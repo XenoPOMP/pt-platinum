@@ -8,6 +8,8 @@ header.appHeader {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   font-size: 20px;
+  position: sticky;
+  top: 0;
 
   section {
     padding: globalPadding(.25) 0;
