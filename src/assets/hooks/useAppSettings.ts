@@ -1,5 +1,6 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { Language, changeLang } from '@redux/reducers/appSettingsSlice';
 import IStore from '@redux/types/redux-types';
 
 interface SettingController<T> {
@@ -10,9 +11,12 @@ interface SettingController<T> {
 interface IUseAppSettings {
 	appVersion: Omit<SettingController<string>, 'set'>;
 	appName: Omit<SettingController<string>, 'set'>;
+	language: SettingController<Language>;
 }
 
 const useAppSettings = (): IUseAppSettings => {
+	const dispatch = useDispatch();
+
 	return {
 		appVersion: {
 			get: () => useSelector((state: IStore) => state.appSettings.appVersion),
@@ -20,6 +24,11 @@ const useAppSettings = (): IUseAppSettings => {
 
 		appName: {
 			get: () => useSelector((state: IStore) => state.appSettings.appName),
+		},
+
+		language: {
+			get: () => useSelector((state: IStore) => state.appSettings.language),
+			set: newLang => dispatch(changeLang(newLang)),
 		},
 	};
 };

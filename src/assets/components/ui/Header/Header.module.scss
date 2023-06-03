@@ -1,0 +1,14 @@
+@import "src/assets/styles/templates";
+
+header.appHeader {
+  @extend %uiContainer;
+
+  outline: 2px solid red;
+  height: globalPadding(4);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+
+  section.main {
+    outline: inherit;
+  }
+}

@@ -31,8 +31,6 @@ const AppRoutes: FC<{
 				<Route path={'*'} element={<NotFound />} />
 
 				<Route path={'/'} element={<MainPage />} />
-
-				<Route path={'/test'} element={<TestingPage />} />
 			</Routes>
 		);
 	};
