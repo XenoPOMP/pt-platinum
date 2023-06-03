@@ -101,6 +101,11 @@ header.appHeader {
           background: none;
           outline: 0;
           border: 0;
+          color: var(--button-font);
+
+          &::-webkit-input-placeholder {
+            color: var(--button-font-inactive);
+          }
         }
       }
     }
