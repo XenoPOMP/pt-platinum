@@ -2,13 +2,107 @@
 
 header.appHeader {
   @extend %uiContainer;
+  @extend %mainFont;
 
-  outline: 2px solid red;
   height: globalPadding(4);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  font-size: 20px;
+
+  section {
+    padding: globalPadding(.25) 0;
+  }
 
   section.main {
-    outline: inherit;
+    @extend %flexCenter;
+
+    justify-content: space-between;
+
+    .logotype {
+      @extend %flexCenter;
+
+      height: 100%;
+      column-gap: .5em;
+
+      img.logo {
+        height: 50%;
+      }
+
+      svg.label {
+        height: 35%;
+
+        path {
+          fill: var(--app-font-primary);
+        }
+      }
+    }
+  }
+
+  section.taskBar {
+    @extend %flexCenter;
+    @extend %notSelectable;
+
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1em; // 1em = 20px
+    container-type: inline-size;
+    gap: globalPadding(.5);
+
+    .progressBar {
+      // width: min(9.3em, 25%);
+      width: 9.3em;
+      height: .75em;
+      background: var(--button-back);
+      border-radius: 5em;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--percent);
+        background: var(--app-progress-bar);
+        height: 100%;
+        border-radius: inherit;
+
+        transition: .15s width,
+                    .15s background;
+      }
+    }
+
+    .rightControls {
+      display: flex;
+      justify-content: end;
+      column-gap: globalPadding(.5);
+      height: 100%;
+      width: 100%;
+
+      label.inputPlaceholder {
+        position: relative;
+        height: 100%;
+        width: min(50%, 14.6em);
+        padding-left: .5em;
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        background: var(--button-back);
+        border-radius: var(--ui-border-radius);
+
+        svg {
+          width: 1em;
+        }
+
+        input.searchBar {
+          @extend %mainFont;
+
+          height: 100%;
+          font-size: 1em; // 1em = 20px
+          background: none;
+          outline: 0;
+          border: 0;
+        }
+      }
+    }
   }
 }

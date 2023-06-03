@@ -14,6 +14,12 @@ const russianLocalization: Localization = {
 			keywords: '',
 		},
 	},
+
+	header: {
+		taskbar: {
+			searchPlaceholder: 'Поиск...',
+		},
+	},
 };
 
 export default russianLocalization;

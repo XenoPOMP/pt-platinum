@@ -1,0 +1,27 @@
+@import "src/assets/styles/templates";
+
+.button {
+  @extend %flexCenter;
+  @extend %notSelectable;
+
+  background: var(--button-back);
+  border-radius: var(--ui-border-radius);
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      path {
+        fill: var(--button-font);
+      }
+    }
+  }
+
+  svg {
+    width: 50%;
+
+    path {
+      fill: var(--button-font-inactive);
+      transition: .15s ease;
+    }
+  }
+}
