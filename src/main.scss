@@ -1,5 +1,9 @@
-@import "./src/assets/styles/nullstyles";
+@import "src/assets/styles/nullstyles";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: var(--app-back-primary);
+}
