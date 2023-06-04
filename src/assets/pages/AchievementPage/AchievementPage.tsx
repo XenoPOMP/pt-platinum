@@ -37,7 +37,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 
 	// Localization
 	const loc = useLocalization();
-	const { title, description, filters } =
+	const { title, description, filters, instructions } =
 		loc.pages.main.achievements[defaultName];
 
 	// Get data from redux store
@@ -100,6 +100,24 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 							: loc.pages.achievement.completeButton.notCompleted}
 					</Button>
 				</div>
+
+				{instructions && (
+					<div className={cn(styles.instructions)}>
+						{instructions.map(instr => {
+							if (typeof instr === 'string') {
+								return <p key={instr}>{instr}</p>;
+							}
+
+							if (instr instanceof ProgressiveImage) {
+								return (
+									<div className={cn(styles.imagePlaceholder)}>{instr}</div>
+								);
+							}
+
+							return instr;
+						})}
+					</div>
+				)}
 			</div>
 		</Page>
 	);

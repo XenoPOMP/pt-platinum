@@ -11,6 +11,7 @@ header.appHeader {
   position: sticky;
   top: 0;
   background: var(--app-back-primary);
+  z-index: 10000;
 
   section {
     padding: globalPadding(.25) 0;

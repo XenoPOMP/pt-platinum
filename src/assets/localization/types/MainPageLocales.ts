@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { Achievements } from '@type/Achievements';
 import { Filter } from '@type/Filter';
 
@@ -7,6 +9,7 @@ export interface MainPageLocales {
 			title: string;
 			description: string;
 			filters?: Filter[];
+			instructions?: ReactNode[];
 		};
 	};
 }

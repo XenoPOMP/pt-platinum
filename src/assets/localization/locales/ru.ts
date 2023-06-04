@@ -42,6 +42,9 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
 					],
+					instructions: [
+						'Для выполнения этого достижения вам необходимо уничтожить все блоки с Джоном на уровне John Gutter.',
+					],
 				},
 
 				LETS_MAKE_THIS_QUICK: {

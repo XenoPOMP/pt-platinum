@@ -1,18 +1,12 @@
 import cn from 'classnames';
-import { CSSProperties, FC, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
-
-import { AchievementMark } from '@redux/reducers/marks.slice';
-import IStore from '@redux/types/redux-types';
 
 import CompletionBadge from '@ui/CompletionBadge/CompletionBadge';
 import FilterGroup from '@ui/FilterGroup/FilterGroup';
 import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
 
 import useLocalization from '@hooks/useLocalization';
-
-import { Filter } from '@type/Filter';
 
 import styles from './AchievementCard.module.scss';
 import type { AchievementCardProps } from './AchievementCard.props';
