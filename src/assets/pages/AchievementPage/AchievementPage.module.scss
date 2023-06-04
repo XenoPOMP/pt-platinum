@@ -1,15 +1,17 @@
 @import "src/assets/styles/templates";
 
-.mainPage {
+.achievementPage {
   @extend %uiContainer;
-  @extend %mainFont;
 
-  padding: globalPadding(.75) 0 globalPadding(1) 0;
   font-size: 20px; // 1em = 20px
+  padding: globalPadding(.75) 0 globalPadding(1) 0;
 
-  &.rowView {
+  .titleBlock {
     display: flex;
     flex-direction: column;
-    gap: globalPadding(.5);
+    align-items: center;
+    font-size: 1em;
+
+    
   }
 }

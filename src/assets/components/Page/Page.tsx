@@ -16,11 +16,11 @@ import type { MetaInfo } from './Page.props';
  * @param {ReactNode} children       page children component.
  * @constructor
  */
-const Page: FC<PropsWithChildren<PageProps>> = ({ meta, children }) => {
+const Page: FC<PropsWithChildren<PageProps>> = ({ meta, children, header }) => {
 	const { appName } = useAppSettings();
 
 	return (
-		<Layout>
+		<Layout header={header}>
 			<Helmet
 				htmlAttributes={{
 					lang: 'en',

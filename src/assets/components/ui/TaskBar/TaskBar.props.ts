@@ -1,1 +1,3 @@
-export interface TaskBarProps {}
+export interface TaskBarProps {
+	rightControl?: boolean;
+}

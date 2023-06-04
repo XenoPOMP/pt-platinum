@@ -3,6 +3,8 @@ import { CSSProperties, FC, ReactElement, useEffect, useState } from 'react';
 
 import Loader from '@ui/Loader/Loader';
 
+import peppinoBreakdance from '@media/images/Spr_player_breakdance_0.webp';
+
 import styles from './ProgressiveImage.module.scss';
 import { ProgressiveImageProps } from './ProgressiveImage.props';
 
@@ -24,7 +26,7 @@ const ProgressiveImage: FC<ProgressiveImageProps> = ({
 	// prettier-ignore
 	const [element, setElement] = useState<ReactElement>(
     <div style={getInlineVariables()} className={cn(styles.loader)}>
-			<Loader type={'circle'} mainColor={loaderColorScheme.loaderColor} />
+			<img src={peppinoBreakdance} alt={'peppino loader'} />
     </div>
   );
 

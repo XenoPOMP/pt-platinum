@@ -12,4 +12,8 @@
       fill: var(--loader-color);
     }
   }
+
+  img.peppinoLoader {
+    width: min(75px, 50%);
+  }
 }

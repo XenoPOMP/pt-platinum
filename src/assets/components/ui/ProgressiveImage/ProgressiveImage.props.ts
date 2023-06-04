@@ -7,6 +7,5 @@ export interface ProgressiveImageProps {
 	style?: CSSProperties;
 	loaderColorScheme: {
 		backgroundColor: string;
-		loaderColor: string;
 	};
 }

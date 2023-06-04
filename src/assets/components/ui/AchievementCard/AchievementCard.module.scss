@@ -1,0 +1,67 @@
+@import "src/assets/styles/templates";
+
+.card {
+  font-size: 1em; // 1em = 20px
+  display: flex;
+  gap: 1em;
+
+  &.rowView {
+    width: 100%;
+
+    .avatarBox {
+      @extend %flexCenter;
+      @extend %notSelectable;
+
+      width: 6em;
+      aspect-ratio: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: .9em;
+
+      .title {
+        display: flex;
+        gap: .5em;
+
+        h3 {
+          @extend %bold;
+          font-size: 1.25em;
+          color: var(--app-font-primary);
+        }
+
+        .filterGroup {
+          display: flex;
+          flex-wrap: wrap;
+          gap: .5em;
+          font-size: 1em; // 1em = 20px
+          align-items: center;
+
+          .filter {
+            @extend %medium;
+            @extend %notSelectable;
+            @extend %flexCenter;
+
+            background: var(--filter-back);
+            color: var(--filter-font);
+            font-size: .75em; // 1em = 15px
+            padding: .2em 1em;
+            border-radius: 10em;
+            border: 1px solid var(--filter-font);
+            height: 1.6em;
+          }
+        }
+      }
+
+      i.desc {
+        color: var(--app-font-secondary);
+        font-size: 1em;
+      }
+    }
+  }
+}

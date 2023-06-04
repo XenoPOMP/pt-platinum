@@ -1,10 +1,12 @@
 import { AppSettings } from '@redux/reducers/appSettingsSlice';
+import { AchievementMarks } from '@redux/reducers/marks.slice';
 
 /**
  * Redux store interface.
  */
 interface IStore {
 	appSettings: AppSettings;
+	marks: AchievementMarks;
 }
 
 /**

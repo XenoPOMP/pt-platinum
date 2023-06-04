@@ -1,3 +1,5 @@
+import { HeaderProps } from '@ui/Header/Header.props';
+
 export type MetaInfo = {
 	pageTitle: string;
 	pageDescription?: string;
@@ -6,4 +8,5 @@ export type MetaInfo = {
 
 export interface PageProps {
 	meta: MetaInfo;
+	header?: HeaderProps;
 }

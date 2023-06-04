@@ -12,10 +12,10 @@ import { LayoutProps } from './Layout.props';
  * @param children
  * @constructor
  */
-const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children }) => {
+const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, header }) => {
 	return (
 		<GlobalProvider>
-			<Header />
+			<Header {...header} />
 
 			<main>{children}</main>
 		</GlobalProvider>

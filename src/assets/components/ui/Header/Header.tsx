@@ -4,13 +4,22 @@ import { Link } from 'react-router-dom';
 
 import Button from '@ui/Button/Button';
 import TaskBar from '@ui/TaskBar/TaskBar';
+import type { TaskBarProps } from '@ui/TaskBar/TaskBar.props';
 
 import ptLogo from '@media/images/logo/short logo 1.png';
 
 import styles from './Header.module.scss';
 import type { HeaderProps } from './Header.props';
 
-const Header: FC<HeaderProps> = ({}) => {
+const Header: FC<HeaderProps> = ({ taskbar }) => {
+	const defaultTaskbarOptions: HeaderProps['taskbar'] =
+		taskbar !== false
+			? ({
+					rightControl: true,
+					...taskbar,
+			  } as TaskBarProps)
+			: false;
+
 	return (
 		<header className={cn(styles.appHeader)}>
 			<section className={cn(styles.main)}>
@@ -50,7 +59,11 @@ const Header: FC<HeaderProps> = ({}) => {
 				</Button>
 			</section>
 
-			<TaskBar />
+			{taskbar !== false && (
+				<TaskBar
+					rightControl={(defaultTaskbarOptions as TaskBarProps).rightControl}
+				/>
+			)}
 		</header>
 	);
 };
