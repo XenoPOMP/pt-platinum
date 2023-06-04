@@ -6,6 +6,7 @@ import { Achievements } from '@type/Achievements';
 
 import johnGuttedWebp from '@media/images/achievement-pictures/webp/john-gutter.webp';
 import letsMakeThisQuickWebp from '@media/images/achievement-pictures/webp/lets-make-this.quick.webp';
+import primateRageWebp from '@media/images/achievement-pictures/webp/primate-rage.webp';
 
 export type AchievementMark = {
 	name: keyof Achievements;
@@ -33,6 +34,13 @@ const initialState: AchievementMarks = {
 			shown: true,
 			completed: false,
 		},
+
+		{
+			name: 'PRIMATE_RAGE',
+			pictureUrl: primateRageWebp,
+			shown: true,
+			completed: false,
+		},
 	],
 };
 
@@ -41,7 +49,9 @@ const marksSlice = createSlice({
 	initialState,
 	reducers: {
 		loadMarks(state, action: ReduxAction<AchievementMarks>) {
-			state.achievements = action.payload.achievements;
+			state.achievements = action.payload.achievements.map((loaded, index) => {
+				return { ...loaded, pictureUrl: state.achievements[index].pictureUrl };
+			});
 		},
 
 		changeCompletion(

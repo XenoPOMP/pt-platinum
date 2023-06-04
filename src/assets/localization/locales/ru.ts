@@ -55,6 +55,16 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
 					],
 				},
+
+				PRIMATE_RAGE: {
+					title: 'Primate Rage',
+					description:
+						'Получите комбо из 99 или более очков на уровне John Gutter.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
+					],
+				},
 			},
 		},
 
