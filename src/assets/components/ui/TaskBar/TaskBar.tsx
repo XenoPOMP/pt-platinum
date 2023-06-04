@@ -5,11 +5,12 @@ import Button from '@ui/Button/Button';
 import styles from '@ui/Header/Header.module.scss';
 
 import useLocalization from '@hooks/useLocalization';
+import { useProgress } from '@hooks/useProgress';
 
 import type { TaskBarProps } from './TaskBar.props';
 
 const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
-	const percent = 75;
+	const { progress } = useProgress();
 	const loc = useLocalization();
 
 	return (
@@ -19,11 +20,11 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 					className={cn(styles.progressBar)}
 					style={
 						{
-							'--percent': `${percent}%`,
+							'--percent': `${progress}%`,
 						} as CSSProperties
 					}
 				></div>
-				{percent}%
+				{progress}%
 			</div>
 
 			{rightControl && (

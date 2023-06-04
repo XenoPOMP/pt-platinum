@@ -6,6 +6,8 @@ import Button from '@ui/Button/Button';
 import TaskBar from '@ui/TaskBar/TaskBar';
 import type { TaskBarProps } from '@ui/TaskBar/TaskBar.props';
 
+import { useProgress } from '@hooks/useProgress';
+
 import ptLogo from '@media/images/logo/short logo 1.png';
 
 import styles from './Header.module.scss';
