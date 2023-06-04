@@ -9,6 +9,7 @@ import { AchievementMark, AchievementMarks } from '@redux/reducers/marks.slice';
 import IStore from '@redux/types/redux-types';
 
 import AchievementCard from '@ui/AchievementCard/AchievementCard';
+import FilterGroup from '@ui/FilterGroup/FilterGroup';
 import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
 
 import useLocalization from '@hooks/useLocalization';
@@ -57,6 +58,10 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 						alt={'achievement-image'}
 						src={pictureUrl}
 					/>
+
+					<FilterGroup filters={filters} />
+
+					<i>{description}</i>
 				</div>
 			</div>
 		</Page>

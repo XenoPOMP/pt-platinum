@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { AchievementMark } from '@redux/reducers/marks.slice';
 import IStore from '@redux/types/redux-types';
 
+import FilterGroup from '@ui/FilterGroup/FilterGroup';
 import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
 
 import useLocalization from '@hooks/useLocalization';
@@ -20,25 +21,6 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 
 	const loc = useLocalization();
 	const { title, description, filters } = loc.pages.main.achievements[name];
-
-	const FilterBadge: FC<{ filter: Filter }> = ({ filter }) => {
-		const label = filter.displayName;
-		const colors = filter.colors;
-
-		return (
-			<div
-				className={cn(styles.filter)}
-				style={
-					{
-						'--filter-back': colors.background,
-						'--filter-font': colors.border,
-					} as CSSProperties
-				}
-			>
-				{label}
-			</div>
-		);
-	};
 
 	return (
 		<>
@@ -62,12 +44,7 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 							<h3>{title}</h3>
 
 							<div className={cn(styles.filterGroup)}>
-								{filters?.map((filter, index) => (
-									<FilterBadge
-										filter={filter}
-										key={`filter-${index}-for-${name}`}
-									/>
-								))}
+								<FilterGroup filters={filters} />
 							</div>
 						</div>
 
