@@ -28,6 +28,11 @@ const MarkSaver: FC<PropsWithChildren<MarkSaverProps>> = ({ children }) => {
 
 	// Load cookie data
 	useEffect(() => {
+		if (getCookieItem.achievements.length !== selector.achievements.length) {
+			setCookieItem(selector);
+			return;
+		}
+
 		dispatch(loadMarks(getCookieItem));
 	}, []);
 
