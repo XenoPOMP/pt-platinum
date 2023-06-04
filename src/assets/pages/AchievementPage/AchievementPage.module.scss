@@ -14,8 +14,14 @@
     font-size: 1em;
     gap: 1.25em;
 
-    img {
+    .avatarPlaceholder {
+      @extend %notSelectable;
+
       width: 10em;
+      aspect-ratio: 1;
+      position: relative;
+
+      img {}
     }
 
     h2 {
@@ -26,6 +32,7 @@
 
     i {
       font-size: 1em;
+      color: var(--app-font-secondary);
     }
   }
 }

@@ -17,12 +17,16 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 	square,
 	fullHeight,
 	fullWidth,
+	variant,
 	onClick,
 	className,
 	children,
 	routerLink,
 	link,
 }) => {
+	/** Default button`s variant. */
+	const defaultVariant: ButtonProps['variant'] = variant ? variant : 'normal';
+
 	/**
 	 * Unified button styles.
 	 */
@@ -30,6 +34,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 		aspectRatio: square ? 1 : 'initial',
 		height: fullHeight ? '100%' : 'initial',
 		width: fullWidth ? '100%' : 'initial',
+		padding: !square ? '.5em .66em' : '',
 	};
 
 	/**
@@ -44,6 +49,19 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 		if (onClick) {
 			onClick(event);
 		}
+	};
+
+	/**
+	 * Unified class list.
+	 */
+	const inlineClasses = (): string => {
+		const classes: string[] = [];
+
+		if (defaultVariant === 'active') {
+			classes.push(styles.active);
+		}
+
+		return cn(...classes);
 	};
 
 	// Error handling
@@ -62,7 +80,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 				<div
 					style={buttonStyle}
 					onClick={clickCallback}
-					className={cn(styles.button, className)}
+					className={cn(styles.button, className, inlineClasses())}
 				>
 					{children}
 				</div>
@@ -74,7 +92,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 					to={routerLink}
 					style={buttonStyle}
 					onClick={clickCallback}
-					className={cn(styles.button, className)}
+					className={cn(styles.button, className, inlineClasses())}
 				>
 					{children}
 				</Link>
@@ -86,7 +104,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 					href={link}
 					style={buttonStyle}
 					onClick={clickCallback}
-					className={cn(styles.button, className)}
+					className={cn(styles.button, className, inlineClasses())}
 				>
 					{children}
 				</a>

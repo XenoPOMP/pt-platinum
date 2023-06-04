@@ -7,6 +7,16 @@
   background: var(--button-back);
   border-radius: var(--ui-border-radius);
   cursor: pointer;
+  font-size: 1em;
+  color: var(--button-font);
+
+  transition: .08s ease background-color,
+              .08s ease color;
+
+  &.active {
+    background: var(--ui-border);
+    color: var(--ui-icon);
+  }
 
   &:hover {
     svg {

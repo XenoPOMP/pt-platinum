@@ -54,6 +54,13 @@ const russianLocalization: Localization = {
 				},
 			},
 		},
+
+		achievement: {
+			completeButton: {
+				completed: 'Выполнено',
+				notCompleted: 'Не выполнено',
+			},
+		},
 	},
 };
 

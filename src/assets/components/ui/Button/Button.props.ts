@@ -10,6 +10,9 @@ export interface ButtonProps {
 	/** Sets width to 100% on true. */
 	fullWidth?: boolean;
 
+	/** Button`s style variant. */
+	variant?: 'normal' | 'active';
+
 	/** Callback. */
 	onClick?: (event?: MouseEvent<HTMLDivElement | HTMLAnchorElement>) => void;
 
