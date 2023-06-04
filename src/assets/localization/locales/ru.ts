@@ -78,7 +78,7 @@ const russianLocalization: Localization = {
 
 				SPOONKNIGHT: {
 					title: 'Spoonknight',
-					description: 'Парируйте десть рыцарей с вилкой в Pizzascape.',
+					description: 'Парируйте десять рыцарей с вилкой в Pizzascape.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
@@ -87,8 +87,7 @@ const russianLocalization: Localization = {
 
 				SPHERICAL: {
 					title: 'Spherical',
-					description:
-						'Убейте другого противника во время формы шара в Pizzascape.',
+					description: 'Убейте противника во время формы шара в Pizzascape.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
