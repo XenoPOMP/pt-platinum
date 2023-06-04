@@ -65,6 +65,35 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
 					],
 				},
+
+				SHINING_ARMOR: {
+					title: 'Shining Armor',
+					description:
+						'Доберитесь до всех священников, ни разу не наткнувшись на стену в Pizzascape.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
+					],
+				},
+
+				SPOONKNIGHT: {
+					title: 'Spoonknight',
+					description: 'Парируйте десть рыцарей с вилкой в Pizzascape.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
+					],
+				},
+
+				SPHERICAL: {
+					title: 'Spherical',
+					description:
+						'Убейте другого противника во время формы шара в Pizzascape.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
+					],
+				},
 			},
 		},
 

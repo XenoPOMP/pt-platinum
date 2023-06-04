@@ -7,6 +7,9 @@ import { Achievements } from '@type/Achievements';
 import johnGuttedWebp from '@media/images/achievement-pictures/webp/john-gutter.webp';
 import letsMakeThisQuickWebp from '@media/images/achievement-pictures/webp/lets-make-this.quick.webp';
 import primateRageWebp from '@media/images/achievement-pictures/webp/primate-rage.webp';
+import shiningArmorWebp from '@media/images/achievement-pictures/webp/shining-armor.webp';
+import spherical from '@media/images/achievement-pictures/webp/spherical.webp';
+import spoonKnight from '@media/images/achievement-pictures/webp/spoonknight.webp';
 
 export type AchievementMark = {
 	name: keyof Achievements;
@@ -38,6 +41,27 @@ const initialState: AchievementMarks = {
 		{
 			name: 'PRIMATE_RAGE',
 			pictureUrl: primateRageWebp,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'SHINING_ARMOR',
+			pictureUrl: shiningArmorWebp,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'SPOONKNIGHT',
+			pictureUrl: spoonKnight,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'SPHERICAL',
+			pictureUrl: spherical,
 			shown: true,
 			completed: false,
 		},

@@ -8,6 +8,7 @@
   gap: .5em;
   font-size: 1em; // 1em = 20px
   align-items: center;
+  height: 100%;
 
   .filter {
     @extend %medium;
