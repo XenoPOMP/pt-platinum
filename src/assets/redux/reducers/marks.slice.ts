@@ -40,6 +40,10 @@ const marksSlice = createSlice({
 	name: 'marks',
 	initialState,
 	reducers: {
+		loadMarks(state, action: ReduxAction<AchievementMarks>) {
+			state.achievements = action.payload.achievements;
+		},
+
 		changeCompletion(
 			state,
 			action: ReduxAction<{
@@ -59,4 +63,5 @@ const marksSlice = createSlice({
 });
 
 export default marksSlice.reducer;
-export const { changeCompletion } = marksSlice.actions;
+export const { changeCompletion, loadMarks } = marksSlice.actions;
+export const initialAchievementMarks = marksSlice.getInitialState();
