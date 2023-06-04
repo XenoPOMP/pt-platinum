@@ -59,6 +59,8 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 						src={pictureUrl}
 					/>
 
+					<h2>{title}</h2>
+
 					<FilterGroup filters={filters} />
 
 					<i>{description}</i>

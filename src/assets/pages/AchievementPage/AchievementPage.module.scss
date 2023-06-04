@@ -2,6 +2,7 @@
 
 .achievementPage {
   @extend %uiContainer;
+  @extend %mainFont;
 
   font-size: 20px; // 1em = 20px
   padding: globalPadding(.75) 0 globalPadding(1) 0;
@@ -17,9 +18,14 @@
       width: 10em;
     }
 
+    h2 {
+      @extend %bold;
+
+      font-size: 1.25em;
+    }
+
     i {
       font-size: 1em;
-      font-weight: 400;
     }
   }
 }
