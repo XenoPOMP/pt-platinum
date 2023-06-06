@@ -72,7 +72,7 @@ const russianLocalization: Localization = {
 						'Доберитесь до всех священников, ни разу не наткнувшись на стену в Pizzascape.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
-						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
+						FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
 					],
 				},
 
@@ -81,7 +81,7 @@ const russianLocalization: Localization = {
 					description: 'Парируйте десять рыцарей с вилкой в Pizzascape.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
-						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
+						FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
 					],
 				},
 
@@ -90,7 +90,37 @@ const russianLocalization: Localization = {
 					description: 'Убейте противника во время формы шара в Pizzascape.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
-						FilterFactory(FilterTypes.worldTwo, 'Уровень: Pizzascape'),
+						FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
+					],
+				},
+
+				THRILL_SEEKER: {
+					title: 'Thrill Seeker',
+					description:
+						'Закончите уровень Ancient Cheese, не получив урона от взрывов.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
+					],
+				},
+
+				VOLLEYBOMB: {
+					title: 'Volleybomb',
+					description:
+						'Убейте крысу, используя бомбу, сброшенную врагом на уровне Ancient Cheese.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
+					],
+				},
+
+				DELICACY: {
+					title: 'Delicacy',
+					description:
+						'Сделайте 40 или более наборов сырных платформ изчезнувшими на уровне Ancient Cheese.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
 					],
 				},
 			},

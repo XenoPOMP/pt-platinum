@@ -5,4 +5,7 @@ export interface Achievements {
 	SHINING_ARMOR: string;
 	SPOONKNIGHT: string;
 	SPHERICAL: string;
+	THRILL_SEEKER: string;
+	VOLLEYBOMB: string;
+	DELICACY: string;
 }

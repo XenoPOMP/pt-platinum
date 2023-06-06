@@ -61,6 +61,20 @@ export class Filter {
 					border: 'var(--bad-required-font)',
 				};
 			}
+
+			case FilterTypes.pizzaScape: {
+				return {
+					background: 'var(--bad-pizzascape-back)',
+					border: 'var(--bad-pizzascape-font)',
+				};
+			}
+
+			case FilterTypes.ancientCheese: {
+				return {
+					background: 'var(--bad-anc-cheese-back)',
+					border: 'var(--bad-anc-cheese-font)',
+				};
+			}
 		}
 	}
 }

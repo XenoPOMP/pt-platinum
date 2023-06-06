@@ -10,10 +10,12 @@ export const useProgress = () => {
 
 	const total = selector.length;
 	const checked = selector.filter(mark => mark.completed).length;
+	const shown = selector.filter(mark => mark.shown).length;
 
 	return {
 		progress: parseInt(`${(checked * 100) / total}`),
 		checked,
 		total,
+		shown,
 	};
 };
