@@ -5,13 +5,17 @@ import { ReduxAction } from '@redux/types/redux-types';
 import { Achievements } from '@type/Achievements';
 
 import delicacy from '@media/images/achievement-pictures/webp/delicacy.webp';
+import eruptionMan from '@media/images/achievement-pictures/webp/eruption_man.webp';
 import johnGuttedWebp from '@media/images/achievement-pictures/webp/john-gutter.webp';
 import letsMakeThisQuickWebp from '@media/images/achievement-pictures/webp/lets-make-this.quick.webp';
 import primateRageWebp from '@media/images/achievement-pictures/webp/primate-rage.webp';
+import rainDance from '@media/images/achievement-pictures/webp/rain_dance.webp';
 import shiningArmorWebp from '@media/images/achievement-pictures/webp/shining-armor.webp';
 import spherical from '@media/images/achievement-pictures/webp/spherical.webp';
 import spoonKnight from '@media/images/achievement-pictures/webp/spoonknight.webp';
 import thrillSeeker from '@media/images/achievement-pictures/webp/thrill_seeker.webp';
+import unslicedMan from '@media/images/achievement-pictures/webp/unsliced_man.webp';
+import veryHotSauce from '@media/images/achievement-pictures/webp/very_very_hot_sauce.webp';
 import volleyBomb from '@media/images/achievement-pictures/webp/volleybomb.webp';
 
 export type AchievementMark = {
@@ -86,6 +90,34 @@ const initialState: AchievementMarks = {
 		{
 			name: 'DELICACY',
 			pictureUrl: delicacy,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'VERY_VERY_HOT_SAUCE',
+			pictureUrl: veryHotSauce,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'ERUPTION_MAN',
+			pictureUrl: eruptionMan,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'UNSLICED_PIZZAMAN',
+			pictureUrl: unslicedMan,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'PEPPINO_S_RAIN_DANCE',
+			pictureUrl: rainDance,
 			shown: true,
 			completed: false,
 		},

@@ -75,6 +75,20 @@ export class Filter {
 					border: 'var(--bad-anc-cheese-font)',
 				};
 			}
+
+			case FilterTypes.bloodSauceDungeon: {
+				return {
+					background: 'var(--bad-bloodsauce-dungeon-back)',
+					border: 'var(--bad-bloodsauce-dungeon-font)',
+				};
+			}
+
+			case FilterTypes.space: {
+				return {
+					background: 'var(--bad-oregano-back)',
+					border: 'var(--bad-oregano-font)',
+				};
+			}
 		}
 	}
 }

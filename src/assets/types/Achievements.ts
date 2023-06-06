@@ -8,4 +8,8 @@ export interface Achievements {
 	THRILL_SEEKER: string;
 	VOLLEYBOMB: string;
 	DELICACY: string;
+	VERY_VERY_HOT_SAUCE: string;
+	ERUPTION_MAN: string;
+	UNSLICED_PIZZAMAN: string;
+	PEPPINO_S_RAIN_DANCE: string;
 }

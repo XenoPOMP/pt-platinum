@@ -7,4 +7,6 @@ export enum FilterTypes {
 	dependsOn,
 	pizzaScape,
 	ancientCheese,
+	bloodSauceDungeon,
+	space,
 }

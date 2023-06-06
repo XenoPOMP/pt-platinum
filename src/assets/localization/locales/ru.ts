@@ -123,6 +123,55 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
 					],
 				},
+
+				VERY_VERY_HOT_SAUCE: {
+					title: 'Very Very Hot Sauce',
+					description:
+						'Закончите уровень Bloodsauce Dungeon ни разу не дотронувшись до лавы.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(
+							FilterTypes.bloodSauceDungeon,
+							'Уровень: Bloodsauce Dungeon'
+						),
+					],
+				},
+
+				ERUPTION_MAN: {
+					title: 'Eruption Man',
+					description:
+						'Во время побега используйте супер-прыжок на протяжении более чем 2 секунд на уровне Bloodsauce Dungeon.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(
+							FilterTypes.bloodSauceDungeon,
+							'Уровень: Bloodsauce Dungeon'
+						),
+					],
+				},
+
+				UNSLICED_PIZZAMAN: {
+					title: 'Unsliced Pizzaman',
+					description:
+						'Закончите уровень Bloodsauce Dungeon, не получив урона от резака для пиццы.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(
+							FilterTypes.bloodSauceDungeon,
+							'Уровень: Bloodsauce Dungeon'
+						),
+					],
+				},
+
+				PEPPINO_S_RAIN_DANCE: {
+					title: "Peppino's Rain Dance",
+					description:
+						'Активируйте тотем заново, станцевав с усоренным бегом в Oregano Desert.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
+					],
+				},
 			},
 		},
 
