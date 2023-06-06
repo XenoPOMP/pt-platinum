@@ -12,4 +12,12 @@ export interface Achievements {
 	ERUPTION_MAN: string;
 	UNSLICED_PIZZAMAN: string;
 	PEPPINO_S_RAIN_DANCE: string;
+	UNNECESSARY_VIOLENCE: string;
+	ALIEN_COW: string;
+	GHOSTED: string;
+	PRETEND_GHOST: string;
+	ALIVE_AND_WELL: string;
+	NO_ONE_IS_SAFE: string;
+	CUBE_MENACE: string;
+	GOOD_EGG: string;
 }

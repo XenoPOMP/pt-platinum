@@ -9,4 +9,6 @@ export enum FilterTypes {
 	ancientCheese,
 	bloodSauceDungeon,
 	space,
+	wasteyard,
+	farm,
 }

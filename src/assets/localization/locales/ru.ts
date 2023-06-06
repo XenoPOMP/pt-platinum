@@ -172,6 +172,83 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
 					],
 				},
+
+				UNNECESSARY_VIOLENCE: {
+					title: 'Unnecessary Violence',
+					description: 'Убейте всех продавцов сосисок в магазинах пиццы.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
+					],
+				},
+
+				ALIEN_COW: {
+					title: 'Alien Cow',
+					description:
+						'Не дайте ни одной корове ударить себя на уровне Oregano Desert.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
+					],
+				},
+
+				GHOSTED: {
+					title: 'Ghosted',
+					description:
+						'Избегайте прикосновения призрака Джона на уровне Wasteyard.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
+					],
+				},
+
+				PRETEND_GHOST: {
+					title: 'Pretend Ghost',
+					description:
+						'Убейте 20 или более врагов в качестве призрака на уровне Wasteyard.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
+					],
+				},
+
+				ALIVE_AND_WELL: {
+					title: 'Alive and Well',
+					description: 'Серфите на каждом трупе на уровне Wasteyard.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
+					],
+				},
+
+				NO_ONE_IS_SAFE: {
+					title: 'No One Is Safe',
+					description:
+						'Убить трех недоступных врагов сразу с супер насмешкой на уровне Fun Farm.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
+					],
+				},
+
+				CUBE_MENACE: {
+					title: 'Cube Menace',
+					description: 'Найдите и уничтожьте куб Морта.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
+					],
+				},
+
+				GOOD_EGG: {
+					title: 'Good Egg',
+					description:
+						'Пройдите уровень Fun Farm, не получив урона, пока на вас сидит Морт.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
+					],
+				},
 			},
 		},
 

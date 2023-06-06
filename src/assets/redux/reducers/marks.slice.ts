@@ -4,10 +4,18 @@ import { ReduxAction } from '@redux/types/redux-types';
 
 import { Achievements } from '@type/Achievements';
 
+import alienCow from '@media/images/achievement-pictures/webp/alien_cow.webp';
+import aliveAndWell from '@media/images/achievement-pictures/webp/alive_and_well.webp';
+import clerkAchievement from '@media/images/achievement-pictures/webp/clerk_achievement.webp';
+import cubeMenace from '@media/images/achievement-pictures/webp/cube_menace.webp';
 import delicacy from '@media/images/achievement-pictures/webp/delicacy.webp';
 import eruptionMan from '@media/images/achievement-pictures/webp/eruption_man.webp';
+import ghosted from '@media/images/achievement-pictures/webp/ghosted.webp';
+import goodEgg from '@media/images/achievement-pictures/webp/good_egg.webp';
 import johnGuttedWebp from '@media/images/achievement-pictures/webp/john-gutter.webp';
 import letsMakeThisQuickWebp from '@media/images/achievement-pictures/webp/lets-make-this.quick.webp';
+import noOneIsSafe from '@media/images/achievement-pictures/webp/no_one_is_safe.webp';
+import pretendGhost from '@media/images/achievement-pictures/webp/pretend_ghost.webp';
 import primateRageWebp from '@media/images/achievement-pictures/webp/primate-rage.webp';
 import rainDance from '@media/images/achievement-pictures/webp/rain_dance.webp';
 import shiningArmorWebp from '@media/images/achievement-pictures/webp/shining-armor.webp';
@@ -121,6 +129,62 @@ const initialState: AchievementMarks = {
 			shown: true,
 			completed: false,
 		},
+
+		{
+			name: 'UNNECESSARY_VIOLENCE',
+			pictureUrl: clerkAchievement,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'ALIEN_COW',
+			pictureUrl: alienCow,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'GHOSTED',
+			pictureUrl: ghosted,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'PRETEND_GHOST',
+			pictureUrl: pretendGhost,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'ALIVE_AND_WELL',
+			pictureUrl: aliveAndWell,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'NO_ONE_IS_SAFE',
+			pictureUrl: noOneIsSafe,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'CUBE_MENACE',
+			pictureUrl: cubeMenace,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'GOOD_EGG',
+			pictureUrl: goodEgg,
+			shown: true,
+			completed: false,
+		},
 	],
 };
 
@@ -130,9 +194,26 @@ const marksSlice = createSlice({
 	reducers: {
 		loadMarks(state, action: ReduxAction<AchievementMarks>) {
 			state.achievements = action.payload.achievements.map((loaded, index) => {
+				/** Default achievement state. */
 				const defaultState = state.achievements[index];
 
-				return { ...loaded, pictureUrl: defaultState.pictureUrl };
+				/**
+				 * These keys are excluded from
+				 * loading from local storage.
+				 */
+				const exclusionList: (keyof typeof defaultState)[] = ['pictureUrl'];
+
+				/** Mark load with exclusions. */
+				let output = { ...loaded };
+
+				// Exclude each exclusion
+				exclusionList.forEach(ex => {
+					output = { ...output, [ex]: defaultState[ex] };
+				});
+
+				// Set local state to local storage`s one,
+				// with excluded keys.
+				return output;
 			});
 		},
 

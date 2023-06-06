@@ -14,6 +14,10 @@ export class Filter {
 		this.label = label;
 	}
 
+	private var(input: string) {
+		return `var(${input})`;
+	}
+
 	get displayName() {
 		return this.label;
 	}
@@ -87,6 +91,20 @@ export class Filter {
 				return {
 					background: 'var(--bad-oregano-back)',
 					border: 'var(--bad-oregano-font)',
+				};
+			}
+
+			case FilterTypes.wasteyard: {
+				return {
+					background: 'var(--bad-wasteyard-back)',
+					border: 'var(--bad-wasteyard-font)',
+				};
+			}
+
+			case FilterTypes.farm: {
+				return {
+					background: this.var('--bad-farm-back'),
+					border: this.var('--bad-farm-font'),
 				};
 			}
 		}
