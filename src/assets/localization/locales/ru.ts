@@ -166,7 +166,7 @@ const russianLocalization: Localization = {
 				PEPPINO_S_RAIN_DANCE: {
 					title: "Peppino's Rain Dance",
 					description:
-						'Активируйте тотем заново, станцевав с усоренным бегом в Oregano Desert.',
+						'Активируйте тотем заново, станцевав ускоренным бегом в Oregano Desert.',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
