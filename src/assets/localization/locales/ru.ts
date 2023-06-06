@@ -163,6 +163,27 @@ const russianLocalization: Localization = {
 					],
 				},
 
+				THE_CRITIC: {
+					title: 'The Critic',
+					description: 'Победите Пеппермена без урона.',
+					filters: [
+						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+						FilterFactory(FilterTypes.boss, 'Босс'),
+					],
+				},
+
+				S_RANK_1: {
+					title: 'S Ranked #1',
+					description: 'Пройдите все уровни из мира 1 на S-ранк.',
+					filters: [FilterFactory(FilterTypes.worldOne, 'Мир 1')],
+				},
+
+				P_RANK_1: {
+					title: 'P Ranked #1',
+					description: 'Пройдите все уровни из мира 1 на P-ранк.',
+					filters: [FilterFactory(FilterTypes.worldOne, 'Мир 1')],
+				},
+
 				PEPPINO_S_RAIN_DANCE: {
 					title: "Peppino's Rain Dance",
 					description:
@@ -247,6 +268,142 @@ const russianLocalization: Localization = {
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
+					],
+				},
+
+				NON_ALCOHOLIC: {
+					title: 'Non-Alcoholic',
+					description:
+						'Уничтожьте все пивные бутылки на уровне Fastfood Saloon.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+					],
+				},
+
+				ALREADY_PRESSED: {
+					title: 'Already Pressed',
+					description:
+						'Активируйте каждуй кнопку лишь однажды на уровне Fastfood Saloon.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+					],
+				},
+
+				ROYAL_FLUSH: {
+					title: 'Royal Flush',
+					description: 'Прикоснитесь к каждой карте на уровне Fastfood Saloon.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+					],
+				},
+
+				THE_UGLY: {
+					title: 'The Ugly',
+					description: 'Победите Виджиланта без урона.',
+					filters: [
+						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+						FilterFactory(FilterTypes.boss, 'Босс'),
+					],
+				},
+
+				S_RANK_2: {
+					title: 'S Ranked #2',
+					description: 'Пройдите все уровни из мира 2 на S-ранк.',
+					filters: [FilterFactory(FilterTypes.worldTwo, 'Мир 2')],
+				},
+
+				P_RANK_2: {
+					title: 'P Ranked #2',
+					description: 'Пройдите все уровни из мира 2 на P-ранк.',
+					filters: [FilterFactory(FilterTypes.worldTwo, 'Мир 2')],
+				},
+
+				BLOWBACK: {
+					title: 'Blowback',
+					description:
+						'Убейте гоблина-пушечника его собственной бомбой на уровне Crust Cove',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
+					],
+				},
+
+				X: {
+					title: 'X',
+					description: 'Найдите всех чуваков-сокровища на уровне Crust Cove',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
+					],
+				},
+
+				DEMOLITION_EXPERT: {
+					title: 'Demolition Expert',
+					description:
+						'Пройдите уровень Crust Cove, не получив урон от взрывов.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
+					],
+				},
+
+				BEE_NICE: {
+					title: 'Bee Nice',
+					description:
+						'Встань перед пчелой и используй насмешку на уровне Gnome Forest.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.lario, 'Уровень: Gnome Forest'),
+					],
+				},
+
+				LUMBERJACK: {
+					title: 'Lumberjack',
+					description: 'Уничтожьте каждый блок дерева на уровне Gnome Forest.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.lario, 'Уровень: Gnome Forest'),
+					],
+				},
+
+				BULLSEYE: {
+					title: 'Bullseye',
+					description:
+						'Убейте гоблина-Нойза его собственной стрелой на уровне Gnome Forest.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.lario, 'Уровень: Gnome Forest'),
+					],
+				},
+
+				TURBO_TUNNEL: {
+					title: 'Turbo Tunnel',
+					description:
+						'Не ударяйтесь не об один потолок в комнате сразу за Джоном-колонной на уровне Deep Dish Nine.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.space, 'Уровень: Deep Dish Nine'),
+					],
+				},
+
+				BLAST_EM_ASTEROIDS: {
+					title: "Blast'Em Asteroids",
+					description: 'Уничтожьте все астероиды на уровне Deep Dish Nine.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.space, 'Уровень: Deep Dish Nine'),
+					],
+				},
+
+				DENOISE: {
+					title: 'Denoise',
+					description: 'Победите Нойза без урона.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.boss, 'Босс'),
 					],
 				},
 			},

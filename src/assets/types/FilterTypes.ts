@@ -11,4 +11,8 @@ export enum FilterTypes {
 	space,
 	wasteyard,
 	farm,
+	saloon,
+	crust,
+	lario,
+	boss,
 }

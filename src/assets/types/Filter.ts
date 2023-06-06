@@ -14,6 +14,14 @@ export class Filter {
 		this.label = label;
 	}
 
+	/**
+	 * Constructs CSS var string.
+	 *
+	 * @param input    variable name.
+	 * @private
+	 *
+	 * @return {string}   var(input).
+	 */
 	private var(input: string) {
 		return `var(${input})`;
 	}
@@ -22,7 +30,10 @@ export class Filter {
 		return this.label;
 	}
 
-	get colors() {
+	get colors(): {
+		background: string;
+		border: string;
+	} {
 		switch (this.filterType) {
 			case FilterTypes.worldOne: {
 				return {
@@ -105,6 +116,34 @@ export class Filter {
 				return {
 					background: this.var('--bad-farm-back'),
 					border: this.var('--bad-farm-font'),
+				};
+			}
+
+			case FilterTypes.saloon: {
+				return {
+					background: this.var('--bad-saloon-back'),
+					border: this.var('--bad-saloon-font'),
+				};
+			}
+
+			case FilterTypes.crust: {
+				return {
+					background: this.var('--bad-crust-back'),
+					border: this.var('--bad-crust-font'),
+				};
+			}
+
+			case FilterTypes.lario: {
+				return {
+					background: this.var('--bad-lario-back'),
+					border: this.var('--bad-lario-font'),
+				};
+			}
+
+			case FilterTypes.boss: {
+				return {
+					background: this.var('--bad-boss-back'),
+					border: this.var('--bad-boss-font'),
 				};
 			}
 		}
