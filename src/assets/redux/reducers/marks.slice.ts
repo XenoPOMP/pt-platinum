@@ -98,7 +98,9 @@ const marksSlice = createSlice({
 	reducers: {
 		loadMarks(state, action: ReduxAction<AchievementMarks>) {
 			state.achievements = action.payload.achievements.map((loaded, index) => {
-				return { ...loaded, pictureUrl: state.achievements[index].pictureUrl };
+				const defaultState = state.achievements[index];
+
+				return { ...loaded, pictureUrl: defaultState.pictureUrl };
 			});
 		},
 
