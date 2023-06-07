@@ -160,6 +160,13 @@ export class Filter {
 					border: this.var('--bad-pigcity-font'),
 				};
 			}
+
+			case FilterTypes.thatLevel: {
+				return {
+					background: this.var('--bad-that-level-back'),
+					border: this.var('--bad-that-level-font'),
+				};
+			}
 		}
 	}
 }

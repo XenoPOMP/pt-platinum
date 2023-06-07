@@ -46,6 +46,7 @@ export interface Achievements extends Record<Uppercase<string>, string> {
 	PAN_FRIED: string;
 	STRIKE: string;
 	SAY_OINK: string;
+	CANT_FOOL_ME: string;
 
 	// Bosses
 	THE_CRITIC: string;

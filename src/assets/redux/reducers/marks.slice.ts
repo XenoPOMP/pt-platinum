@@ -11,6 +11,7 @@ import beeNice from '@media/images/achievement-pictures/webp/bee_nice.webp';
 import blastEmAsteroids from '@media/images/achievement-pictures/webp/blast_em_asteroid.webp';
 import blowBack from '@media/images/achievement-pictures/webp/blowback.webp';
 import bullsEye from '@media/images/achievement-pictures/webp/bullseye.webp';
+import cantFoolMe from '@media/images/achievement-pictures/webp/cant_fool_me.webp';
 import clerkAchievement from '@media/images/achievement-pictures/webp/clerk_achievement.webp';
 import cubeMenace from '@media/images/achievement-pictures/webp/cube_menace.webp';
 import delicacy from '@media/images/achievement-pictures/webp/delicacy.webp';
@@ -382,6 +383,13 @@ const initialState: AchievementMarks = {
 		{
 			name: 'SAY_OINK',
 			pictureUrl: sayOink,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'CANT_FOOL_ME',
+			pictureUrl: cantFoolMe,
 			shown: true,
 			completed: false,
 		},

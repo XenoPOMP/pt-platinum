@@ -17,4 +17,5 @@ export enum FilterTypes {
 	boss,
 	golf,
 	pigCity,
+	thatLevel,
 }

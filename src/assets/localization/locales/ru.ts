@@ -474,6 +474,16 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.pigCity, 'Уровень: The Pig City'),
 					],
 				},
+
+				CANT_FOOL_ME: {
+					title: "Can't Fool Me",
+					description:
+						'Избегайте убийства любого пицца-пацана на уровне Oh Shit!.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.thatLevel, 'Уровень: Oh Shit!'),
+					],
+				},
 			},
 		},
 
