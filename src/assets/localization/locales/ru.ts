@@ -398,12 +398,80 @@ const russianLocalization: Localization = {
 					],
 				},
 
+				MAN_METEOR: {
+					title: 'Man Meteor',
+					description:
+						'Уничтожьте 5 летающих тарелок за один боди-слам на уровне Deep Dish Nine.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.space, 'Уровень: Deep Dish Nine'),
+					],
+				},
+
+				PRIMO_GOLFER: {
+					title: 'Primo Golfer',
+					description:
+						'Получите максимальные ранги во всех курсах на уровне Golf.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.golf, 'Уровень: Golf'),
+					],
+				},
+
+				NICE_SHOT: {
+					title: 'Nice Shot',
+					description:
+						'Убейте трех или более врагов за раз с помощью одного и того же удара на уровне Golf.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.golf, 'Уровень: Golf'),
+					],
+				},
+
+				HELPFUL_BURGER: {
+					title: 'Helpful Burger',
+					description:
+						'Заставьте противника-бургера забить мяч внутрь цели на уровне Golf.',
+					filters: [
+						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+						FilterFactory(FilterTypes.golf, 'Уровень: Golf'),
+					],
+				},
+
 				DENOISE: {
 					title: 'Denoise',
 					description: 'Победите Нойза без урона.',
 					filters: [
 						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
 						FilterFactory(FilterTypes.boss, 'Босс'),
+					],
+				},
+
+				PAN_FRIED: {
+					title: 'Pan Fried',
+					description: 'Найдите беконную комнату.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.pigCity, 'Уровень: The Pig City'),
+					],
+				},
+
+				STRIKE: {
+					title: 'Strike!',
+					description:
+						'Убейте трех или более врагов за раз при помощи единственного запуска шара-Кирпича на уровне The Pig City.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.pigCity, 'Уровень: The Pig City'),
+					],
+				},
+
+				SAY_OINK: {
+					title: 'Say Oink!',
+					description: 'Сделайте фото с каждым жителем на уровне The Pig City.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.pigCity, 'Уровень: The Pig City'),
 					],
 				},
 			},

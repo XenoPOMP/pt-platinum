@@ -1,6 +1,6 @@
-export interface Achievements {
+export interface Achievements extends Record<Uppercase<string>, string> {
 	// Levels
-	// Wolrd 1
+	// World 1
 	JOHN_GUTTED: string;
 	LETS_MAKE_THIS_QUICK: string;
 	PRIMATE_RAGE: string;
@@ -37,6 +37,15 @@ export interface Achievements {
 	BULLSEYE: string;
 	TURBO_TUNNEL: string;
 	BLAST_EM_ASTEROIDS: string;
+	MAN_METEOR: string;
+	PRIMO_GOLFER: string;
+	NICE_SHOT: string;
+	HELPFUL_BURGER: string;
+
+	// World 4
+	PAN_FRIED: string;
+	STRIKE: string;
+	SAY_OINK: string;
 
 	// Bosses
 	THE_CRITIC: string;
@@ -44,8 +53,10 @@ export interface Achievements {
 	DENOISE: string;
 
 	// Ranks
+	// Ranks - 1
 	S_RANK_1: string;
 	P_RANK_1: string;
+	// Ranks - 2
 	S_RANK_2: string;
 	P_RANK_2: string;
 }

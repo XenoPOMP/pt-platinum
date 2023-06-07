@@ -17,6 +17,7 @@
   }
 
   &.light {
+
     // App
     --app-back-primary: rgba(250, 250, 250, 1);
     --app-font-primary: rgba(0, 0, 0, 1);
@@ -78,8 +79,12 @@
     --bad-crust-font: rgba(252, 119, 185, 1);
     --bad-lario-back: rgba(88, 192, 0, 1);
     --bad-lario-font: rgba(200, 248, 168, 1);
-    --bad-boss-back: rgba(147, 19, 192, 1);
-    --bad-boss-font: rgba(96, 255, 0, 1);
+    --bad-boss-back: rgba(98, 97, 97, 1);
+    --bad-boss-font: rgba(193, 192, 192, 1);
+    --bad-golf-back: rgba(96, 208, 72, 1);
+    --bad-golf-font: rgba(255, 255, 255, 1);
+    --bad-pigcity-back: rgba(216, 104, 160, 1);
+    --bad-pigcity-font: rgba(78, 9, 43, 1);
 
     // Pagination
     --pagination-font: rgba(0, 102, 255, 1);

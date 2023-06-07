@@ -19,22 +19,29 @@ import denoise from '@media/images/achievement-pictures/webp/denoise.webp';
 import eruptionMan from '@media/images/achievement-pictures/webp/eruption_man.webp';
 import ghosted from '@media/images/achievement-pictures/webp/ghosted.webp';
 import goodEgg from '@media/images/achievement-pictures/webp/good_egg.webp';
+import helpfulBurger from '@media/images/achievement-pictures/webp/helpful_burger.webp';
 import johnGuttedWebp from '@media/images/achievement-pictures/webp/john-gutter.webp';
 import letsMakeThisQuickWebp from '@media/images/achievement-pictures/webp/lets-make-this.quick.webp';
 import lumberJack from '@media/images/achievement-pictures/webp/lumberjack.webp';
+import manMeteor from '@media/images/achievement-pictures/webp/man_meteor.webp';
+import niceShot from '@media/images/achievement-pictures/webp/nice_shot.webp';
 import noOneIsSafe from '@media/images/achievement-pictures/webp/no_one_is_safe.webp';
 import nonAlco from '@media/images/achievement-pictures/webp/non-alco.webp';
 import pRankOne from '@media/images/achievement-pictures/webp/p_rank_1.webp';
 import pRankTwo from '@media/images/achievement-pictures/webp/p_rank_2.webp';
+import panFried from '@media/images/achievement-pictures/webp/pan_fried.webp';
 import pretendGhost from '@media/images/achievement-pictures/webp/pretend_ghost.webp';
 import primateRageWebp from '@media/images/achievement-pictures/webp/primate-rage.webp';
+import primoGolf from '@media/images/achievement-pictures/webp/primo_golf.webp';
 import rainDance from '@media/images/achievement-pictures/webp/rain_dance.webp';
 import royalFlush from '@media/images/achievement-pictures/webp/royal_flush.webp';
 import sRankOne from '@media/images/achievement-pictures/webp/s_rank_1.webp';
 import sRankTwo from '@media/images/achievement-pictures/webp/s_rank_2.webp';
+import sayOink from '@media/images/achievement-pictures/webp/say_oink.webp';
 import shiningArmorWebp from '@media/images/achievement-pictures/webp/shining-armor.webp';
 import spherical from '@media/images/achievement-pictures/webp/spherical.webp';
 import spoonKnight from '@media/images/achievement-pictures/webp/spoonknight.webp';
+import strike from '@media/images/achievement-pictures/webp/strike.webp';
 import theCritic from '@media/images/achievement-pictures/webp/the_critic.webp';
 import theUgly from '@media/images/achievement-pictures/webp/the_ugly.webp';
 import thrillSeeker from '@media/images/achievement-pictures/webp/thrill_seeker.webp';
@@ -324,8 +331,57 @@ const initialState: AchievementMarks = {
 		},
 
 		{
+			name: 'MAN_METEOR',
+			pictureUrl: manMeteor,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'PRIMO_GOLFER',
+			pictureUrl: primoGolf,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'NICE_SHOT',
+			pictureUrl: niceShot,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'HELPFUL_BURGER',
+			pictureUrl: helpfulBurger,
+			shown: true,
+			completed: false,
+		},
+
+		{
 			name: 'DENOISE',
 			pictureUrl: denoise,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'PAN_FRIED',
+			pictureUrl: panFried,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'STRIKE',
+			pictureUrl: strike,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'SAY_OINK',
+			pictureUrl: sayOink,
 			shown: true,
 			completed: false,
 		},

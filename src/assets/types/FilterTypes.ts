@@ -15,4 +15,6 @@ export enum FilterTypes {
 	crust,
 	lario,
 	boss,
+	golf,
+	pigCity,
 }

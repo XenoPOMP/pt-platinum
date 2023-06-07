@@ -146,6 +146,20 @@ export class Filter {
 					border: this.var('--bad-boss-font'),
 				};
 			}
+
+			case FilterTypes.golf: {
+				return {
+					background: this.var('--bad-golf-back'),
+					border: this.var('--bad-golf-font'),
+				};
+			}
+
+			case FilterTypes.pigCity: {
+				return {
+					background: this.var('--bad-pigcity-back'),
+					border: this.var('--bad-pigcity-font'),
+				};
+			}
 		}
 	}
 }
