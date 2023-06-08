@@ -558,6 +558,53 @@ const russianLocalization: Localization = {
 						),
 					],
 				},
+
+				SEASON_S_GREETINGS: {
+					title: "Season's Greetings",
+					description:
+						'Убейте 5 фейковых Санта-Клаусов на уровне Refrigerator-Refrigerador-Freezerator.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(
+							FilterTypes.freezerator,
+							'Уровень: Refrigerator-Refrigerador-Freezerator'
+						),
+					],
+				},
+
+				ICE_CLIMBER: {
+					title: 'Ice Climber',
+					description:
+						'Закончите уровень Refrigerator-Refrigerador-Freezerator, ни разу не упав в пропасть.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(
+							FilterTypes.freezerator,
+							'Уровень: Refrigerator-Refrigerador-Freezerator'
+						),
+					],
+				},
+
+				FAKER: {
+					title: 'Faker',
+					description: 'Победите босса фейк-Пеппино без урона.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.boss, 'Босс'),
+					],
+				},
+
+				S_RANK_4: {
+					title: 'S Ranked #4',
+					description: 'Пройдите все уровни из мира 4 на S-ранк.',
+					filters: [FilterFactory(FilterTypes.worldFour, 'Мир 4')],
+				},
+
+				P_RANK_4: {
+					title: 'P Ranked #4',
+					description: 'Пройдите все уровни из мира 4 на P-ранк.',
+					filters: [FilterFactory(FilterTypes.worldFour, 'Мир 4')],
+				},
 			},
 		},
 

@@ -18,11 +18,13 @@ import delicacy from '@media/images/achievement-pictures/webp/delicacy.webp';
 import demoExpert from '@media/images/achievement-pictures/webp/demo_expert.webp';
 import denoise from '@media/images/achievement-pictures/webp/denoise.webp';
 import eruptionMan from '@media/images/achievement-pictures/webp/eruption_man.webp';
+import faker from '@media/images/achievement-pictures/webp/faker.webp';
 import foodClan from '@media/images/achievement-pictures/webp/food_clan.webp';
 import frozenNuggets from '@media/images/achievement-pictures/webp/frozen_nuggets.webp';
 import ghosted from '@media/images/achievement-pictures/webp/ghosted.webp';
 import goodEgg from '@media/images/achievement-pictures/webp/good_egg.webp';
 import helpfulBurger from '@media/images/achievement-pictures/webp/helpful_burger.webp';
+import iceClimber from '@media/images/achievement-pictures/webp/ice_climber.webp';
 import johnGuttedWebp from '@media/images/achievement-pictures/webp/john-gutter.webp';
 import letsMakeThisQuickWebp from '@media/images/achievement-pictures/webp/lets-make-this.quick.webp';
 import lumberJack from '@media/images/achievement-pictures/webp/lumberjack.webp';
@@ -33,6 +35,7 @@ import nonAlco from '@media/images/achievement-pictures/webp/non-alco.webp';
 import pRankOne from '@media/images/achievement-pictures/webp/p_rank_1.webp';
 import pRankTwo from '@media/images/achievement-pictures/webp/p_rank_2.webp';
 import pRankThree from '@media/images/achievement-pictures/webp/p_rank_3.webp';
+import pRankFour from '@media/images/achievement-pictures/webp/p_ranked_4.webp';
 import panFried from '@media/images/achievement-pictures/webp/pan_fried.webp';
 import pennyPincher from '@media/images/achievement-pictures/webp/penny_pincher.webp';
 import pretendGhost from '@media/images/achievement-pictures/webp/pretend_ghost.webp';
@@ -43,7 +46,9 @@ import royalFlush from '@media/images/achievement-pictures/webp/royal_flush.webp
 import sRankOne from '@media/images/achievement-pictures/webp/s_rank_1.webp';
 import sRankTwo from '@media/images/achievement-pictures/webp/s_rank_2.webp';
 import sRankThree from '@media/images/achievement-pictures/webp/s_rank_3.webp';
+import sRankFour from '@media/images/achievement-pictures/webp/s_ranked_4.webp';
 import sayOink from '@media/images/achievement-pictures/webp/say_oink.webp';
+import seasonGreetings from '@media/images/achievement-pictures/webp/season_s_greetings.webp';
 import shiningArmorWebp from '@media/images/achievement-pictures/webp/shining-armor.webp';
 import spherical from '@media/images/achievement-pictures/webp/spherical.webp';
 import spoonKnight from '@media/images/achievement-pictures/webp/spoonknight.webp';
@@ -454,6 +459,41 @@ const initialState: AchievementMarks = {
 		{
 			name: 'FROZEN_NUGGETS',
 			pictureUrl: frozenNuggets,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'SEASON_S_GREETINGS',
+			pictureUrl: seasonGreetings,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'ICE_CLIMBER',
+			pictureUrl: iceClimber,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'FAKER',
+			pictureUrl: faker,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'S_RANK_4',
+			pictureUrl: sRankFour,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'P_RANK_4',
+			pictureUrl: pRankFour,
 			shown: true,
 			completed: false,
 		},
