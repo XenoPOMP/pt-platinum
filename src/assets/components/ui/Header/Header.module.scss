@@ -13,6 +13,10 @@ header.appHeader {
   background: var(--app-back-primary);
   z-index: 10000;
 
+  @media (max-width: 534px) {
+    font-size: 16px;
+  }
+
   section {
     padding: globalPadding(.25) 0;
   }
@@ -40,6 +44,12 @@ header.appHeader {
         }
       }
     }
+
+    .settingsButton {
+      @media (max-width: 534px) {
+        height: globalPadding(1.6) !important;
+      }
+    }
   }
 
   section.taskBar {
@@ -51,6 +61,14 @@ header.appHeader {
     font-size: 1em; // 1em = 20px
     container-type: inline-size;
     gap: globalPadding(.5);
+    background: var(--app-back-primary);
+    z-index: 10000;
+
+    @media (max-width: 883px) {
+      .progressBar {
+        display: none;
+      }
+    }
 
     .progressBar {
       // width: min(9.3em, 25%);
@@ -91,6 +109,11 @@ header.appHeader {
         gap: .5em;
         background: var(--button-back);
         border-radius: var(--ui-border-radius);
+
+        @media (max-width: 695px) {
+          display: grid;
+          grid-template-columns: 1em 1fr;
+        }
 
         svg {
           width: 1em;
