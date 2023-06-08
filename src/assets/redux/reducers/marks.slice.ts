@@ -217,7 +217,10 @@ const marksSlice = createSlice({
 				 * These keys are excluded from
 				 * loading from local storage.
 				 */
-				const exclusionList: (keyof typeof defaultState)[] = [];
+				const exclusionList: (keyof typeof defaultState)[] = [
+					'pictureUrl',
+					'shown',
+				];
 
 				/** Mark load with exclusions. */
 				let output = { ...loaded };
@@ -248,9 +251,21 @@ const marksSlice = createSlice({
 				return achieve;
 			});
 		},
+
+		changeShown(
+			state,
+			action: ReduxAction<{
+				name: keyof Achievements;
+				shown: AchievementMark['shown'];
+			}>
+		) {
+			state.achievements.filter(
+				mark => mark.name === action.payload.name
+			)[0].shown = action.payload.shown;
+		},
 	},
 });
 
 export default marksSlice.reducer;
-export const { changeCompletion, loadMarks } = marksSlice.actions;
+export const { changeCompletion, loadMarks, changeShown } = marksSlice.actions;
 export const initialAchievementMarks = marksSlice.getInitialState();

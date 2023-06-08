@@ -1,5 +1,6 @@
 import { AppSettings } from '@redux/reducers/appSettingsSlice';
 import { AchievementMarks } from '@redux/reducers/marks.slice';
+import { TaskbarOptions } from '@redux/reducers/taskbar.slice';
 
 /**
  * Redux store interface.
@@ -7,6 +8,7 @@ import { AchievementMarks } from '@redux/reducers/marks.slice';
 interface IStore {
 	appSettings: AppSettings;
 	marks: AchievementMarks;
+	taskbar: TaskbarOptions;
 }
 
 /**

@@ -26,6 +26,13 @@ header.appHeader {
 
     justify-content: space-between;
 
+    @media (max-width: 534px) {
+      height: globalPadding(1.6);
+      align-items: center;
+      margin-top: globalPadding(.25);
+      padding: 0;
+    }
+
     .logotype {
       @extend %flexCenter;
 

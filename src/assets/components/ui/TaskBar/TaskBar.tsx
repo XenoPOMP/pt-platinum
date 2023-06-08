@@ -1,16 +1,22 @@
 import cn from 'classnames';
 import { CSSProperties, FC } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { changeSearchString } from '@redux/reducers/taskbar.slice';
 
 import Button from '@ui/Button/Button';
 import styles from '@ui/Header/Header.module.scss';
 
 import useLocalization from '@hooks/useLocalization';
 import { useProgress } from '@hooks/useProgress';
+import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
 
 import type { TaskBarProps } from './TaskBar.props';
 
 const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 	const { progress } = useProgress();
+	const { search } = useTaskbarOptions();
+	const dispatch = useDispatch();
 	const loc = useLocalization();
 
 	return (
@@ -44,6 +50,10 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 						<input
 							className={cn(styles.searchBar)}
 							placeholder={loc.header.taskbar.searchPlaceholder}
+							value={search}
+							onChange={ev => {
+								dispatch(changeSearchString(ev.target.value));
+							}}
 						/>
 					</label>
 
