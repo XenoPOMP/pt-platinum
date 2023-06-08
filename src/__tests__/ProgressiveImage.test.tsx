@@ -14,7 +14,6 @@ describe.skipIf(skipTestCondition('FRONTEND'))('Progressive image', () => {
 				<ProgressiveImage
 					loaderColorScheme={{
 						backgroundColor: 'transparent',
-						loaderColor: 'black',
 					}}
 					src={mockImage}
 				/>

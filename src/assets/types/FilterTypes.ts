@@ -18,4 +18,6 @@ export enum FilterTypes {
 	golf,
 	pigCity,
 	thatLevel,
+	factory,
+	freezerator,
 }

@@ -167,6 +167,20 @@ export class Filter {
 					border: this.var('--bad-that-level-font'),
 				};
 			}
+
+			case FilterTypes.factory: {
+				return {
+					background: this.var('--bad-factory-back'),
+					border: this.var('--bad-factory-font'),
+				};
+			}
+
+			case FilterTypes.freezerator: {
+				return {
+					background: this.var('--bad-freezerator-back'),
+					border: this.var('--bad-freezerator-font'),
+				};
+			}
 		}
 	}
 }

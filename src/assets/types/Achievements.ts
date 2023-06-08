@@ -47,6 +47,12 @@ export interface Achievements extends Record<Uppercase<string>, string> {
 	STRIKE: string;
 	SAY_OINK: string;
 	CANT_FOOL_ME: string;
+	FOOD_CLAN: string;
+	PENNY_PINCHER: string;
+	UNFLATTENING: string;
+	WHOOP_THIS: string;
+	THERE_CAN_BE_ONLY_ONE: string;
+	FROZEN_NUGGETS: string;
 
 	// Bosses
 	THE_CRITIC: string;
@@ -60,4 +66,7 @@ export interface Achievements extends Record<Uppercase<string>, string> {
 	// Ranks - 2
 	S_RANK_2: string;
 	P_RANK_2: string;
+	// Ranks - 3
+	S_RANK_3: string;
+	P_RANK_3: string;
 }

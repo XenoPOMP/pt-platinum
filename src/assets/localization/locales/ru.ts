@@ -447,6 +447,18 @@ const russianLocalization: Localization = {
 					],
 				},
 
+				S_RANK_3: {
+					title: 'S Ranked #3',
+					description: 'Пройдите все уровни из мира 3 на S-ранк.',
+					filters: [FilterFactory(FilterTypes.worldThree, 'Мир 3')],
+				},
+
+				P_RANK_3: {
+					title: 'P Ranked #3',
+					description: 'Пройдите все уровни из мира 3 на P-ранк.',
+					filters: [FilterFactory(FilterTypes.worldThree, 'Мир 3')],
+				},
+
 				PAN_FRIED: {
 					title: 'Pan Fried',
 					description: 'Найдите беконную комнату.',
@@ -482,6 +494,68 @@ const russianLocalization: Localization = {
 					filters: [
 						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
 						FilterFactory(FilterTypes.thatLevel, 'Уровень: Oh Shit!'),
+					],
+				},
+
+				FOOD_CLAN: {
+					title: 'Food Clan',
+					description: 'Убейте 10 ниндзя парированием на уровне Oh Shit!.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.thatLevel, 'Уровень: Oh Shit!'),
+					],
+				},
+
+				PENNY_PINCHER: {
+					title: 'Penny Pincher',
+					description:
+						'Избегайте быть захваченным мистером Пинчем во время побега на уровне Oh Shit!.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.thatLevel, 'Уровень: Oh Shit!'),
+					],
+				},
+
+				UNFLATTENING: {
+					title: 'Unflattening',
+					description:
+						'Уберите форму коробки при помощи жрецов (хотя бы раз на каждого) на уровне Peppibot Factory.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.factory, 'Уровень: Peppibot Factory'),
+					],
+				},
+
+				WHOOP_THIS: {
+					title: 'Whoop This!',
+					description:
+						'Пройдите первый секрет на уровне Peppibot Factory без урона.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.factory, 'Уровень: Peppibot Factory'),
+					],
+				},
+
+				THERE_CAN_BE_ONLY_ONE: {
+					title: 'There Can Be Only One',
+					description:
+						'Уничтожьте каждого робота-Пеппино на уровне Peppibot Factory.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(FilterTypes.factory, 'Уровень: Peppibot Factory'),
+					],
+				},
+
+				FROZEN_NUGGETS: {
+					title: 'Frozen Nuggets',
+					description:
+						'Освободите всех замороженных птиц на уровне Refrigerator-Refrigerador-Freezerator.',
+					filters: [
+						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+						FilterFactory(
+							FilterTypes.freezerator,
+							'Уровень: Refrigerator-Refrigerador-Freezerator'
+						),
 					],
 				},
 			},

@@ -18,6 +18,8 @@ import delicacy from '@media/images/achievement-pictures/webp/delicacy.webp';
 import demoExpert from '@media/images/achievement-pictures/webp/demo_expert.webp';
 import denoise from '@media/images/achievement-pictures/webp/denoise.webp';
 import eruptionMan from '@media/images/achievement-pictures/webp/eruption_man.webp';
+import foodClan from '@media/images/achievement-pictures/webp/food_clan.webp';
+import frozenNuggets from '@media/images/achievement-pictures/webp/frozen_nuggets.webp';
 import ghosted from '@media/images/achievement-pictures/webp/ghosted.webp';
 import goodEgg from '@media/images/achievement-pictures/webp/good_egg.webp';
 import helpfulBurger from '@media/images/achievement-pictures/webp/helpful_burger.webp';
@@ -30,7 +32,9 @@ import noOneIsSafe from '@media/images/achievement-pictures/webp/no_one_is_safe.
 import nonAlco from '@media/images/achievement-pictures/webp/non-alco.webp';
 import pRankOne from '@media/images/achievement-pictures/webp/p_rank_1.webp';
 import pRankTwo from '@media/images/achievement-pictures/webp/p_rank_2.webp';
+import pRankThree from '@media/images/achievement-pictures/webp/p_rank_3.webp';
 import panFried from '@media/images/achievement-pictures/webp/pan_fried.webp';
+import pennyPincher from '@media/images/achievement-pictures/webp/penny_pincher.webp';
 import pretendGhost from '@media/images/achievement-pictures/webp/pretend_ghost.webp';
 import primateRageWebp from '@media/images/achievement-pictures/webp/primate-rage.webp';
 import primoGolf from '@media/images/achievement-pictures/webp/primo_golf.webp';
@@ -38,6 +42,7 @@ import rainDance from '@media/images/achievement-pictures/webp/rain_dance.webp';
 import royalFlush from '@media/images/achievement-pictures/webp/royal_flush.webp';
 import sRankOne from '@media/images/achievement-pictures/webp/s_rank_1.webp';
 import sRankTwo from '@media/images/achievement-pictures/webp/s_rank_2.webp';
+import sRankThree from '@media/images/achievement-pictures/webp/s_rank_3.webp';
 import sayOink from '@media/images/achievement-pictures/webp/say_oink.webp';
 import shiningArmorWebp from '@media/images/achievement-pictures/webp/shining-armor.webp';
 import spherical from '@media/images/achievement-pictures/webp/spherical.webp';
@@ -45,11 +50,14 @@ import spoonKnight from '@media/images/achievement-pictures/webp/spoonknight.web
 import strike from '@media/images/achievement-pictures/webp/strike.webp';
 import theCritic from '@media/images/achievement-pictures/webp/the_critic.webp';
 import theUgly from '@media/images/achievement-pictures/webp/the_ugly.webp';
+import thereCanBeOnlyOne from '@media/images/achievement-pictures/webp/there_can_be_only_one.webp';
 import thrillSeeker from '@media/images/achievement-pictures/webp/thrill_seeker.webp';
 import turboTunnel from '@media/images/achievement-pictures/webp/turbo_tunnel.webp';
+import unflattering from '@media/images/achievement-pictures/webp/unflattering.webp';
 import unslicedMan from '@media/images/achievement-pictures/webp/unsliced_man.webp';
 import veryHotSauce from '@media/images/achievement-pictures/webp/very_very_hot_sauce.webp';
 import volleyBomb from '@media/images/achievement-pictures/webp/volleybomb.webp';
+import whoopThis from '@media/images/achievement-pictures/webp/whoop_this.webp';
 import xWebp from '@media/images/achievement-pictures/webp/x.webp';
 
 export type AchievementMark = {
@@ -367,6 +375,20 @@ const initialState: AchievementMarks = {
 		},
 
 		{
+			name: 'S_RANK_3',
+			pictureUrl: sRankThree,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'P_RANK_3',
+			pictureUrl: pRankThree,
+			shown: true,
+			completed: false,
+		},
+
+		{
 			name: 'PAN_FRIED',
 			pictureUrl: panFried,
 			shown: true,
@@ -390,6 +412,48 @@ const initialState: AchievementMarks = {
 		{
 			name: 'CANT_FOOL_ME',
 			pictureUrl: cantFoolMe,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'FOOD_CLAN',
+			pictureUrl: foodClan,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'PENNY_PINCHER',
+			pictureUrl: pennyPincher,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'UNFLATTENING',
+			pictureUrl: unflattering,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'WHOOP_THIS',
+			pictureUrl: whoopThis,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'THERE_CAN_BE_ONLY_ONE',
+			pictureUrl: thereCanBeOnlyOne,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'FROZEN_NUGGETS',
+			pictureUrl: frozenNuggets,
 			shown: true,
 			completed: false,
 		},
