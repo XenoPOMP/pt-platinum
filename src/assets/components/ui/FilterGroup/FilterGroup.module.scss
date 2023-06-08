@@ -10,6 +10,10 @@
   align-items: center;
   height: 100%;
 
+  @media (max-width: 753px) {
+    display: none;
+  }
+
   .filter {
     @extend %medium;
     @extend %notSelectable;

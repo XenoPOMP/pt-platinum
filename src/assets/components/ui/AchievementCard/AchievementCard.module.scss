@@ -16,8 +16,8 @@
       --avatar-width: 4.5em;
     }
 
-    @media (max-width: 753px) {
-      // --avatar-width: 3em;
+    @media (max-width: 618px) {
+        --avatar-width: 4em;
     }
 
     .avatarBox {
@@ -37,6 +37,10 @@
       display: flex;
       flex-direction: column;
       gap: .9em;
+
+      @media (max-width: 753px) {
+          gap: .5em;
+      }
 
       .title {
         display: flex;

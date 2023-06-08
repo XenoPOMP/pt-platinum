@@ -552,10 +552,7 @@ const russianLocalization: Localization = {
 						'Освободите всех замороженных птиц на уровне Refrigerator-Refrigerador-Freezerator.',
 					filters: [
 						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
-						FilterFactory(
-							FilterTypes.freezerator,
-							'Уровень: Refrigerator-Refrigerador-Freezerator'
-						),
+						FilterFactory(FilterTypes.freezerator, 'Уровень: Refrigerator'),
 					],
 				},
 
@@ -565,10 +562,7 @@ const russianLocalization: Localization = {
 						'Убейте 5 фейковых Санта-Клаусов на уровне Refrigerator-Refrigerador-Freezerator.',
 					filters: [
 						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
-						FilterFactory(
-							FilterTypes.freezerator,
-							'Уровень: Refrigerator-Refrigerador-Freezerator'
-						),
+						FilterFactory(FilterTypes.freezerator, 'Уровень: Refrigerator'),
 					],
 				},
 
@@ -578,10 +572,7 @@ const russianLocalization: Localization = {
 						'Закончите уровень Refrigerator-Refrigerador-Freezerator, ни разу не упав в пропасть.',
 					filters: [
 						FilterFactory(FilterTypes.worldFour, 'Мир 4'),
-						FilterFactory(
-							FilterTypes.freezerator,
-							'Уровень: Refrigerator-Refrigerador-Freezerator'
-						),
+						FilterFactory(FilterTypes.freezerator, 'Уровень: Refrigerator'),
 					],
 				},
 
