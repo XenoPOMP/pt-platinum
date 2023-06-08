@@ -58,12 +58,21 @@ export interface Achievements extends Record<Uppercase<string>, string> {
 
 	// World 5 - Last
 	CROSS_TO_BARE: string;
+	HAUNTED_PLAYGROUND: string;
+	SKULLSPLITTER: string;
+	AND_THIS_IS_MY_GUN_ON_A_STICK: string;
+	LET_THEM_SLEEP: string;
+	JUMPSPARED: string;
+	DECORATED_VETERAN: string;
+	SHARPSHOOTER: string;
+	TRIP_TO_THE_WARZONE: string;
 
 	// Bosses
 	THE_CRITIC: string;
 	THE_UGLY: string;
 	DENOISE: string;
 	FAKER: string;
+	FACE_OFF: string;
 
 	// Ranks
 	// Ranks - 1
@@ -78,4 +87,7 @@ export interface Achievements extends Record<Uppercase<string>, string> {
 	// Ranks - 4
 	S_RANK_4: string;
 	P_RANK_4: string;
+	// Ranks - 5
+	S_RANK_5: string;
+	P_RANK_5: string;
 }

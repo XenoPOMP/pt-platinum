@@ -8,4 +8,10 @@
 
   // UI Sizes
   --ui-border-radius: 7px;
+
+  $mobileBreakpoint: 753px;
+
+  @media (max-width: 753px) {
+      // --global-padding: 30px;
+  }
 }

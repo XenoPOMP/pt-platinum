@@ -6,13 +6,25 @@
   gap: 1em;
 
   &.rowView {
+    --avatar-width: 6em;
+
     width: 100%;
+    display: grid;
+    grid-template-columns: var(--avatar-width) 1fr;
+
+    @media (max-width: 1062px) {
+      --avatar-width: 4.5em;
+    }
+
+    @media (max-width: 753px) {
+      // --avatar-width: 3em;
+    }
 
     .avatarBox {
       @extend %flexCenter;
       @extend %notSelectable;
 
-      width: 6em;
+      // width: 6em;
       aspect-ratio: 1;
       position: relative;
 

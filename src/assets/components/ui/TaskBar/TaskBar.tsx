@@ -10,7 +10,7 @@ import { useProgress } from '@hooks/useProgress';
 import type { TaskBarProps } from './TaskBar.props';
 
 const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
-	const { progress, total } = useProgress();
+	const { progress } = useProgress();
 	const loc = useLocalization();
 
 	return (
@@ -24,7 +24,7 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 						} as CSSProperties
 					}
 				></div>
-				{progress}% ({total})
+				{progress}%
 			</div>
 
 			{rightControl && (

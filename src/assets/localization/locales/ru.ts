@@ -614,6 +614,104 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.pizzaScare, 'Уровень: Pizzascare'),
 					],
 				},
+
+				HAUNTED_PLAYGROUND: {
+					title: 'Haunted Playground',
+					description:
+						'Не получайте урон от ловушек Короля-Призрака на уровне Pizzascare.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.pizzaScare, 'Уровень: Pizzascare'),
+					],
+				},
+
+				SKULLSPLITTER: {
+					title: 'Skullsplitter',
+					description: 'Уничтожьте каждый блок скелета на уровне Pizzascare.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.pizzaScare, 'Уровень: Pizzascare'),
+					],
+				},
+
+				AND_THIS_IS_MY_GUN_ON_A_STICK: {
+					title: 'And This... Is My Gun On A Stick!',
+					description:
+						'Убейте всех преследующих вас монстров во время побега на уровне Don`t Make A Sound.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.fnaf, 'Уровень: Don`t Make A Sound'),
+					],
+				},
+
+				LET_THEM_SLEEP: {
+					title: 'Let Them Sleep',
+					description:
+						'Активируйте тревогу меньше чем 6 раз до побега на уровне Don`t Make A Sound.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.fnaf, 'Уровень: Don`t Make A Sound'),
+					],
+				},
+
+				JUMPSPARED: {
+					title: 'Jumpspared',
+					description: 'Избегайте скримеров на уровне Don`t Make A Sound.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.fnaf, 'Уровень: Don`t Make A Sound'),
+					],
+				},
+
+				DECORATED_VETERAN: {
+					title: 'Decorated Veteran',
+					description: 'Получите урон не более трех раз на уровне WAR.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.war, 'Уровень: WAR'),
+					],
+				},
+
+				SHARPSHOOTER: {
+					title: 'Sharpshooter',
+					description:
+						'Не промазывайте выстрелами более трех раз на уровне WAR.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.war, 'Уровень: WAR'),
+					],
+				},
+
+				TRIP_TO_THE_WARZONE: {
+					title: 'Trip to the Warzone',
+					description:
+						'Закончите уровень WAR так, чтобы у вас осталось времени больше минуты.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.war, 'Уровень: WAR'),
+					],
+				},
+
+				FACE_OFF: {
+					title: 'Face Off',
+					description: 'Пройдите Пицца-фейса без урона.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.boss, 'Босс'),
+					],
+				},
+
+				S_RANK_5: {
+					title: 'S Ranked #5',
+					description: 'Пройдите все уровни из мира 5 на S-ранк.',
+					filters: [FilterFactory(FilterTypes.worldFive, 'Мир 5')],
+				},
+
+				P_RANK_5: {
+					title: 'P Ranked #5',
+					description: 'Пройдите все уровни из мира 5 на P-ранк.',
+					filters: [FilterFactory(FilterTypes.worldFive, 'Мир 5')],
+				},
 			},
 		},
 
