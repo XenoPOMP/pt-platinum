@@ -605,6 +605,15 @@ const russianLocalization: Localization = {
 					description: 'Пройдите все уровни из мира 4 на P-ранк.',
 					filters: [FilterFactory(FilterTypes.worldFour, 'Мир 4')],
 				},
+
+				CROSS_TO_BARE: {
+					title: 'Cross To Bare',
+					description: 'Убейте 30 призраков на уровне Pizzascare.',
+					filters: [
+						FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+						FilterFactory(FilterTypes.pizzaScare, 'Уровень: Pizzascare'),
+					],
+				},
 			},
 		},
 

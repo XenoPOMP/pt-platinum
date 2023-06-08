@@ -56,6 +56,9 @@ export interface Achievements extends Record<Uppercase<string>, string> {
 	SEASON_S_GREETINGS: string;
 	ICE_CLIMBER: string;
 
+	// World 5 - Last
+	CROSS_TO_BARE: string;
+
 	// Bosses
 	THE_CRITIC: string;
 	THE_UGLY: string;

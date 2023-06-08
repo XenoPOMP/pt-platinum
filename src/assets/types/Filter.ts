@@ -181,6 +181,27 @@ export class Filter {
 					border: this.var('--bad-freezerator-font'),
 				};
 			}
+
+			case FilterTypes.pizzaScare: {
+				return {
+					background: this.var('--bad-pizzascare-back'),
+					border: this.var('--bad-pizzascare-font'),
+				};
+			}
+
+			case FilterTypes.fnaf: {
+				return {
+					background: this.var('--bad-fnaf-back'),
+					border: this.var('--bad-fnaf-font'),
+				};
+			}
+
+			case FilterTypes.war: {
+				return {
+					background: this.var('--bad-war-back'),
+					border: this.var('--bad-war-font'),
+				};
+			}
 		}
 	}
 }

@@ -20,4 +20,7 @@ export enum FilterTypes {
 	thatLevel,
 	factory,
 	freezerator,
+	pizzaScare,
+	fnaf,
+	war,
 }

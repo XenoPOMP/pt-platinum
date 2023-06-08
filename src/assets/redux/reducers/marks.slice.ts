@@ -13,6 +13,7 @@ import blowBack from '@media/images/achievement-pictures/webp/blowback.webp';
 import bullsEye from '@media/images/achievement-pictures/webp/bullseye.webp';
 import cantFoolMe from '@media/images/achievement-pictures/webp/cant_fool_me.webp';
 import clerkAchievement from '@media/images/achievement-pictures/webp/clerk_achievement.webp';
+import crossToBare from '@media/images/achievement-pictures/webp/cross_to_bare.webp';
 import cubeMenace from '@media/images/achievement-pictures/webp/cube_menace.webp';
 import delicacy from '@media/images/achievement-pictures/webp/delicacy.webp';
 import demoExpert from '@media/images/achievement-pictures/webp/demo_expert.webp';
@@ -494,6 +495,13 @@ const initialState: AchievementMarks = {
 		{
 			name: 'P_RANK_4',
 			pictureUrl: pRankFour,
+			shown: true,
+			completed: false,
+		},
+
+		{
+			name: 'CROSS_TO_BARE',
+			pictureUrl: crossToBare,
 			shown: true,
 			completed: false,
 		},
