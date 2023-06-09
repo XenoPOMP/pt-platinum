@@ -28,6 +28,9 @@ const russianLocalization: Localization = {
 	header: {
 		taskbar: {
 			searchPlaceholder: 'Поиск...',
+			options: {
+				showCompleted: 'Показывать выполненные достижения',
+			},
 		},
 	},
 

@@ -1,0 +1,15 @@
+%scrollable {
+  $scrollbarWidth: 7px;
+
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: $scrollbarWidth;
+    height: $scrollbarWidth;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--button-font-inactive);
+    border-radius: calc($scrollbarWidth / 2);
+  }
+}

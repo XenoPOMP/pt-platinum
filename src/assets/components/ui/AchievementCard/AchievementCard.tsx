@@ -21,7 +21,7 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	const loc = useLocalization();
 	const { title, description, filters } = loc.pages.main.achievements[name];
 
-	const { search } = useTaskbarOptions();
+	const { search, showCompleted } = useTaskbarOptions();
 	const dispatch = useDispatch();
 
 	const showCard = (): void => {
@@ -42,16 +42,20 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 		);
 	};
 
+	// Hide or show card
 	useEffect(() => {
 		const pattern = new RegExp(`${search}`, 'gi');
 
-		if (pattern.test(title)) {
+		const showCondition =
+			pattern.test(title) && completed ? showCompleted : true;
+
+		if (showCondition) {
 			showCard();
 			return;
 		}
 
 		hideCard();
-	}, [search]);
+	}, [search, showCompleted, completed]);
 
 	return (
 		<>

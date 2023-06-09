@@ -1,12 +1,21 @@
+import { useOutside } from '@pacote/react-use-outside';
 import cn from 'classnames';
-import { CSSProperties, FC } from 'react';
+import { motion } from 'framer-motion';
+import { CSSProperties, FC, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { changeSearchString } from '@redux/reducers/taskbar.slice';
+import Portal from '@components/Portal/Portal';
+
+import {
+	changeSearchString,
+	changeShowCompletedRule,
+} from '@redux/reducers/taskbar.slice';
 
 import Button from '@ui/Button/Button';
+import CheckBox from '@ui/CheckBox/CheckBox';
 import styles from '@ui/Header/Header.module.scss';
 
+import useBoolean from '@hooks/useBoolean';
 import useLocalization from '@hooks/useLocalization';
 import { useProgress } from '@hooks/useProgress';
 import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
@@ -15,9 +24,15 @@ import type { TaskBarProps } from './TaskBar.props';
 
 const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 	const { progress } = useProgress();
-	const { search } = useTaskbarOptions();
+	const { search, showCompleted } = useTaskbarOptions();
 	const dispatch = useDispatch();
 	const loc = useLocalization();
+
+	const [optionsShown, toggleOptions, setOptionsVisibility] = useBoolean(false);
+	const [toggleBuffer, setToggleBuffer] = useState<boolean | null>(null);
+	const optionsRef = useOutside<HTMLDivElement>('click', () => {
+		setOptionsVisibility(false);
+	});
 
 	return (
 		<section className={cn(styles.taskBar)}>
@@ -34,7 +49,12 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 			</div>
 
 			{rightControl && (
-				<div className={cn(styles.rightControls)}>
+				<div
+					className={cn(
+						styles.rightControls,
+						optionsShown && styles.optionsShown
+					)}
+				>
 					<label className={cn(styles.inputPlaceholder)}>
 						<svg
 							viewBox='0 0 20 20'
@@ -57,7 +77,22 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 						/>
 					</label>
 
-					<Button square fullHeight className={cn(styles.button)}>
+					<Button
+						square
+						fullHeight
+						className={cn(styles.optionsButton)}
+						onClick={() => {
+							const newValue = !optionsShown;
+
+							if (toggleBuffer === null) {
+								setOptionsVisibility(newValue);
+								setToggleBuffer(newValue);
+								return;
+							}
+
+							setToggleBuffer(null);
+						}}
+					>
 						<svg
 							width='32'
 							height='32'
@@ -71,6 +106,34 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 							/>
 						</svg>
 					</Button>
+
+					<motion.div
+						initial={{
+							opacity: optionsShown ? 1 : 0,
+							pointerEvents: optionsShown ? 'all' : 'none',
+						}}
+						animate={{
+							opacity: optionsShown ? 1 : 0,
+							pointerEvents: optionsShown ? 'all' : 'none',
+						}}
+						transition={{
+							duration: 0.25,
+							ease: optionsShown ? 'easeOut' : 'easeIn',
+						}}
+						ref={optionsRef}
+						className={cn(styles.settingsPopup)}
+					>
+						<div className={cn(styles.item)}>
+							<CheckBox
+								checked={showCompleted}
+								onClick={state => {
+									dispatch(changeShowCompletedRule(state));
+								}}
+							>
+								{loc.header.taskbar.options.showCompleted}
+							</CheckBox>
+						</div>
+					</motion.div>
 				</div>
 			)}
 		</section>
