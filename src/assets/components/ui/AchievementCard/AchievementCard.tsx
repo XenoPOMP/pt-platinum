@@ -3,7 +3,7 @@ import { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { changeShown } from '@redux/reducers/marks.slice';
+import { changeCompletion, changeShown } from '@redux/reducers/marks.slice';
 
 import CompletionBadge from '@ui/CompletionBadge/CompletionBadge';
 import FilterGroup from '@ui/FilterGroup/FilterGroup';
@@ -56,11 +56,18 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	return (
 		<>
 			{shown && (
-				<Link
-					to={`/articles/${name}`}
-					className={cn(styles.card, styles.rowView)}
-				>
-					<div className={cn(styles.avatarBox)}>
+				<div className={cn(styles.card, styles.rowView)}>
+					<div
+						className={cn(styles.avatarBox)}
+						onClick={() => {
+							dispatch(
+								changeCompletion({
+									name,
+									value: !completed,
+								})
+							);
+						}}
+					>
 						<ProgressiveImage
 							loaderColorScheme={{
 								backgroundColor: 'transparent',
@@ -72,18 +79,20 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 						<CompletionBadge completed={completed} />
 					</div>
 
-					<section>
-						<div className={cn(styles.title)}>
-							<h3>{title}</h3>
+					<Link to={`/articles/${name}`}>
+						<section>
+							<div className={cn(styles.title)}>
+								<h3>{title}</h3>
 
-							<div className={cn(styles.filterGroup)}>
-								<FilterGroup filters={filters} />
+								<div className={cn(styles.filterGroup)}>
+									<FilterGroup filters={filters} />
+								</div>
 							</div>
-						</div>
 
-						<i className={cn(styles.desc)}>{description}</i>
-					</section>
-				</Link>
+							<i className={cn(styles.desc)}>{description}</i>
+						</section>
+					</Link>
+				</div>
 			)}
 		</>
 	);
