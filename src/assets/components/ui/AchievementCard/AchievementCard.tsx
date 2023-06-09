@@ -45,11 +45,13 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	// Hide or show card
 	useEffect(() => {
 		const pattern = new RegExp(`${search}`, 'gi');
+		let showCardCondition = false;
 
-		const showCondition =
-			pattern.test(title) && completed ? showCompleted : true;
+		if ((completed && showCompleted) || !completed) {
+			showCardCondition = true;
+		}
 
-		if (showCondition) {
+		if (pattern.test(title) && showCardCondition) {
 			showCard();
 			return;
 		}

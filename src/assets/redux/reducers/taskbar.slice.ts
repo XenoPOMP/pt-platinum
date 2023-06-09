@@ -16,6 +16,16 @@ const taskbarSlice = createSlice({
 	name: 'taskbar',
 	initialState,
 	reducers: {
+		/**
+		 * Load taskbar options from cookie to redux.
+		 */
+		loadTaskbarOptions(
+			state,
+			action: ReduxAction<Pick<TaskbarOptions, 'showCompleted'>>
+		) {
+			state.showCompleted = action.payload.showCompleted;
+		},
+
 		/** Allows to change search string. */
 		changeSearchString(state, action: ReduxAction<TaskbarOptions['search']>) {
 			state.search = action.payload;
@@ -32,5 +42,9 @@ const taskbarSlice = createSlice({
 });
 
 export default taskbarSlice.reducer;
-export const { changeSearchString, changeShowCompletedRule } =
-	taskbarSlice.actions;
+export const {
+	changeSearchString,
+	changeShowCompletedRule,
+	loadTaskbarOptions,
+} = taskbarSlice.actions;
+export const initialTaskbarOptions = taskbarSlice.getInitialState();

@@ -4,6 +4,7 @@ import BodyClassnameProvider from '@providers/BodyClassnameProvider/BodyClassnam
 import MarkSaver from '@providers/MarkSaver/MarkSaver';
 import { ProviderProps } from '@providers/Provider.props';
 import SizesProvider from '@providers/SizesProvider/SizesProvider';
+import TaskbarSaver from '@providers/TaskbarSaver/TaskbarSaver';
 import ThemeProvider from '@providers/ThemeProvider/ThemeProvider';
 
 const GlobalProvider: FC<ProviderProps> = ({ children }) => {
@@ -11,9 +12,11 @@ const GlobalProvider: FC<ProviderProps> = ({ children }) => {
 		<>
 			<BodyClassnameProvider>
 				<SizesProvider>
-					<ThemeProvider>
-						<MarkSaver>{children}</MarkSaver>
-					</ThemeProvider>
+					<TaskbarSaver>
+						<ThemeProvider>
+							<MarkSaver>{children}</MarkSaver>
+						</ThemeProvider>
+					</TaskbarSaver>
 				</SizesProvider>
 			</BodyClassnameProvider>
 		</>
