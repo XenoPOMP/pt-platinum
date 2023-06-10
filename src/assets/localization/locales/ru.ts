@@ -6,6 +6,14 @@ import { FilterTypes } from '@type/FilterTypes';
 import { FilterFactory } from '@utils/FilterFactory';
 
 import preview_0 from '@media/images/guides/2938238385_preview_Jonh Small.jpg';
+import preview_1 from '@media/images/guides/preview_1.jpg';
+import preview_2 from '@media/images/guides/preview_2.jpg';
+import preview_3 from '@media/images/guides/preview_3.jpg';
+import preview_4 from '@media/images/guides/preview_4.jpg';
+import preview_5 from '@media/images/guides/preview_5.jpg';
+import preview_6 from '@media/images/guides/preview_6.jpg';
+import preview_7 from '@media/images/guides/preview_7.jpg';
+import preview_8 from '@media/images/guides/preview_8.jpg';
 
 const russianLocalization: Localization = {
 	meta: {
@@ -43,7 +51,7 @@ const russianLocalization: Localization = {
 				JOHN_GUTTED: {
 					title: 'John Gutted',
 					description:
-						'Уничтожьте все блоки мертвого Джона на уровне John Gutter.',
+						'Уничтожьте все блоки мертвого Джона на уровне "John Gutter".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
@@ -56,78 +64,111 @@ const russianLocalization: Localization = {
 
 				LETS_MAKE_THIS_QUICK: {
 					title: "Let's Make This Quick",
-					description: 'Закончи уровень John Gutter меньше чем за две минуты.',
+					description:
+						'Закончи уровень "John Gutter" меньше чем за две минуты.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
+					],
+					instructions: [
+						'Попытайтесь пройти карту менее чем за две минуты, несколько попыток и все должно получиться.',
 					],
 				},
 
 				PRIMATE_RAGE: {
 					title: 'Primate Rage',
 					description:
-						'Получите комбо из 99 или более очков на уровне John Gutter.',
+						'Получите комбо из 99 или более очков на уровне "John Gutter".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
+					],
+					instructions: [
+						new InstructionImage(preview_1, 'preview_1', 'transparent', 1),
+						'Полное комбо от начала и до конца, а также выполнение 2-го забега. Должно ровно хватить чтобы получить комбо из 99 врагов.',
 					],
 				},
 
 				SHINING_ARMOR: {
 					title: 'Shining Armor',
 					description:
-						'Доберитесь до всех священников, ни разу не наткнувшись на стену в Pizzascape.',
+						'Доберитесь до всех священников, ни разу не врезавшись на стену в "Pizzascape".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
+					],
+					instructions: [
+						new InstructionImage(preview_2, 'preview_2', 'transparent', 1),
+						'Всего нужно добраться до 5 священников. Постоянно выполняйте прием резкого спуска вниз, будет очень много моментов когда нужно биться об стену и только этот прием спасет от удара об стену.',
 					],
 				},
 
 				SPOONKNIGHT: {
 					title: 'Spoonknight',
-					description: 'Парируйте десять рыцарей с вилкой в Pizzascape.',
+					description: 'Парируйте десять атак "Forknights" в "Pizzascape".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
+					],
+					instructions: [
+						new InstructionImage(preview_3, 'preview_3', 'transparent', 1),
+						'Очень просто, ничего особенного. Просто нажимаем "C" рядом с 10 "Forkknight" за один заход.',
 					],
 				},
 
 				SPHERICAL: {
 					title: 'Spherical',
-					description: 'Убейте противника во время формы шара в Pizzascape.',
+					description:
+						'Убейте другого врага когда вас пнет "Pepperoni Goblin" в "Pizzascape".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
+					],
+					instructions: [
+						new InstructionImage(preview_4, 'preview_4', 'transparent', 1),
+						'Найдите область с "Pepperoni Goblin" и другим врагом достаточно близко друг к другу - (при необходимости вы можете переместить их, схватив их). И пусть вас пнут, и будучи круглым мячом убить другого врага.',
 					],
 				},
 
 				THRILL_SEEKER: {
 					title: 'Thrill Seeker',
 					description:
-						'Закончите уровень Ancient Cheese, не получив урона от взрывов.',
+						'Закончите уровень "Ancient Cheese", не получив урона от взрывов.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
+					],
+					instructions: [
+						new InstructionImage(preview_5, 'preview_5', 'transparent', 1),
+						'Все предельно просто. Просто постарайтесь не получить урона на этом уровне от бомб.',
 					],
 				},
 
 				VOLLEYBOMB: {
 					title: 'Volleybomb',
 					description:
-						'Убейте крысу, используя бомбу, сброшенную врагом на уровне Ancient Cheese.',
+						'Убейте Крысу, используя бомбу, сброшенную врагом на уровне "Ancient Cheese".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
+					],
+					instructions: [
+						new InstructionImage(preview_6, 'preview_6', 'transparent', 1),
+						'Убейте Крысу бомбой гоблина. Испытание может быть завершено в комнате, скрин ниже:',
 					],
 				},
 
 				DELICACY: {
 					title: 'Delicacy',
 					description:
-						'Сделайте 40 или более наборов сырных платформ изчезнувшими на уровне Ancient Cheese.',
+						'Разрушить более сорока одной сырной платформы в "Ancient Cheese".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
+					],
+					instructions: [
+						new InstructionImage(preview_7, 'preview_7', 'transparent', 1),
+						'Можете особо не напрягаться, получите без проблем.',
 					],
 				},
 
@@ -141,6 +182,10 @@ const russianLocalization: Localization = {
 							FilterTypes.bloodSauceDungeon,
 							'Уровень: Bloodsauce Dungeon'
 						),
+					],
+					instructions: [
+						new InstructionImage(preview_8, 'preview_8', 'transparent', 1),
+						'Ничего особенного, просто пройдите уровень, не попадая ни в какие ямы с лавой.',
 					],
 				},
 
