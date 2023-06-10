@@ -1,28 +1,19 @@
 import cn from 'classnames';
-import { motion } from 'framer-motion';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import Page from '@components/Page/Page';
 
-import {
-	AchievementMark,
-	AchievementMarks,
-	changeCompletion,
-} from '@redux/reducers/marks.slice';
+import { AchievementMark, changeCompletion } from '@redux/reducers/marks.slice';
 import IStore from '@redux/types/redux-types';
 
 import { InstructionImage } from '@localization/types/MainPageLocales';
 
-import AchievementCard from '@ui/AchievementCard/AchievementCard';
-import Button from '@ui/Button/Button';
 import CheckBox from '@ui/CheckBox/CheckBox';
 import CompletionBadge from '@ui/CompletionBadge/CompletionBadge';
-import FilterGroup from '@ui/FilterGroup/FilterGroup';
 import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
 
-import useBoolean from '@hooks/useBoolean';
 import useLocalization from '@hooks/useLocalization';
 
 import { Achievements } from '@type/Achievements';
@@ -104,9 +95,14 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 					{/*		: loc.pages.achievement.completeButton.notCompleted}*/}
 					{/*</Button>*/}
 
-					<span
+					<div
 						style={{
 							fontSize: '1.5em',
+							height: '100%',
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							aspectRatio: 1,
 						}}
 					>
 						<CheckBox
@@ -120,7 +116,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 								);
 							}}
 						/>
-					</span>
+					</div>
 				</div>
 			</div>
 
@@ -132,13 +128,14 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 						<div className={cn(styles.instructions)}>
 							{instructions.map(instr => {
 								if (instr instanceof InstructionImage) {
-									const { alt, background, url, rowSpan } = instr;
+									const { alt, background, url, rowSpan, colSpan } = instr;
 
 									return (
 										<div
 											className={cn(styles.imagePlaceholder)}
 											style={{
 												gridRow: `span ${rowSpan}`,
+												gridColumn: colSpan ? `span ${colSpan}` : 1,
 											}}
 										>
 											<ProgressiveImage

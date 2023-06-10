@@ -8,12 +8,20 @@ export class InstructionImage {
 	url: string;
 	background: string;
 	rowSpan: number;
+	colSpan?: number;
 
-	constructor(url: string, alt: string, background: string, rowSpan: number) {
+	constructor(
+		url: string,
+		alt: string,
+		background: string,
+		rowSpan: number,
+		colSpan?: number
+	) {
 		this.url = url;
 		this.alt = alt;
 		this.background = background;
 		this.rowSpan = rowSpan;
+		this.colSpan = colSpan;
 	}
 }
 

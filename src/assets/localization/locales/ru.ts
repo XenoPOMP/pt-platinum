@@ -14,6 +14,33 @@ import preview_5 from '@media/images/guides/preview_5.jpg';
 import preview_6 from '@media/images/guides/preview_6.jpg';
 import preview_7 from '@media/images/guides/preview_7.jpg';
 import preview_8 from '@media/images/guides/preview_8.jpg';
+import preview_9 from '@media/images/guides/preview_9.jpg';
+import preview_10 from '@media/images/guides/preview_10.jpg';
+import preview_11 from '@media/images/guides/preview_11.jpg';
+import preview_12 from '@media/images/guides/preview_12.jpg';
+import preview_13 from '@media/images/guides/preview_13.jpg';
+import preview_14 from '@media/images/guides/preview_14.jpg';
+import preview_15 from '@media/images/guides/preview_15.jpg';
+import preview_16 from '@media/images/guides/preview_16.jpg';
+import preview_17 from '@media/images/guides/preview_17.jpg';
+import preview_18 from '@media/images/guides/preview_18.jpg';
+import preview_19 from '@media/images/guides/preview_19.jpg';
+import preview_20 from '@media/images/guides/preview_20.jpg';
+import preview_21 from '@media/images/guides/preview_21.jpg';
+import preview_22 from '@media/images/guides/preview_22.jpg';
+import preview_23 from '@media/images/guides/preview_23.jpg';
+import preview_24 from '@media/images/guides/preview_24.jpg';
+import preview_25 from '@media/images/guides/preview_25.jpg';
+import preview_26 from '@media/images/guides/preview_26.jpg';
+import preview_27 from '@media/images/guides/preview_27.jpg';
+import preview_28 from '@media/images/guides/preview_28.jpg';
+import preview_29 from '@media/images/guides/preview_29.jpg';
+import preview_30 from '@media/images/guides/preview_30.jpg';
+import preview_31 from '@media/images/guides/preview_31.jpg';
+import preview_32 from '@media/images/guides/preview_32.jpg';
+import preview_33 from '@media/images/guides/preview_33.jpg';
+import preview_34 from '@media/images/guides/preview_34.jpg';
+import preview_35 from '@media/images/guides/preview_35.jpg';
 
 const russianLocalization: Localization = {
 	meta: {
@@ -175,7 +202,7 @@ const russianLocalization: Localization = {
 				VERY_VERY_HOT_SAUCE: {
 					title: 'Very Very Hot Sauce',
 					description:
-						'Закончите уровень Bloodsauce Dungeon ни разу не дотронувшись до лавы.',
+						'Закончите уровень "Bloodsauce Dungeon" ни разу не дотронувшись до лавы.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(
@@ -192,7 +219,7 @@ const russianLocalization: Localization = {
 				ERUPTION_MAN: {
 					title: 'Eruption Man',
 					description:
-						'Во время побега используйте супер-прыжок на протяжении более чем 2 секунд на уровне Bloodsauce Dungeon.',
+						'Во время побега используйте супер-прыжок на протяжении более чем 2 секунд на уровне "Bloodsauce Dungeon".',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(
@@ -200,18 +227,26 @@ const russianLocalization: Localization = {
 							'Уровень: Bloodsauce Dungeon'
 						),
 					],
+					instructions: [
+						new InstructionImage(preview_9, 'preview_9', 'transparent', 1),
+						'Совершив суперпрыжок в этом месте во время "Pizza Time", и достижение ваше.',
+					],
 				},
 
 				UNSLICED_PIZZAMAN: {
 					title: 'Unsliced Pizzaman',
 					description:
-						'Закончите уровень Bloodsauce Dungeon, не получив урона от резака для пиццы.',
+						'Закончите уровень "Bloodsauce Dungeon", не получив урона от ножей для пиццы.',
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(
 							FilterTypes.bloodSauceDungeon,
 							'Уровень: Bloodsauce Dungeon'
 						),
+					],
+					instructions: [
+						new InstructionImage(preview_10, 'preview_10', 'transparent', 1, 2),
+						'Просто постарайтесь не получить урон от ножей для пиццы на этом уровне.',
 					],
 				},
 
@@ -221,6 +256,9 @@ const russianLocalization: Localization = {
 					filters: [
 						FilterFactory(FilterTypes.worldOne, 'Мир 1'),
 						FilterFactory(FilterTypes.boss, 'Босс'),
+					],
+					instructions: [
+						new InstructionImage(preview_11, 'preview_11', 'transparent', 1, 2),
 					],
 				},
 
@@ -238,69 +276,98 @@ const russianLocalization: Localization = {
 
 				PEPPINO_S_RAIN_DANCE: {
 					title: "Peppino's Rain Dance",
-					description:
-						'Активируйте тотем заново, станцевав ускоренным бегом в Oregano Desert.',
+					description: 'Повторно активируйте тотем, танцуя в "Oregano Desert".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
+					],
+					instructions: [
+						new InstructionImage(preview_12, 'preview_12', 'transparent', 1),
+						'Находясь рядом с тотемом, начните бегать и разгоняться туда-сюда, пока тотем снова не станет активным. Можно это сделать с любым тотемом.',
 					],
 				},
 
 				UNNECESSARY_VIOLENCE: {
 					title: 'Unnecessary Violence',
-					description: 'Убейте всех продавцов сосисок в магазинах пиццы.',
+					description: 'Убейте всех клерков-сосисок в пиццериях.',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
+					],
+					instructions: [
+						new InstructionImage(preview_13, 'preview_13', 'transparent', 1),
+						'На уровне расположено 5 пиццерий, в каждой из которых есть продавец сосисок.',
 					],
 				},
 
 				ALIEN_COW: {
 					title: 'Alien Cow',
 					description:
-						'Не дайте ни одной корове ударить себя на уровне Oregano Desert.',
+						'Не дайте ни одной корове ударить себя на уровне "Oregano Desert".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
+					],
+					instructions: [
+						new InstructionImage(preview_14, 'preview_14', 'transparent', 1),
+						'Избегайте спешки и не торопитесь. Старайтесь перепрыгнуть всех коров и все получится.',
 					],
 				},
 
 				GHOSTED: {
 					title: 'Ghosted',
 					description:
-						'Избегайте прикосновения призрака Джона на уровне Wasteyard.',
+						'Избегайте прикосновения призрака Джона на уровне "Wasteyard".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
+					],
+					instructions: [
+						new InstructionImage(preview_15, 'preview_15', 'transparent', 1),
+						'Не прикасайтесь к Джону-Призраку во время "Pizza Time".',
 					],
 				},
 
 				PRETEND_GHOST: {
 					title: 'Pretend Ghost',
 					description:
-						'Убейте 20 или более врагов в качестве призрака на уровне Wasteyard.',
+						'Убейте 20 или более врагов, играя за призрака, в "Wasteyard".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
+					],
+					instructions: [
+						new InstructionImage(preview_16, 'preview_16', 'transparent', 1),
+						'Убедитесь, что появились эти два мини-Джонов - (Нужно убить их будучи призраком)',
+						new InstructionImage(preview_17, 'preview_17', 'transparent', 1),
+						'и залетите в этот секрет, чтобы выполнить квест.',
 					],
 				},
 
 				ALIVE_AND_WELL: {
 					title: 'Alive and Well',
-					description: 'Серфите на каждом трупе на уровне Wasteyard.',
+					description: 'Прокатитесь на каждом трупе в "Wasteyard".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
+					],
+					instructions: [
+						new InstructionImage(preview_18, 'preview_18', 'transparent', 1),
+						'Все трупы находятся на главном пути.',
 					],
 				},
 
 				NO_ONE_IS_SAFE: {
 					title: 'No One Is Safe',
 					description:
-						'Убить трех недоступных врагов сразу с супер насмешкой на уровне Fun Farm.',
+						'Убейте сразу трех недоступных врагов с помощью супер-насмешки в "Fun Farm".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
+					],
+					instructions: [
+						new InstructionImage(preview_19, 'preview_19', 'transparent', 1),
+						'Супер-насмешка в этом месте убьет 4 "Peasanto\'s":',
 					],
 				},
 
@@ -311,44 +378,64 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
 					],
+					instructions: [
+						new InstructionImage(preview_20, 'preview_20', 'transparent', 1),
+						'Куб можно найти в первой локации, через которую вам нужно будет перепрыгнуть с "Мортом". Секция будет закрыта, и вам нужно будет сломать блок "Мортом", чтобы туда попасть.',
+					],
 				},
 
 				GOOD_EGG: {
 					title: 'Good Egg',
-					description:
-						'Пройдите уровень Fun Farm, не получив урона, пока на вас сидит Морт.',
+					description: 'Завершите "Fun Farm", избегая урона с "Мортом" на вас.',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
+					],
+					instructions: [
+						new InstructionImage(preview_21, 'preview_21', 'transparent', 1),
+						'Просто постарайтесь избегать повреждений с "Мортом" на вас. Попадания факела который кидает "Peasanto" не считается уроном.',
 					],
 				},
 
 				NON_ALCOHOLIC: {
 					title: 'Non-Alcoholic',
 					description:
-						'Уничтожьте все пивные бутылки на уровне Fastfood Saloon.',
+						'Уничтожьте все пивные бутылки на уровне "Fastfood Saloon".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+					],
+					instructions: [
+						new InstructionImage(preview_22, 'preview_22', 'transparent', 1),
+						'В салуне повсюду разбросано куча пивных бутылок, и большую часть нужно их разбить.',
 					],
 				},
 
 				ALREADY_PRESSED: {
 					title: 'Already Pressed',
 					description:
-						'Активируйте каждуй кнопку лишь однажды на уровне Fastfood Saloon.',
+						'Активируйте каждую кнопку только один раз в "Fastfood Saloon".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+					],
+					instructions: [
+						new InstructionImage(preview_23, 'preview_23', 'transparent', 1),
+						'Не очень простое достижение. Нужно не плохо запомнить маршрут и точно знать, что делать. Также есть вероятность двойного активирования кнопки так что нужно быть немного осторожным с этим.',
 					],
 				},
 
 				ROYAL_FLUSH: {
 					title: 'Royal Flush',
-					description: 'Прикоснитесь к каждой карте на уровне Fastfood Saloon.',
+					description:
+						'Прикоснитесь к каждой карте на уровне "Fastfood Saloon".',
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+					],
+					instructions: [
+						new InstructionImage(preview_24, 'preview_24', 'transparent', 1),
+						'Карты разбросаны по всей карте и вам нужно собрать их всех. Карты в секретах не учитываются.',
 					],
 				},
 
@@ -358,6 +445,9 @@ const russianLocalization: Localization = {
 					filters: [
 						FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
 						FilterFactory(FilterTypes.boss, 'Босс'),
+					],
+					instructions: [
+						new InstructionImage(preview_25, 'preview_25', 'transparent', 1, 2),
 					],
 				},
 
@@ -381,24 +471,36 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
 						FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
 					],
+					instructions: [
+						new InstructionImage(preview_26, 'preview_26', 'transparent', 1),
+						'Отразите атаку пушечного выстрела гоблина, и все должно получиться.',
+					],
 				},
 
 				X: {
 					title: 'X',
-					description: 'Найдите всех чуваков-сокровища на уровне Crust Cove',
+					description: 'Найдите всех "Treasure Chest Guy" в "Crust Cove".',
 					filters: [
 						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
 						FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
+					],
+					instructions: [
+						new InstructionImage(preview_27, 'preview_27', 'transparent', 2),
+						'На протяжении всего забега в земле прячутся 7 спрятанных "Treasure Chest Guy", все они отмечены красным крестиком на земле.',
+						'В игре засчитывается "Treasure Chest Guy", выкопав его, а не убив. Это означает, что вы можете постоянно выкапывать первого "Treasure Chest Guy" в начале уровня, и не убивать его. Идем на другую под-локацию, возвращаемся обратно в комнату и снова выкапываем того же "Treasure Chest Guy", делаем так 7 раз и получаем достижение.',
 					],
 				},
 
 				DEMOLITION_EXPERT: {
 					title: 'Demolition Expert',
-					description:
-						'Пройдите уровень Crust Cove, не получив урон от взрывов.',
+					description: 'Завершите "Crust Cove", не получив урона от взрыва.',
 					filters: [
 						FilterFactory(FilterTypes.worldThree, 'Мир 3'),
 						FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
+					],
+					instructions: [
+						new InstructionImage(preview_28, 'preview_28', 'transparent', 1),
+						'Просто избегайте повреждений гоблинов с пушкой и капитанских пушек на протяжении всего забега.',
 					],
 				},
 

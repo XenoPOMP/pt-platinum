@@ -179,7 +179,7 @@
       width: 100%;
 
       img {
-        max-width: calc((100vw - var(--global-padding) * 2 - 1.25em) / 2);
+        max-width: min(calc((100vw - var(--global-padding) * 2 - 1.25em) / 2), 100%);
         border-radius: .5em;
       }
     }
