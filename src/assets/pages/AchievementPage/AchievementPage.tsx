@@ -61,48 +61,70 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 				),
 			}}
 			header={{
-				taskbar: {
-					rightControl: false,
-				},
+				taskbar: false,
 			}}
 		>
-			<div className={cn(styles.achievementPage)}>
-				<div className={cn(styles.titleBlock)}>
-					<div className={cn(styles.avatarPlaceholder)}>
-						<ProgressiveImage
-							loaderColorScheme={{
-								backgroundColor: 'transparent',
-							}}
-							alt={'achievement-image'}
-							src={pictureUrl}
-						/>
+			<div className={cn(styles.titleBlock)}>
+				<div className={cn(styles.container)}>
+					<div className={cn(styles.block)}>
+						<div className={cn(styles.avatarPlaceholder)}>
+							<ProgressiveImage
+								loaderColorScheme={{
+									backgroundColor: 'transparent',
+								}}
+								alt={'achievement-image'}
+								src={pictureUrl}
+							/>
 
-						<CompletionBadge completed={completed} />
+							<CompletionBadge completed={completed} />
+						</div>
+
+						<div className={cn(styles.text)}>
+							<h2>{title}</h2>
+
+							<i>{description}</i>
+						</div>
 					</div>
 
-					<h2>{title}</h2>
+					{/*<FilterGroup filters={filters} />*/}
 
-					<FilterGroup filters={filters} />
+					{/*<Button*/}
+					{/*	variant={completed ? 'active' : 'normal'}*/}
+					{/*	onClick={() => {*/}
+					{/*		dispatch(*/}
+					{/*			changeCompletion({*/}
+					{/*				name: defaultName,*/}
+					{/*				value: !completed,*/}
+					{/*			})*/}
+					{/*		);*/}
+					{/*	}}*/}
+					{/*>*/}
+					{/*	{completed*/}
+					{/*		? loc.pages.achievement.completeButton.completed*/}
+					{/*		: loc.pages.achievement.completeButton.notCompleted}*/}
+					{/*</Button>*/}
 
-					<i>{description}</i>
-
-					<Button
-						variant={completed ? 'active' : 'normal'}
-						onClick={() => {
-							dispatch(
-								changeCompletion({
-									name: defaultName,
-									value: !completed,
-								})
-							);
+					<span
+						style={{
+							fontSize: '1.5em',
 						}}
 					>
-						{completed
-							? loc.pages.achievement.completeButton.completed
-							: loc.pages.achievement.completeButton.notCompleted}
-					</Button>
+						<CheckBox
+							checked={completed}
+							onClick={() => {
+								dispatch(
+									changeCompletion({
+										name: defaultName,
+										value: !completed,
+									})
+								);
+							}}
+						/>
+					</span>
 				</div>
+			</div>
 
+			<div className={cn(styles.achievementPage)}>
 				{instructions && (
 					<>
 						<h3>{loc.pages.achievement.guideLabel}</h3>
