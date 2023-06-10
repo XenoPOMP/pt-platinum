@@ -16,6 +16,26 @@
   width: 100%;
   background: var(--app-back-primary);
 
+  @media (max-width: 750px) {
+    font-size: .9em;
+  }
+
+  @media (max-width: 622px) {
+    font-size: .8em;
+  }
+
+  @media (max-width: 590px) {
+    font-size: .7em;
+  }
+
+  @media (max-width: 534px) {
+    font-size: .75em;
+  }
+
+  @media (max-width: 466px) {
+    font-size: .6em;
+  }
+
   .container {
     @extend %uiContainer;
     @extend %flexCenter;
@@ -37,6 +57,22 @@
         height: globalPadding(1.75);
         aspect-ratio: 1;
         position: relative;
+
+        @media (max-width: 750px) {
+          height: globalPadding(1.5);
+        }
+
+        @media (max-width: 590px) {
+          height: globalPadding(1);
+        }
+
+        @media (max-width: 534px) {
+          height: globalPadding(1.75);
+        }
+
+        @media (max-width: 412px) {
+          height: globalPadding(1.5);
+        }
 
         img {}
       }
@@ -64,6 +100,26 @@
 
   font-size: 20px; // 1em = 20px
   // padding: globalPadding(.75) 0 globalPadding(2.5) 0;
+
+  @media (max-width: 1146px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 612px) {
+    .instructions {
+      .imagePlaceholder, p {
+        grid-column: span 2 !important;
+      }
+
+      .imagePlaceholder img {
+        max-width: 100% !important;
+      }
+    }
+  }
 
   margin-top: calc(var(--header-height) * 2);
 
