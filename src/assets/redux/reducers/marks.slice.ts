@@ -194,6 +194,7 @@ const initialState: AchievementMarks = {
 		AchievementFactory('SKULLSPLITTER', skullsplitter),
 		AchievementFactory('AND_THIS_IS_MY_GUN_ON_A_STICK', myGunOnAstick),
 		AchievementFactory('LET_THEM_SLEEP', letThemSleep),
+		AchievementFactory('JUMPSPARED', jumpSpared),
 		AchievementFactory('DECORATED_VETERAN', decoratedVeteran),
 		AchievementFactory('SHARPSHOOTER', sharpShooter),
 		AchievementFactory('TRIP_TO_THE_WARZONE', tripToTheWarzone),
