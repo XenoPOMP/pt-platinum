@@ -13,6 +13,8 @@ import {
 } from '@redux/reducers/marks.slice';
 import IStore from '@redux/types/redux-types';
 
+import { InstructionImage } from '@localization/types/MainPageLocales';
+
 import AchievementCard from '@ui/AchievementCard/AchievementCard';
 import Button from '@ui/Button/Button';
 import CheckBox from '@ui/CheckBox/CheckBox';
@@ -102,21 +104,37 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 				</div>
 
 				{instructions && (
-					<div className={cn(styles.instructions)}>
-						{instructions.map(instr => {
-							if (typeof instr === 'string') {
-								return <p key={instr}>{instr}</p>;
-							}
+					<>
+						<h3>{loc.pages.achievement.guideLabel}</h3>
 
-							if (instr instanceof ProgressiveImage) {
-								return (
-									<div className={cn(styles.imagePlaceholder)}>{instr}</div>
-								);
-							}
+						<div className={cn(styles.instructions)}>
+							{instructions.map(instr => {
+								if (instr instanceof InstructionImage) {
+									const { alt, background, url, rowSpan } = instr;
 
-							return instr;
-						})}
-					</div>
+									return (
+										<div
+											className={cn(styles.imagePlaceholder)}
+											style={{
+												gridRow: `span ${rowSpan}`,
+											}}
+										>
+											<ProgressiveImage
+												loaderColorScheme={{
+													backgroundColor: background,
+												}}
+												alt={alt}
+												src={url}
+											/>
+										</div>
+									);
+								} else {
+									// Return paragraph by default
+									return <p key={instr}>{instr}</p>;
+								}
+							})}
+						</div>
+					</>
 				)}
 			</div>
 		</Page>

@@ -5,7 +5,7 @@
   @extend %mainFont;
 
   font-size: 20px; // 1em = 20px
-  padding: globalPadding(.75) 0 globalPadding(1) 0;
+  padding: globalPadding(.75) 0 globalPadding(2.5) 0;
 
   .titleBlock {
     display: flex;
@@ -37,8 +37,21 @@
     }
   }
 
+  h3 {
+    @extend %mainFont;
+    @extend %bold;
+
+    font-size: 2em;
+    text-align: center;
+    margin:
+            calc(1.25em * 1.5)
+            0
+            1em
+            0;
+  }
+
   .instructions {
-    margin-top: calc(1.25em * 2);
+    // margin-top: calc(1.25em * 2);
     font-size: 1em;
     gap: 1.25em;
     display: flex;
@@ -51,8 +64,33 @@
       color: var(--app-font-primary);
     }
 
+    &:has(> .imagePlaceholder) {
+      // background: red;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+
+      .imagePlaceholder {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        align-items: start;
+      }
+
+      p {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        // height: 100%;
+      }
+    }
+
     .imagePlaceholder {
+      @extend %flexCenter;
+
       width: 100%;
+
+      img {
+        max-width: 600px;
+        border-radius: .5em;
+      }
     }
   }
 }

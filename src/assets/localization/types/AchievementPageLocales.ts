@@ -3,4 +3,6 @@ export type AchievementPageLocales = {
 		completed: string;
 		notCompleted: string;
 	};
+
+	guideLabel: string;
 };

@@ -1,8 +1,11 @@
 import { Localization } from '@localization/Localization';
+import { InstructionImage } from '@localization/types/MainPageLocales';
 
 import { FilterTypes } from '@type/FilterTypes';
 
 import { FilterFactory } from '@utils/FilterFactory';
+
+import preview_0 from '@media/images/guides/2938238385_preview_Jonh Small.jpg';
 
 const russianLocalization: Localization = {
 	meta: {
@@ -46,6 +49,7 @@ const russianLocalization: Localization = {
 						FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
 					],
 					instructions: [
+						new InstructionImage(preview_0, 'preview_0', 'transparent', 1),
 						'Для выполнения этого достижения вам необходимо уничтожить все блоки с Джоном на уровне John Gutter.',
 					],
 				},
@@ -714,6 +718,8 @@ const russianLocalization: Localization = {
 				completed: 'Выполнено',
 				notCompleted: 'Не выполнено',
 			},
+
+			guideLabel: 'Как получить?',
 		},
 	},
 };
