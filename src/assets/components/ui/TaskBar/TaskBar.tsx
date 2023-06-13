@@ -178,7 +178,7 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 							</div>
 						</div>
 
-						<div className={cn(styles.item)}>
+						<div className={cn(styles.item, styles.disabled)}>
 							<label className={cn(styles.itemLabel)}>
 								{loc.header.taskbar.options.filters}
 							</label>
