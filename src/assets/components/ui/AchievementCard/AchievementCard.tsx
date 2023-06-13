@@ -21,7 +21,8 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	const loc = useLocalization();
 	const { title, description, filters } = loc.pages.main.achievements[name];
 
-	const { search, showCompleted, taskbarFilters } = useTaskbarOptions();
+	const { search, showCompleted, taskbarFilters, gridView } =
+		useTaskbarOptions();
 	const dispatch = useDispatch();
 
 	const showCard = (): void => {
@@ -83,7 +84,13 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	return (
 		<>
 			{shown && (
-				<div className={cn(styles.card, styles.rowView)}>
+				<div
+					className={cn(
+						styles.card,
+						gridView === 'row' && styles.rowView,
+						gridView === 'grid' && styles.gridView
+					)}
+				>
 					<div
 						className={cn(styles.avatarBox)}
 						onClick={() => {
