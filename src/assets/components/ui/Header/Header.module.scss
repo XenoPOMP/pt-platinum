@@ -162,12 +162,14 @@ header.appHeader {
         @extend %scrollable;
 
         $topPadding: globalPadding(.25);
+        $headerHeight: globalPadding(4);
 
         position: absolute;
         content: "";
         width: min(25em, 100%);
         top: calc(100% + $topPadding);
-        max-height: min(50vh, 21.05em);
+        // max-height: min(50vh, 21.05em);
+        height: min(calc(100vh - $headerHeight), 21.05em);
         right: 0;
         z-index: 10000;
         background: var(--button-back);
@@ -185,6 +187,24 @@ header.appHeader {
           gap: 1em;
           align-items: center;
           justify-content: space-between;
+          font-size: 1em;
+
+          // With label
+          &:has(> label.itemLabel) {
+            @extend %flexCenter;
+
+            gap: 1em;
+            justify-content: space-between;
+
+            .select {
+              font-size: .85em;
+              width: 100%;
+            }
+          }
+
+          label.itemLabel {
+            font-size: 1em;
+          }
         }
 
         // Shadow

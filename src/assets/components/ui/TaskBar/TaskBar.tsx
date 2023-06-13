@@ -3,16 +3,20 @@ import cn from 'classnames';
 import { motion } from 'framer-motion';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { MultiValue } from 'react-select';
 
 import Portal from '@components/Portal/Portal';
 
 import {
+	changeAppFilters,
 	changeSearchString,
 	changeShowCompletedRule,
 } from '@redux/reducers/taskbar.slice';
 
 import Button from '@ui/Button/Button';
 import CheckBox from '@ui/CheckBox/CheckBox';
+import CustomSelect from '@ui/CustomSelect/CustomSelect';
+import { SelectOption } from '@ui/CustomSelect/CustomSelect.props';
 import styles from '@ui/Header/Header.module.scss';
 
 import useBoolean from '@hooks/useBoolean';
@@ -132,6 +136,40 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 							>
 								{loc.header.taskbar.options.showCompleted}
 							</CheckBox>
+						</div>
+
+						<div className={cn(styles.item)}>
+							<label className={cn(styles.itemLabel)}>
+								{loc.header.taskbar.options.filters}
+							</label>
+
+							<CustomSelect
+								options={loc.pages.main.indexingFilters.map(filter => {
+									const { colors, displayName } = filter;
+
+									return {
+										value: displayName,
+										label: displayName,
+										multiColors: {
+											background: colors.background,
+											font: colors.border,
+										},
+									};
+								})}
+								isMulti
+								placeholder={loc.header.taskbar.options.filtersPlaceholder}
+								className={cn(styles.select)}
+								onChange={select => {
+									const filters: (string | undefined)[] = (
+										select as MultiValue<SelectOption>
+									).map(item => {
+										return item.value;
+									});
+
+									// Apply filters
+									dispatch(changeAppFilters(filters));
+								}}
+							/>
 						</div>
 					</motion.div>
 				</div>

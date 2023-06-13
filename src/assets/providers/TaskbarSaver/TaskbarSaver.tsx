@@ -4,11 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import {
 	TaskbarOptions,
+	changeAppFilters,
 	initialTaskbarOptions,
 	loadTaskbarOptions,
 } from '@redux/reducers/taskbar.slice';
 import IStore from '@redux/types/redux-types';
 
+import useAppSettings from '@hooks/useAppSettings';
 import { useLocalStorage } from '@hooks/useLocalStorage';
 
 import styles from './TaskbarSaver.module.scss';
@@ -20,6 +22,7 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 	const selector: TaskbarOptions = useSelector(
 		(state: IStore) => state.taskbar
 	);
+	const { language } = useAppSettings();
 	const dispatch = useDispatch();
 
 	const [getCookie, setCookie] = useLocalStorage<TaskbarOptions>(

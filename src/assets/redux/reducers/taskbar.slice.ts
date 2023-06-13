@@ -5,11 +5,13 @@ import { ReduxAction } from '@redux/types/redux-types';
 export type TaskbarOptions = {
 	search: string;
 	showCompleted: boolean;
+	taskbarFilters: (string | undefined)[];
 };
 
 const initialState: TaskbarOptions = {
 	search: '',
 	showCompleted: true,
+	taskbarFilters: [],
 };
 
 const taskbarSlice = createSlice({
@@ -38,6 +40,14 @@ const taskbarSlice = createSlice({
 		) {
 			state.showCompleted = action.payload;
 		},
+
+		/** Allows to apply filters. */
+		changeAppFilters(
+			state,
+			action: ReduxAction<TaskbarOptions['taskbarFilters']>
+		) {
+			state.taskbarFilters = action.payload;
+		},
 	},
 });
 
@@ -46,5 +56,6 @@ export const {
 	changeSearchString,
 	changeShowCompletedRule,
 	loadTaskbarOptions,
+	changeAppFilters,
 } = taskbarSlice.actions;
 export const initialTaskbarOptions = taskbarSlice.getInitialState();

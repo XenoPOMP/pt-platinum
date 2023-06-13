@@ -34,4 +34,6 @@ export interface MainPageLocales {
 			instructions?: (string | InstructionImage)[];
 		};
 	};
+
+	indexingFilters: Filter[];
 }

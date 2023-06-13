@@ -3,6 +3,8 @@ export type HeaderLocales = {
 		searchPlaceholder: string;
 		options: {
 			showCompleted: string;
+			filters: string;
+			filtersPlaceholder: string;
 		};
 	};
 };
