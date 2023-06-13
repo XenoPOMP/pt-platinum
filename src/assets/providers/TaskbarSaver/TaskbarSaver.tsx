@@ -34,9 +34,7 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 	useEffect(() => {
 		dispatch(
 			loadTaskbarOptions({
-				showCompleted: getCookie.showCompleted
-					? getCookie.showCompleted
-					: initialTaskbarOptions.showCompleted,
+				showCompleted: getCookie.showCompleted,
 				gridView: getCookie.gridView
 					? getCookie.gridView
 					: initialTaskbarOptions.gridView,
