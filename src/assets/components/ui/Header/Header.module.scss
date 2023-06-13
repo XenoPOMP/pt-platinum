@@ -114,7 +114,7 @@ header.appHeader {
 
       label.inputPlaceholder {
         position: relative;
-        height: 100%;
+        height: 100% !important;
         width: min(50%, 14.6em);
         padding-left: .5em;
         display: flex;
@@ -155,6 +155,7 @@ header.appHeader {
       }
 
       .optionsButton {
+        height: 100% !important;
       }
 
       .settingsPopup {
