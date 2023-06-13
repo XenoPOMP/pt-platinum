@@ -30,20 +30,16 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 		initialTaskbarOptions
 	);
 
-	// Check for data file corruption
-	useEffect(() => {
-		// Reset settings
-		if (getCookie.gridView === undefined) {
-			setCookie(initialTaskbarOptions);
-		}
-	}, []);
-
 	// Load data from cookie
 	useEffect(() => {
 		dispatch(
 			loadTaskbarOptions({
-				showCompleted: getCookie.showCompleted,
-				gridView: getCookie.gridView,
+				showCompleted: getCookie.showCompleted
+					? getCookie.showCompleted
+					: initialTaskbarOptions.showCompleted,
+				gridView: getCookie.gridView
+					? getCookie.gridView
+					: initialTaskbarOptions.gridView,
 			})
 		);
 	}, []);
