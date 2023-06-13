@@ -73,6 +73,12 @@ const russianLocalization: Localization = {
 			keywords: '',
 		},
 
+		options: {
+			pageTitle: `Настройки`,
+			pageDescription: '',
+			keywords: '',
+		},
+
 		achievement: {
 			pageTitle: `Достижение "#[ACHIEVEMENT_NAME]" Pizza Tower`,
 			pageDescription: '',
