@@ -179,6 +179,9 @@ header.appHeader {
         border-radius:
                 var(--ui-border-radius) var(--ui-border-radius)
                 var(--ui-border-radius) var(--ui-border-radius);
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
 
         .item {
           @extend %flexCenter;
@@ -200,10 +203,48 @@ header.appHeader {
               font-size: .85em;
               width: 100%;
             }
+
+            .gridViewSelector {
+              height: 3em;
+              padding: .2em;
+              background: var(--ui-border-disabled);
+              border-radius: var(--ui-border-radius);
+              display: flex;
+              gap: .2em;
+
+              .selector {
+                @extend %flexCenter;
+                @extend %notSelectable;
+
+                height: 100%;
+                aspect-ratio: 1;
+                border-radius: inherit;
+                cursor: pointer;
+
+                svg {
+                  width: 54%;
+
+                  path {
+                    fill: var(--button-back);
+                  }
+                }
+
+                &.active {
+                  background: var(--button-back);
+
+                  svg {
+                    path {
+                      fill: var(--button-font-inactive);
+                    }
+                  }
+                }
+              }
+            }
           }
 
           label.itemLabel {
             font-size: 1em;
+            min-width: 5em;
           }
         }
 

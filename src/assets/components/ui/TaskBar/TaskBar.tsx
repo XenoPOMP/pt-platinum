@@ -9,6 +9,7 @@ import Portal from '@components/Portal/Portal';
 
 import {
 	changeAppFilters,
+	changeGridView,
 	changeSearchString,
 	changeShowCompletedRule,
 } from '@redux/reducers/taskbar.slice';
@@ -28,7 +29,7 @@ import type { TaskBarProps } from './TaskBar.props';
 
 const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 	const { progress } = useProgress();
-	const { search, showCompleted } = useTaskbarOptions();
+	const { search, showCompleted, gridView } = useTaskbarOptions();
 	const dispatch = useDispatch();
 	const loc = useLocalization();
 
@@ -128,14 +129,53 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 						className={cn(styles.settingsPopup)}
 					>
 						<div className={cn(styles.item)}>
-							<CheckBox
-								checked={showCompleted}
-								onClick={state => {
-									dispatch(changeShowCompletedRule(state));
-								}}
-							>
-								{loc.header.taskbar.options.showCompleted}
-							</CheckBox>
+							<label className={cn(styles.itemLabel)}>
+								{loc.header.taskbar.options.gridView}
+							</label>
+
+							<div className={cn(styles.gridViewSelector)}>
+								<div
+									className={cn(
+										styles.selector,
+										gridView === 'grid' && styles.active
+									)}
+									onClick={() => dispatch(changeGridView('grid'))}
+								>
+									<svg
+										viewBox='0 0 25 25'
+										fill='none'
+										xmlns='http://www.w3.org/2000/svg'
+									>
+										<path
+											fill-rule='evenodd'
+											clip-rule='evenodd'
+											d='M2 2H9V9H2V2ZM0 2C0 0.895431 0.895431 0 2 0H9C10.1046 0 11 0.895431 11 2V9C11 10.1046 10.1046 11 9 11H2C0.895431 11 0 10.1046 0 9V2ZM16 2H23V9H16V2ZM14 2C14 0.895431 14.8954 0 16 0H23C24.1046 0 25 0.895431 25 2V9C25 10.1046 24.1046 11 23 11H16C14.8954 11 14 10.1046 14 9V2ZM9 16H2V23H9V16ZM2 14C0.895431 14 0 14.8954 0 16V23C0 24.1046 0.895431 25 2 25H9C10.1046 25 11 24.1046 11 23V16C11 14.8954 10.1046 14 9 14H2ZM16 16H23V23H16V16ZM14 16C14 14.8954 14.8954 14 16 14H23C24.1046 14 25 14.8954 25 16V23C25 24.1046 24.1046 25 23 25H16C14.8954 25 14 24.1046 14 23V16Z'
+											fill='#EDEDED'
+										/>
+									</svg>
+								</div>
+
+								<div
+									className={cn(
+										styles.selector,
+										gridView === 'row' && styles.active
+									)}
+									onClick={() => dispatch(changeGridView('row'))}
+								>
+									<svg
+										viewBox='0 0 28 20'
+										fill='none'
+										xmlns='http://www.w3.org/2000/svg'
+									>
+										<path
+											fill-rule='evenodd'
+											clip-rule='evenodd'
+											d='M0 2C0 0.895431 0.895431 0 2 0H26C27.1046 0 28 0.895431 28 2C28 3.10457 27.1046 4 26 4H2C0.895431 4 0 3.10457 0 2ZM0 10C0 8.89543 0.895431 8 2 8H26C27.1046 8 28 8.89543 28 10C28 11.1046 27.1046 12 26 12H2C0.895431 12 0 11.1046 0 10ZM2 16C0.895431 16 0 16.8954 0 18C0 19.1046 0.895431 20 2 20H26C27.1046 20 28 19.1046 28 18C28 16.8954 27.1046 16 26 16H2Z'
+											fill='#737674'
+										/>
+									</svg>
+								</div>
+							</div>
 						</div>
 
 						<div className={cn(styles.item)}>
@@ -170,6 +210,17 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 									dispatch(changeAppFilters(filters));
 								}}
 							/>
+						</div>
+
+						<div className={cn(styles.item)}>
+							<CheckBox
+								checked={showCompleted}
+								onClick={state => {
+									dispatch(changeShowCompletedRule(state));
+								}}
+							>
+								{loc.header.taskbar.options.showCompleted}
+							</CheckBox>
 						</div>
 					</motion.div>
 				</div>

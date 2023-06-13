@@ -93,6 +93,7 @@ const russianLocalization: Localization = {
 				showCompleted: 'Показывать выполненные достижения',
 				filters: 'Фильтры',
 				filtersPlaceholder: 'Выберете из списка...',
+				gridView: 'Вид сетки',
 			},
 		},
 	},

@@ -5,6 +5,7 @@ export type HeaderLocales = {
 			showCompleted: string;
 			filters: string;
 			filtersPlaceholder: string;
+			gridView: string;
 		};
 	};
 };

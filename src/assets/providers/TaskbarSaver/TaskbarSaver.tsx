@@ -35,6 +35,7 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 		dispatch(
 			loadTaskbarOptions({
 				showCompleted: getCookie.showCompleted,
+				gridView: getCookie.gridView,
 			})
 		);
 	}, []);
@@ -42,7 +43,7 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 	// Save data to cookie
 	useEffect(() => {
 		setCookie(selector);
-	}, [selector.showCompleted]);
+	}, [selector.showCompleted, selector.gridView]);
 
 	return <>{children}</>;
 };
