@@ -9,6 +9,7 @@ import IStore from '@redux/types/redux-types';
 import AchievementCard from '@ui/AchievementCard/AchievementCard';
 
 import useLocalization from '@hooks/useLocalization';
+import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
 
 import styles from './MainPage.module.scss';
 
@@ -17,10 +18,17 @@ const MainPage = () => {
 	const achievements: AchievementMarks['achievements'] = useSelector(
 		(state: IStore) => state.marks.achievements
 	);
+	const { gridView } = useTaskbarOptions();
 
 	return (
 		<Page meta={loc.meta.main}>
-			<div className={cn(styles.mainPage, styles.rowView)}>
+			<div
+				className={cn(
+					styles.mainPage,
+					gridView === 'row' && styles.rowView,
+					gridView === 'grid' && styles.gridView
+				)}
+			>
 				{achievements.map((ac, index) => (
 					<AchievementCard achievement={ac} key={`ac-card-${index}`} />
 				))}

@@ -5,11 +5,15 @@ import { ReduxAction } from '@redux/types/redux-types';
 export type TaskbarOptions = {
 	search: string;
 	showCompleted: boolean;
+	taskbarFilters: (string | undefined)[];
+	gridView: 'row' | 'grid';
 };
 
 const initialState: TaskbarOptions = {
 	search: '',
 	showCompleted: true,
+	taskbarFilters: [],
+	gridView: 'row',
 };
 
 const taskbarSlice = createSlice({
@@ -21,9 +25,10 @@ const taskbarSlice = createSlice({
 		 */
 		loadTaskbarOptions(
 			state,
-			action: ReduxAction<Pick<TaskbarOptions, 'showCompleted'>>
+			action: ReduxAction<Pick<TaskbarOptions, 'showCompleted' | 'gridView'>>
 		) {
 			state.showCompleted = action.payload.showCompleted;
+			state.gridView = action.payload.gridView;
 		},
 
 		/** Allows to change search string. */
@@ -38,6 +43,19 @@ const taskbarSlice = createSlice({
 		) {
 			state.showCompleted = action.payload;
 		},
+
+		/** Allows to apply filters. */
+		changeAppFilters(
+			state,
+			action: ReduxAction<TaskbarOptions['taskbarFilters']>
+		) {
+			state.taskbarFilters = action.payload;
+		},
+
+		/** Change grid settings. */
+		changeGridView(state, action: ReduxAction<TaskbarOptions['gridView']>) {
+			state.gridView = action.payload;
+		},
 	},
 });
 
@@ -46,5 +64,7 @@ export const {
 	changeSearchString,
 	changeShowCompletedRule,
 	loadTaskbarOptions,
+	changeAppFilters,
+	changeGridView,
 } = taskbarSlice.actions;
 export const initialTaskbarOptions = taskbarSlice.getInitialState();

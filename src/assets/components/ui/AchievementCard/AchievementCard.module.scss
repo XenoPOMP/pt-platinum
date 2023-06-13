@@ -60,4 +60,27 @@
       }
     }
   }
+
+  &.gridView {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .25em;
+
+    .avatarBox {
+      width: 100%;
+      aspect-ratio: 1;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    section {
+      .filterGroup, i {
+        display: none;
+      }
+    }
+  }
 }

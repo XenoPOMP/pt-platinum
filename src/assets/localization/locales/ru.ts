@@ -91,6 +91,9 @@ const russianLocalization: Localization = {
 			searchPlaceholder: 'Поиск...',
 			options: {
 				showCompleted: 'Показывать выполненные достижения',
+				filters: 'Фильтры',
+				filtersPlaceholder: 'Выберете из списка...',
+				gridView: 'Вид сетки',
 			},
 		},
 	},
@@ -1009,6 +1012,43 @@ const russianLocalization: Localization = {
 					filters: [FilterFactory(FilterTypes.worldFive, 'Мир 5')],
 				},
 			},
+
+			indexingFilters: [
+				FilterFactory(FilterTypes.worldOne, 'Мир 1'),
+				FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
+				FilterFactory(FilterTypes.worldThree, 'Мир 3'),
+				FilterFactory(FilterTypes.worldFour, 'Мир 4'),
+				FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+
+				// World 1
+				FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
+				FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
+				FilterFactory(FilterTypes.ancientCheese, 'Уровень: Ancient Cheese'),
+				FilterFactory(
+					FilterTypes.bloodSauceDungeon,
+					'Уровень: Bloodsauce Dungeon'
+				),
+				FilterFactory(FilterTypes.boss, 'Босс'),
+				// World 2
+				FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
+				FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
+				FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
+				FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+				// World 3
+				FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
+				FilterFactory(FilterTypes.lario, 'Уровень: Gnome Forest'),
+				FilterFactory(FilterTypes.space, 'Уровень: Deep Dish Nine'),
+				FilterFactory(FilterTypes.golf, 'Уровень: Golf'),
+				// World 4
+				FilterFactory(FilterTypes.pigCity, 'Уровень: The Pig City'),
+				FilterFactory(FilterTypes.thatLevel, 'Уровень: Oh Shit!'),
+				FilterFactory(FilterTypes.factory, 'Уровень: Peppibot Factory'),
+				FilterFactory(FilterTypes.freezerator, 'Уровень: Refrigerator'),
+				// World 5
+				FilterFactory(FilterTypes.pizzaScare, 'Уровень: Pizzascare'),
+				FilterFactory(FilterTypes.fnaf, 'Уровень: Don`t Make A Sound'),
+				FilterFactory(FilterTypes.war, 'Уровень: WAR'),
+			],
 		},
 
 		achievement: {

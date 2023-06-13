@@ -24,4 +24,28 @@
       // font-size: 14px;
     }
   }
+
+  &.gridView {
+    --column-count: 5;
+
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr);
+    gap: globalPadding(.5);
+
+    @media (max-width: 1000px) {
+      --column-count: 4;
+    }
+
+    @media (max-width: 720px) {
+      --column-count: 3;
+    }
+
+    @media (max-width: 568px) {
+      --column-count: 2;
+    }
+
+    @media (max-width: 388px) {
+      --column-count: 1;
+    }
+  }
 }

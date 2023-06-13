@@ -3,6 +3,8 @@ import { CSSProperties, FC, useEffect, useState } from 'react';
 import Select, { GroupBase, StylesConfig } from 'react-select';
 import AsyncSelect from 'react-select/async';
 
+import { PropsWith } from '@type/PropsWith';
+
 import styles from './CustomSelect.module.scss';
 import type { CustomSelectProps, SelectOption } from './CustomSelect.props';
 
@@ -48,11 +50,12 @@ import type { CustomSelectProps, SelectOption } from './CustomSelect.props';
  * @param {boolean} isMulti				   																											         defines whether select is multiply or not.
  * @constructor
  */
-const CustomSelect: FC<CustomSelectProps> = ({
+const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 	options,
 	onChange,
 	placeholder,
 	isMulti,
+	className,
 }) => {
 	const colorStyles: StylesConfig<
 		SelectOption,
@@ -148,6 +151,7 @@ const CustomSelect: FC<CustomSelectProps> = ({
 			isMulti={isMulti}
 			placeholder={placeholder}
 			styles={colorStyles}
+			className={cn(className)}
 		></Select>
 	);
 };

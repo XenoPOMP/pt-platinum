@@ -21,7 +21,8 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	const loc = useLocalization();
 	const { title, description, filters } = loc.pages.main.achievements[name];
 
-	const { search, showCompleted } = useTaskbarOptions();
+	const { search, showCompleted, taskbarFilters, gridView } =
+		useTaskbarOptions();
 	const dispatch = useDispatch();
 
 	const showCard = (): void => {
@@ -47,22 +48,49 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 		const pattern = new RegExp(`${search}`, 'gi');
 		let showCardCondition = false;
 
+		// If card has not to show (it`s completed)
 		if ((completed && showCompleted) || !completed) {
 			showCardCondition = true;
 		}
 
+		// Check filters
+		const matches: (string | undefined)[] | undefined = filters?.map(filter => {
+			// If filters are applied and filter march
+			if (
+				taskbarFilters.includes(filter.displayName) &&
+				taskbarFilters.length !== 0
+			) {
+				return filter.displayName;
+			}
+		});
+
+		// Hide card immediately if filters don`t match
+		if (matches?.length === 0 && taskbarFilters.length !== 0) {
+			hideCard();
+			return;
+		}
+
+		// If card match search query
+		// show it immediately
 		if (pattern.test(title) && showCardCondition) {
 			showCard();
 			return;
 		}
 
+		// At other cases, hide card
 		hideCard();
-	}, [search, showCompleted, completed]);
+	}, [search, showCompleted, completed, taskbarFilters]);
 
 	return (
 		<>
 			{shown && (
-				<div className={cn(styles.card, styles.rowView)}>
+				<div
+					className={cn(
+						styles.card,
+						gridView === 'row' && styles.rowView,
+						gridView === 'grid' && styles.gridView
+					)}
+				>
 					<div
 						className={cn(styles.avatarBox)}
 						onClick={() => {

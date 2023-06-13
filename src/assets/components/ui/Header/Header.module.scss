@@ -162,12 +162,14 @@ header.appHeader {
         @extend %scrollable;
 
         $topPadding: globalPadding(.25);
+        $headerHeight: globalPadding(4);
 
         position: absolute;
         content: "";
         width: min(25em, 100%);
         top: calc(100% + $topPadding);
-        max-height: min(50vh, 21.05em);
+        // max-height: min(50vh, 21.05em);
+        height: min(calc(100vh - $headerHeight), 21.05em);
         right: 0;
         z-index: 10000;
         background: var(--button-back);
@@ -177,6 +179,9 @@ header.appHeader {
         border-radius:
                 var(--ui-border-radius) var(--ui-border-radius)
                 var(--ui-border-radius) var(--ui-border-radius);
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
 
         .item {
           @extend %flexCenter;
@@ -185,6 +190,68 @@ header.appHeader {
           gap: 1em;
           align-items: center;
           justify-content: space-between;
+          font-size: 1em;
+
+          // Disabled
+          &.disabled {
+            opacity: .5;
+            pointer-events: none;
+          }
+
+          // With label
+          &:has(> label.itemLabel) {
+            @extend %flexCenter;
+
+            gap: 1em;
+            justify-content: space-between;
+
+            .select {
+              font-size: .85em;
+              width: 100%;
+            }
+
+            .gridViewSelector {
+              height: 3em;
+              padding: .2em;
+              background: var(--ui-border-disabled);
+              border-radius: var(--ui-border-radius);
+              display: flex;
+              gap: .2em;
+
+              .selector {
+                @extend %flexCenter;
+                @extend %notSelectable;
+
+                height: 100%;
+                aspect-ratio: 1;
+                border-radius: inherit;
+                cursor: pointer;
+
+                svg {
+                  width: 54%;
+
+                  path {
+                    fill: var(--button-back);
+                  }
+                }
+
+                &.active {
+                  background: var(--button-back);
+
+                  svg {
+                    path {
+                      fill: var(--button-font-inactive);
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          label.itemLabel {
+            font-size: 1em;
+            min-width: 5em;
+          }
         }
 
         // Shadow
