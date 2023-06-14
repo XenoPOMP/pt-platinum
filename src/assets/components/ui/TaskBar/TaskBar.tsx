@@ -1,11 +1,9 @@
 import { useOutside } from '@pacote/react-use-outside';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
-import { CSSProperties, FC, useEffect, useState } from 'react';
+import { CSSProperties, FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { MultiValue } from 'react-select';
-
-import Portal from '@components/Portal/Portal';
 
 import {
 	changeAppFilters,

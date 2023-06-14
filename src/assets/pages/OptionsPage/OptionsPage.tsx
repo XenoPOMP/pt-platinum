@@ -3,8 +3,6 @@ import { FC } from 'react';
 
 import Page from '@components/Page/Page';
 
-import AchievementCard from '@ui/AchievementCard/AchievementCard';
-
 import useLocalization from '@hooks/useLocalization';
 
 import styles from './OptionsPage.module.scss';

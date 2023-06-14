@@ -1,12 +1,11 @@
 import { AnimatePresence } from 'framer-motion';
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import AchievementPage from '@pages/AchievementPage/AchievementPage';
 import MainPage from '@pages/MainPage/MainPage';
 import NotFound from '@pages/NotFound/NotFound';
 import OptionsPage from '@pages/OptionsPage/OptionsPage';
-import TestingPage from '@pages/TestingPage/TestingPage';
 
 /**
  * Root component of application routes.

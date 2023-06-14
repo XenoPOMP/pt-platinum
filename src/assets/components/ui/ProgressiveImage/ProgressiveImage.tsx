@@ -1,8 +1,6 @@
 import cn from 'classnames';
 import { CSSProperties, FC, ReactElement, useEffect, useState } from 'react';
 
-import Loader from '@ui/Loader/Loader';
-
 import peppinoBreakdance from '@media/images/Spr_player_breakdance_0.webp';
 
 import styles from './ProgressiveImage.module.scss';

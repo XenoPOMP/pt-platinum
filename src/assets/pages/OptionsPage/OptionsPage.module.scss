@@ -6,4 +6,10 @@
 
   padding: globalPadding(.75) 0 globalPadding(1) 0;
   font-size: 20px;
+
+  h2 {
+    @extend %medium;
+
+    font-size: 1.6em;
+  }
 }
