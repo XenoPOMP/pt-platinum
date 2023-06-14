@@ -1065,6 +1065,24 @@ const russianLocalization: Localization = {
 
 			guideLabel: 'Как получить?',
 		},
+
+		options: {
+			theme: {
+				header: 'Тема',
+				description: 'Выберите, как будет выглядеть приложение.',
+				variants: {
+					light: 'Светлая',
+				},
+			},
+
+			language: {
+				header: 'Язык',
+				description: 'Выберете ваш язык.',
+				variants: {
+					ru: 'Русский',
+				},
+			},
+		},
 	},
 };
 

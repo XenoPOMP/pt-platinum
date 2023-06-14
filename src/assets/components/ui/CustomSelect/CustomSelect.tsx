@@ -54,6 +54,7 @@ const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 	placeholder,
 	isMulti,
 	className,
+	defaultValue,
 }) => {
 	const colorStyles: StylesConfig<
 		SelectOption,
@@ -146,6 +147,7 @@ const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 					onChange(option);
 				}
 			}}
+			defaultValue={defaultValue}
 			isMulti={isMulti}
 			placeholder={placeholder}
 			styles={colorStyles}
