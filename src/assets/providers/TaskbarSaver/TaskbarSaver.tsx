@@ -1,10 +1,8 @@
-import cn from 'classnames';
 import { FC, PropsWithChildren, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
 	TaskbarOptions,
-	changeAppFilters,
 	initialTaskbarOptions,
 	loadTaskbarOptions,
 } from '@redux/reducers/taskbar.slice';
@@ -13,7 +11,6 @@ import IStore from '@redux/types/redux-types';
 import useAppSettings from '@hooks/useAppSettings';
 import { useLocalStorage } from '@hooks/useLocalStorage';
 
-import styles from './TaskbarSaver.module.scss';
 import type { TaskbarSaverProps } from './TaskbarSaver.props';
 
 const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({

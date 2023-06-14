@@ -9,7 +9,6 @@ import {
 
 import { IBodyClassname } from '@providers/BodyClassnameProvider/body-classname.interface';
 
-import styles from './BodyClassnameProvider.module.scss';
 import type { BodyClassnameProviderProps } from './BodyClassnameProvider.props';
 
 export const BodyClassnameContext = createContext<IBodyClassname>({

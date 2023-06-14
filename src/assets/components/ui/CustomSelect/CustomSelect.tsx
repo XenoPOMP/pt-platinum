@@ -1,11 +1,9 @@
 import cn from 'classnames';
-import { CSSProperties, FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Select, { GroupBase, StylesConfig } from 'react-select';
-import AsyncSelect from 'react-select/async';
 
 import { PropsWith } from '@type/PropsWith';
 
-import styles from './CustomSelect.module.scss';
 import type { CustomSelectProps, SelectOption } from './CustomSelect.props';
 
 /**

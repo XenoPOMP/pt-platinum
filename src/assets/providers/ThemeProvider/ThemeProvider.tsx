@@ -1,7 +1,5 @@
-import cn from 'classnames';
-import { FC, useContext, useEffect } from 'react';
+import { FC } from 'react';
 
-import { BodyClassnameContext } from '@providers/BodyClassnameProvider/BodyClassnameProvider';
 import { ProviderProps } from '@providers/Provider.props';
 
 import useBodyClassnames from '@hooks/useBodyClassnames';

@@ -5,8 +5,8 @@ import Layout from '@components/Layout/Layout';
 
 import useAppSettings from '@hooks/useAppSettings';
 
-import { PageProps } from './Page.props';
 import type { MetaInfo } from './Page.props';
+import { PageProps } from './Page.props';
 
 /**
  * Component that provides page implementation.

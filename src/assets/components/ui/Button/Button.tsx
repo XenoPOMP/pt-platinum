@@ -1,11 +1,5 @@
 import cn from 'classnames';
-import {
-	CSSProperties,
-	FC,
-	MouseEvent,
-	PropsWithChildren,
-	useEffect,
-} from 'react';
+import { CSSProperties, FC, PropsWithChildren, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import ArgumentError from '@errors/ArgumentError';
