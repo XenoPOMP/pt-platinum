@@ -175,6 +175,7 @@ const englishLocalization: Localization = {
 	},
 
 	pages: {
+		// TODO Translate all locales
 		main: {
 			achievements: {
 				JOHN_GUTTED: {

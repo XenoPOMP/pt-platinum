@@ -14,8 +14,17 @@ export type AppSettings = {
 
 const initialState: AppSettings = {
 	appVersion: '1.0.0',
-	appName: 'React Vite Application',
-	language: 'en',
+	appName: 'PT Platinum',
+	language: (() => {
+		// Set default language in russian-speaking countries for
+		// Russian
+		if (navigator.language === 'ru-RU') {
+			return 'ru';
+		}
+
+		// Set default language to english in all other countries
+		return 'en';
+	})(),
 	theme: 'light',
 };
 
