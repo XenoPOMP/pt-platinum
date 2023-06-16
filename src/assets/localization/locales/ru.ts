@@ -771,7 +771,7 @@ const russianLocalization: Localization = {
 					description: 'Победите босса фейк-Пеппино без урона.',
 					filters: [indexingFilters.worldFour, indexingFilters.boss],
 					instructions: [
-						new InstructionImage(preview_52, 'preview_52', 'transparent', 1, 2),
+						new InstructionImage(preview_52, 'preview_52', 'transparent', 1, 1),
 						'Достаточно не простой босс. Всего у него две стадии атак, сначала он сам лично атакует, а потом уже посылает своих двойников атаковать вас. Наберитесь терпения, достаточно продолжительный босс который требуют много времени и попыток. Было не плохо бы запомнить расположение туннеля когда будете убегать от него, а то будет очень обидно упереться в тупик когда вы почти прошли это испытание.',
 					],
 				},
