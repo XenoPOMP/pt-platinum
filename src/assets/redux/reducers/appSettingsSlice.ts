@@ -16,6 +16,9 @@ const initialState: AppSettings = {
 	appVersion: '1.0.0',
 	appName: 'PT Platinum',
 	language: (() => {
+		// DEBUG
+		return 'en';
+
 		// Set default language in russian-speaking countries for
 		// Russian
 		if (navigator.language === 'ru-RU') {

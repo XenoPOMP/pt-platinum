@@ -180,44 +180,41 @@ const englishLocalization: Localization = {
 			achievements: {
 				JOHN_GUTTED: {
 					title: 'John Gutted',
-					description:
-						'Уничтожьте все блоки мертвого Джона на уровне "John Gutter".',
+					description: 'Destroy all the dead john blocks in John Gutter.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
 						new InstructionImage(preview_0, 'preview_0', 'transparent', 1),
-						'Для выполнения этого достижения вам необходимо уничтожить все блоки с Джоном на уровне John Gutter.',
+						'To complete this achievement, you need to destroy all the dead John blocks at the John Gutter level.',
 					],
 				},
 
 				LETS_MAKE_THIS_QUICK: {
 					title: "Let's Make This Quick",
-					description:
-						'Закончи уровень "John Gutter" меньше чем за две минуты.',
+					description: 'Finish John Gutter in under two minutes.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
-						'Попытайтесь пройти карту менее чем за две минуты, несколько попыток и все должно получиться.',
+						'Try to complete the map in less than two minutes, a few attempts and everything should work out.',
 					],
 				},
 
 				PRIMATE_RAGE: {
 					title: 'Primate Rage',
-					description:
-						'Получите комбо из 99 или более очков на уровне "John Gutter".',
+					description: 'Get a combo of 99 or more in John Gutter.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
 						new InstructionImage(preview_1, 'preview_1', 'transparent', 1),
-						'Полное комбо от начала и до конца, а также выполнение 2-го забега. Должно ровно хватить чтобы получить комбо из 99 врагов.',
+						'Complete combo from start to finish, as well as the execution of the 2nd lap. Should be exactly enough to get a combo of 99 enemies.',
 					],
 				},
 
 				SHINING_ARMOR: {
 					title: 'Shining Armor',
 					description:
-						'Доберитесь до всех священников, ни разу не врезавшись на стену в "Pizzascape".',
+						'Get to all the priests without bumping into a wall once in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
 						new InstructionImage(preview_2, 'preview_2', 'transparent', 1),
-						'Всего нужно добраться до 5 священников. Постоянно выполняйте прием резкого спуска вниз, будет очень много моментов когда нужно биться об стену и только этот прием спасет от удара об стену.',
+						'In total, you need to get to 5 priests. Constantly perform the technique of a sharp descent down, there will be a lot of moments when you need to beat against the wall and only this technique will save you from hitting the wall.',
 					],
 				},
 
