@@ -44,7 +44,11 @@
       --column-count: 2;
     }
 
-    @media (max-width: 388px) {
+    @media (max-width: 411px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 316px) {
       --column-count: 1;
     }
   }
