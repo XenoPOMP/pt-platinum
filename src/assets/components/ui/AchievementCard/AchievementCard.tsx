@@ -94,7 +94,9 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 				<Link to={articleLink}>
 					<section>
 						<div className={cn(styles.title)}>
-							<h3>{title}</h3>
+							<h3>
+								<TextOverflow text={title} />
+							</h3>
 
 							<div className={cn(styles.filterGroup)}>
 								<FilterGroup filters={filters} />
