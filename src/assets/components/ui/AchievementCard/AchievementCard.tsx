@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import TextOverflow from 'react-text-overflow';
 
 import { changeCompletion, changeShown } from '@redux/reducers/marks.slice';
 
@@ -100,7 +101,9 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 							</div>
 						</div>
 
-						<i className={cn(styles.desc)}>{description}</i>
+						<i className={cn(styles.desc)}>
+							<TextOverflow text={description} />
+						</i>
 					</section>
 				</Link>
 			</div>
