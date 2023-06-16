@@ -22,6 +22,7 @@ import {
 	TypedSelectOption,
 } from '@ui/CustomSelect/CustomSelect.props';
 
+import useAppSettings from '@hooks/useAppSettings';
 import useLocalization from '@hooks/useLocalization';
 
 import { PropsWith } from '@type/PropsWith';
@@ -32,6 +33,8 @@ import type { OptionsPageProps } from './OptionsPage.props';
 const OptionsPage: FC<OptionsPageProps> = ({}) => {
 	const loc = useLocalization();
 	const dispatch = useDispatch();
+
+	const { theme, language } = useAppSettings();
 
 	const themeVariants: TypedSelectOption<Theme>[] = [
 		{
@@ -93,8 +96,10 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 					<CustomSelect
 						options={themeVariants}
 						defaultValue={(() => {
+							const currentTheme = theme.get();
+
 							return themeVariants.filter(
-								variant => variant.value === initialAppSettings.theme
+								variant => variant.value === currentTheme
 							)[0];
 						})()}
 						onChange={newTheme => {
@@ -106,10 +111,8 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 							)?.value as Theme;
 
 							// Update Redux-state.
-							dispatch(
-								changeTheme(
-									selectedValue ? selectedValue : initialAppSettings.theme
-								)
+							theme.set(
+								selectedValue ? selectedValue : initialAppSettings.theme
 							);
 						}}
 					/>
@@ -119,8 +122,10 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 					<CustomSelect
 						options={languageVariants}
 						defaultValue={(() => {
+							const currentLang = language.get();
+
 							return languageVariants.filter(
-								variant => variant.value === initialAppSettings.language
+								variant => variant.value === currentLang
 							)[0];
 						})()}
 						onChange={newLanguage => {
@@ -132,10 +137,8 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 							)?.value as Language;
 
 							// Update Redux-state.
-							dispatch(
-								changeLang(
-									selectedValue ? selectedValue : initialAppSettings.language
-								)
+							language.set(
+								selectedValue ? selectedValue : initialAppSettings.language
 							);
 						}}
 					/>
