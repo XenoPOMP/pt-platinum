@@ -72,49 +72,49 @@ import preview_59 from '@media/images/guides/preview_59.jpg';
  */
 const indexingFilters: Record<keyof FilterNames, Filter> = {
 	// Worlds
-	worldOne: FilterFactory(FilterTypes.worldOne, 'Мир 1'),
-	worldTwo: FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
-	worldThree: FilterFactory(FilterTypes.worldThree, 'Мир 3'),
-	worldFour: FilterFactory(FilterTypes.worldFour, 'Мир 4'),
-	worldFive: FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+	worldOne: FilterFactory(FilterTypes.worldOne, 'World 1'),
+	worldTwo: FilterFactory(FilterTypes.worldTwo, 'World 2'),
+	worldThree: FilterFactory(FilterTypes.worldThree, 'World 3'),
+	worldFour: FilterFactory(FilterTypes.worldFour, 'World 4'),
+	worldFive: FilterFactory(FilterTypes.worldFive, 'World 5'),
 
 	// Boss
-	boss: FilterFactory(FilterTypes.boss, 'Босс'),
+	boss: FilterFactory(FilterTypes.boss, 'Boss'),
 
 	// World 1
-	johnGutter: FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
-	pizzaScape: FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
+	johnGutter: FilterFactory(FilterTypes.worldOne, 'Level: John Gutter'),
+	pizzaScape: FilterFactory(FilterTypes.pizzaScape, 'Level: Pizzascape'),
 	ancientCheese: FilterFactory(
 		FilterTypes.ancientCheese,
-		'Уровень: Ancient Cheese'
+		'Level: Ancient Cheese'
 	),
 	bloodSauceDungeon: FilterFactory(
 		FilterTypes.bloodSauceDungeon,
-		'Уровень: Bloodsauce Dungeon'
+		'Level: Bloodsauce Dungeon'
 	),
 
 	// World 2
-	oreganoDesert: FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
-	wasteyard: FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
-	farm: FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
-	saloon: FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+	oreganoDesert: FilterFactory(FilterTypes.space, 'Level: Oregano Desert'),
+	wasteyard: FilterFactory(FilterTypes.wasteyard, 'Level: Wasteyard'),
+	farm: FilterFactory(FilterTypes.farm, 'Level: Fun Farm'),
+	saloon: FilterFactory(FilterTypes.saloon, 'Level: Fastfood Saloon'),
 
 	// World 3
-	crust: FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
-	lario: FilterFactory(FilterTypes.lario, 'Уровень: Gnome Forest'),
-	deepDishNine: FilterFactory(FilterTypes.space, 'Уровень: Deep Dish Nine'),
-	golf: FilterFactory(FilterTypes.golf, 'Уровень: Golf'),
+	crust: FilterFactory(FilterTypes.crust, 'Level: Crust Cove'),
+	lario: FilterFactory(FilterTypes.lario, 'Level: Gnome Forest'),
+	deepDishNine: FilterFactory(FilterTypes.space, 'Level: Deep Dish Nine'),
+	golf: FilterFactory(FilterTypes.golf, 'Level: Golf'),
 
 	// World 4
-	pigCity: FilterFactory(FilterTypes.pigCity, 'Уровень: The Pig City'),
-	thatLevel: FilterFactory(FilterTypes.thatLevel, 'Уровень: Oh Shit!'),
-	factory: FilterFactory(FilterTypes.factory, 'Уровень: Peppibot Factory'),
-	freezerator: FilterFactory(FilterTypes.freezerator, 'Уровень: Refrigerator'),
+	pigCity: FilterFactory(FilterTypes.pigCity, 'Level: The Pig City'),
+	thatLevel: FilterFactory(FilterTypes.thatLevel, 'Level: Oh Shit!'),
+	factory: FilterFactory(FilterTypes.factory, 'Level: Peppibot Factory'),
+	freezerator: FilterFactory(FilterTypes.freezerator, 'Level: Refrigerator'),
 
 	// World 5
-	pizzaScare: FilterFactory(FilterTypes.pizzaScare, 'Уровень: Pizzascare'),
-	fnaf: FilterFactory(FilterTypes.fnaf, 'Уровень: Don`t Make A Sound'),
-	war: FilterFactory(FilterTypes.war, 'Уровень: WAR'),
+	pizzaScare: FilterFactory(FilterTypes.pizzaScare, 'Level: Pizzascare'),
+	fnaf: FilterFactory(FilterTypes.fnaf, 'Level: Don`t Make A Sound'),
+	war: FilterFactory(FilterTypes.war, 'Level: WAR'),
 };
 
 /**
@@ -135,7 +135,7 @@ const getIndexingFilters = (): Filter[] => {
 	return output;
 };
 
-const russianLocalization: Localization = {
+const englishLocalization: Localization = {
 	meta: {
 		main: {
 			pageTitle: 'PT Platinum',
@@ -144,13 +144,13 @@ const russianLocalization: Localization = {
 		},
 
 		options: {
-			pageTitle: `Настройки`,
+			pageTitle: `Options`,
 			pageDescription: '',
 			keywords: '',
 		},
 
 		achievement: {
-			pageTitle: `Достижение "#[ACHIEVEMENT_NAME]" Pizza Tower`,
+			pageTitle: `Achievement "#[ACHIEVEMENT_NAME]" Pizza Tower`,
 			pageDescription: '',
 			keywords: '',
 		},
@@ -164,12 +164,12 @@ const russianLocalization: Localization = {
 
 	header: {
 		taskbar: {
-			searchPlaceholder: 'Поиск...',
+			searchPlaceholder: 'Search...',
 			options: {
-				showCompleted: 'Показывать выполненные достижения',
-				filters: 'Фильтры',
-				filtersPlaceholder: 'Выберете из списка...',
-				gridView: 'Вид сетки',
+				showCompleted: 'Show completed achievements',
+				filters: 'Filters',
+				filtersPlaceholder: 'Choose from list...',
+				gridView: 'Grid view',
 			},
 		},
 	},
@@ -908,25 +908,25 @@ const russianLocalization: Localization = {
 
 		achievement: {
 			completeButton: {
-				completed: 'Выполнено',
-				notCompleted: 'Не выполнено',
+				completed: 'Completed',
+				notCompleted: 'Not completed',
 			},
 
-			guideLabel: 'Как получить?',
+			guideLabel: 'How to get it?',
 		},
 
 		options: {
 			theme: {
-				header: 'Тема',
-				description: 'Выберите, как будет выглядеть приложение.',
+				header: 'Theme',
+				description: 'Choose appearance for application.',
 				variants: {
-					light: 'Светлая',
+					light: 'Light',
 				},
 			},
 
 			language: {
-				header: 'Язык',
-				description: 'Выберете ваш язык.',
+				header: 'Language',
+				description: 'Choose your language.',
 				variants: {
 					ru: 'Русский',
 					en: 'English',
@@ -936,4 +936,4 @@ const russianLocalization: Localization = {
 	},
 };
 
-export default russianLocalization;
+export default englishLocalization;

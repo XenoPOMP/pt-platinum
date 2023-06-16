@@ -49,6 +49,15 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 				</div>
 			),
 		},
+		{
+			value: 'en',
+			label: (
+				<div className={'flex items-center gap-[.5em]'}>
+					<Emoji name={'flagUnitedKingdom'} />{' '}
+					{loc.pages.options.language.variants.en}
+				</div>
+			),
+		},
 	];
 
 	const OptionItem: FC<
@@ -84,15 +93,9 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 					<CustomSelect
 						options={themeVariants}
 						defaultValue={(() => {
-							// Fetch initial value
-							themeVariants.forEach(variant => {
-								if (variant.value === initialAppSettings.theme) {
-									return variant;
-								}
-							});
-
-							// Default theme
-							return themeVariants[0];
+							return themeVariants.filter(
+								variant => variant.value === initialAppSettings.theme
+							)[0];
 						})()}
 						onChange={newTheme => {
 							/**
@@ -116,15 +119,9 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 					<CustomSelect
 						options={languageVariants}
 						defaultValue={(() => {
-							// Fetch initial value
-							languageVariants.forEach(variant => {
-								if (variant.value === initialAppSettings.language) {
-									return variant;
-								}
-							});
-
-							// Default theme
-							return languageVariants[0];
+							return languageVariants.filter(
+								variant => variant.value === initialAppSettings.language
+							)[0];
 						})()}
 						onChange={newLanguage => {
 							/**
