@@ -200,6 +200,22 @@
       @extend %notSelectable;
       color: var(--app-link);
 
+      $toMediumBreakpoint: 775px;
+
+      span.title {
+        @media (max-width: $toMediumBreakpoint) {
+          display: none;
+        }
+      }
+
+      span.locale {
+        display: none;
+
+        @media (max-width: $toMediumBreakpoint) {
+          display: unset;
+        }
+      }
+
       &.disabled {
         opacity: 0;
         pointer-events: none;

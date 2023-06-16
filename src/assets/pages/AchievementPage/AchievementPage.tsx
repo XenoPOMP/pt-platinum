@@ -98,9 +98,10 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 			'className',
 			{
 				achievementName?: keyof Achievements;
+				type: 'previous' | 'next';
 			}
 		>
-	> = ({ achievementName, className }) => {
+	> = ({ achievementName, className, type }) => {
 		/** Router link. */
 		const link = `/articles/${achievementName}`;
 
@@ -127,7 +128,13 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 					/>
 				</svg>
 
-				{title}
+				<span className={cn(styles.title)}>{title}</span>
+
+				<span className={cn(styles.locale)}>
+					{type === 'previous' && loc.pages.achievement.nextUp.previous}
+
+					{type === 'next' && loc.pages.achievement.nextUp.next}
+				</span>
 			</Link>
 		);
 	};
@@ -247,8 +254,11 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 				)}
 
 				<div className={cn(styles.nextUpLinks)}>
-					<NextUpLink achievementName={getNextUpLinks().previous} />
-					<NextUpLink achievementName={getNextUpLinks().next} />
+					<NextUpLink
+						achievementName={getNextUpLinks().previous}
+						type={'previous'}
+					/>
+					<NextUpLink achievementName={getNextUpLinks().next} type={'next'} />
 				</div>
 			</div>
 		</Page>

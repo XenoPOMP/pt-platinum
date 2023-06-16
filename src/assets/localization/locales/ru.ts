@@ -913,6 +913,11 @@ const russianLocalization: Localization = {
 			},
 
 			guideLabel: 'Как получить?',
+
+			nextUp: {
+				previous: 'Пред.',
+				next: 'След.',
+			},
 		},
 
 		options: {

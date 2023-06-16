@@ -5,4 +5,9 @@ export type AchievementPageLocales = {
 	};
 
 	guideLabel: string;
+
+	nextUp: {
+		previous: string;
+		next: string;
+	};
 };

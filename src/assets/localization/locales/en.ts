@@ -911,6 +911,11 @@ const englishLocalization: Localization = {
 			},
 
 			guideLabel: 'How to get it?',
+
+			nextUp: {
+				previous: 'Prev.',
+				next: 'Next.',
+			},
 		},
 
 		options: {
