@@ -1,6 +1,5 @@
 import cn from 'classnames';
-import { motion } from 'framer-motion';
-import { FC, PropsWithChildren, ReactNode } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 import getUiSx from '@utils/getUiSx';
 

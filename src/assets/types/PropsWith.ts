@@ -1,7 +1,8 @@
+import { PropsWithChildren } from 'react';
+
 import { PropsWithClassnames } from '@type/PropsWithClassnames';
 import { PropsWithId } from '@type/PropsWithId';
 import { PropsWithStyles } from '@type/PropsWithStyles';
-import { PropsWithChildren } from 'react';
 
 type ConcatenationVariants<P extends any = unknown> = {
 	/** Children node. */

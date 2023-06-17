@@ -3725,6 +3725,11 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.2.tgz#dc6345b9e8f9906dc2eeb68700b615e0b4fe752a"
   integrity sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw==
 
+react-text-overflow@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-text-overflow/-/react-text-overflow-1.0.2.tgz#8a04717620b5a4a0868e9cffe52f85b2732638f9"
+  integrity sha512-NGCcGupT3yZVpPRcOHghBIFMgctLVGL6z1SXOoEoztMt9DHIHQzAy/gKsxh93jDdfmvP9VzS7ibixyliZexI7g==
+
 react-transition-group@^4.3.0:
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.5.tgz#e53d4e3f3344da8521489fbef8f2581d42becdd1"

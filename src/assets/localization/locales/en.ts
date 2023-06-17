@@ -72,49 +72,49 @@ import preview_59 from '@media/images/guides/preview_59.jpg';
  */
 const indexingFilters: Record<keyof FilterNames, Filter> = {
 	// Worlds
-	worldOne: FilterFactory(FilterTypes.worldOne, 'Мир 1'),
-	worldTwo: FilterFactory(FilterTypes.worldTwo, 'Мир 2'),
-	worldThree: FilterFactory(FilterTypes.worldThree, 'Мир 3'),
-	worldFour: FilterFactory(FilterTypes.worldFour, 'Мир 4'),
-	worldFive: FilterFactory(FilterTypes.worldFive, 'Мир 5'),
+	worldOne: FilterFactory(FilterTypes.worldOne, 'World 1'),
+	worldTwo: FilterFactory(FilterTypes.worldTwo, 'World 2'),
+	worldThree: FilterFactory(FilterTypes.worldThree, 'World 3'),
+	worldFour: FilterFactory(FilterTypes.worldFour, 'World 4'),
+	worldFive: FilterFactory(FilterTypes.worldFive, 'World 5'),
 
 	// Boss
-	boss: FilterFactory(FilterTypes.boss, 'Босс'),
+	boss: FilterFactory(FilterTypes.boss, 'Boss'),
 
 	// World 1
-	johnGutter: FilterFactory(FilterTypes.worldOne, 'Уровень: John Gutter'),
-	pizzaScape: FilterFactory(FilterTypes.pizzaScape, 'Уровень: Pizzascape'),
+	johnGutter: FilterFactory(FilterTypes.worldOne, 'Level: John Gutter'),
+	pizzaScape: FilterFactory(FilterTypes.pizzaScape, 'Level: Pizzascape'),
 	ancientCheese: FilterFactory(
 		FilterTypes.ancientCheese,
-		'Уровень: Ancient Cheese'
+		'Level: Ancient Cheese'
 	),
 	bloodSauceDungeon: FilterFactory(
 		FilterTypes.bloodSauceDungeon,
-		'Уровень: Bloodsauce Dungeon'
+		'Level: Bloodsauce Dungeon'
 	),
 
 	// World 2
-	oreganoDesert: FilterFactory(FilterTypes.space, 'Уровень: Oregano Desert'),
-	wasteyard: FilterFactory(FilterTypes.wasteyard, 'Уровень: Wasteyard'),
-	farm: FilterFactory(FilterTypes.farm, 'Уровень: Fun Farm'),
-	saloon: FilterFactory(FilterTypes.saloon, 'Уровень: Fastfood Saloon'),
+	oreganoDesert: FilterFactory(FilterTypes.space, 'Level: Oregano Desert'),
+	wasteyard: FilterFactory(FilterTypes.wasteyard, 'Level: Wasteyard'),
+	farm: FilterFactory(FilterTypes.farm, 'Level: Fun Farm'),
+	saloon: FilterFactory(FilterTypes.saloon, 'Level: Fastfood Saloon'),
 
 	// World 3
-	crust: FilterFactory(FilterTypes.crust, 'Уровень: Crust Cove'),
-	lario: FilterFactory(FilterTypes.lario, 'Уровень: Gnome Forest'),
-	deepDishNine: FilterFactory(FilterTypes.space, 'Уровень: Deep Dish Nine'),
-	golf: FilterFactory(FilterTypes.golf, 'Уровень: Golf'),
+	crust: FilterFactory(FilterTypes.crust, 'Level: Crust Cove'),
+	lario: FilterFactory(FilterTypes.lario, 'Level: Gnome Forest'),
+	deepDishNine: FilterFactory(FilterTypes.space, 'Level: Deep Dish Nine'),
+	golf: FilterFactory(FilterTypes.golf, 'Level: Golf'),
 
 	// World 4
-	pigCity: FilterFactory(FilterTypes.pigCity, 'Уровень: The Pig City'),
-	thatLevel: FilterFactory(FilterTypes.thatLevel, 'Уровень: Oh Shit!'),
-	factory: FilterFactory(FilterTypes.factory, 'Уровень: Peppibot Factory'),
-	freezerator: FilterFactory(FilterTypes.freezerator, 'Уровень: Refrigerator'),
+	pigCity: FilterFactory(FilterTypes.pigCity, 'Level: The Pig City'),
+	thatLevel: FilterFactory(FilterTypes.thatLevel, 'Level: Oh Shit!'),
+	factory: FilterFactory(FilterTypes.factory, 'Level: Peppibot Factory'),
+	freezerator: FilterFactory(FilterTypes.freezerator, 'Level: Refrigerator'),
 
 	// World 5
-	pizzaScare: FilterFactory(FilterTypes.pizzaScare, 'Уровень: Pizzascare'),
-	fnaf: FilterFactory(FilterTypes.fnaf, 'Уровень: Don`t Make A Sound'),
-	war: FilterFactory(FilterTypes.war, 'Уровень: WAR'),
+	pizzaScare: FilterFactory(FilterTypes.pizzaScare, 'Level: Pizzascare'),
+	fnaf: FilterFactory(FilterTypes.fnaf, 'Level: Don`t Make A Sound'),
+	war: FilterFactory(FilterTypes.war, 'Level: WAR'),
 };
 
 /**
@@ -135,7 +135,7 @@ const getIndexingFilters = (): Filter[] => {
 	return output;
 };
 
-const russianLocalization: Localization = {
+const englishLocalization: Localization = {
 	meta: {
 		main: {
 			pageTitle: 'PT Platinum',
@@ -144,13 +144,13 @@ const russianLocalization: Localization = {
 		},
 
 		options: {
-			pageTitle: `Настройки`,
+			pageTitle: `Options`,
 			pageDescription: '',
 			keywords: '',
 		},
 
 		achievement: {
-			pageTitle: `Достижение "#[ACHIEVEMENT_NAME]" Pizza Tower`,
+			pageTitle: `Achievement "#[ACHIEVEMENT_NAME]" Pizza Tower`,
 			pageDescription: '',
 			keywords: '',
 		},
@@ -164,69 +164,67 @@ const russianLocalization: Localization = {
 
 	header: {
 		taskbar: {
-			searchPlaceholder: 'Поиск...',
+			searchPlaceholder: 'Search...',
 			options: {
-				showCompleted: 'Показывать выполненные достижения',
-				filters: 'Фильтры',
-				filtersPlaceholder: 'Выберете из списка...',
-				gridView: 'Вид сетки',
+				showCompleted: 'Show completed achievements',
+				filters: 'Filters',
+				filtersPlaceholder: 'Choose from list...',
+				gridView: 'Grid view',
 			},
 		},
 	},
 
 	pages: {
+		// TODO Translate all locales
 		main: {
 			achievements: {
 				JOHN_GUTTED: {
 					title: 'John Gutted',
-					description:
-						'Уничтожьте все блоки мертвого Джона на уровне "John Gutter".',
+					description: 'Destroy all the dead john blocks in John Gutter.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
 						new InstructionImage(preview_0, 'preview_0', 'transparent', 1),
-						'Для выполнения этого достижения вам необходимо уничтожить все блоки с Джоном на уровне John Gutter.',
+						'To complete this achievement, you need to destroy all the dead John blocks at the John Gutter level.',
 					],
 				},
 
 				LETS_MAKE_THIS_QUICK: {
 					title: "Let's Make This Quick",
-					description:
-						'Закончи уровень "John Gutter" меньше чем за две минуты.',
+					description: 'Finish John Gutter in under two minutes.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
-						'Попытайтесь пройти карту менее чем за две минуты, несколько попыток и все должно получиться.',
+						'Try to complete the map in less than two minutes, a few attempts and everything should work out.',
 					],
 				},
 
 				PRIMATE_RAGE: {
 					title: 'Primate Rage',
-					description:
-						'Получите комбо из 99 или более очков на уровне "John Gutter".',
+					description: 'Get a combo of 99 or more in John Gutter.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
 						new InstructionImage(preview_1, 'preview_1', 'transparent', 1),
-						'Полное комбо от начала и до конца, а также выполнение 2-го забега. Должно ровно хватить чтобы получить комбо из 99 врагов.',
+						'Complete combo from start to finish, as well as the execution of the 2nd lap. Should be exactly enough to get a combo of 99 enemies.',
 					],
 				},
 
 				SHINING_ARMOR: {
 					title: 'Shining Armor',
 					description:
-						'Доберитесь до всех священников, ни разу не врезавшись на стену в "Pizzascape".',
+						'Get to all the priests without bumping into a wall once in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
 						new InstructionImage(preview_2, 'preview_2', 'transparent', 1),
-						'Всего нужно добраться до 5 священников. Постоянно выполняйте прием резкого спуска вниз, будет очень много моментов когда нужно биться об стену и только этот прием спасет от удара об стену.',
+						'In total, you need to get to 5 priests. Constantly perform the technique of a sharp descent down, there will be a lot of moments when you need to beat against the wall and only this technique will save you from hitting the wall.',
 					],
 				},
 
 				SPOONKNIGHT: {
 					title: 'Spoonknight',
-					description: 'Парируйте десять атак "Forknights" в "Pizzascape".',
+					description: 'Parry ten Forknights in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
 						new InstructionImage(preview_3, 'preview_3', 'transparent', 1),
-						'Очень просто, ничего особенного. Просто нажимаем "C" рядом с 10 "Forkknight" за один заход.',
+						'Very simple, nothing special. Just press Parry next to 10 "Forkknight" in one run.',
 					],
 				},
 
@@ -908,30 +906,30 @@ const russianLocalization: Localization = {
 
 		achievement: {
 			completeButton: {
-				completed: 'Выполнено',
-				notCompleted: 'Не выполнено',
+				completed: 'Completed',
+				notCompleted: 'Not completed',
 			},
 
-			guideLabel: 'Как получить?',
+			guideLabel: 'How to get it?',
 
 			nextUp: {
-				previous: 'Пред.',
-				next: 'След.',
+				previous: 'Prev.',
+				next: 'Next.',
 			},
 		},
 
 		options: {
 			theme: {
-				header: 'Тема',
-				description: 'Выберите, как будет выглядеть приложение.',
+				header: 'Theme',
+				description: 'Choose appearance for application.',
 				variants: {
-					light: 'Светлая',
+					light: 'Light',
 				},
 			},
 
 			language: {
-				header: 'Язык',
-				description: 'Выберете ваш язык.',
+				header: 'Language',
+				description: 'Choose your language.',
 				variants: {
 					ru: 'Русский',
 					en: 'English',
@@ -941,4 +939,4 @@ const russianLocalization: Localization = {
 	},
 };
 
-export default russianLocalization;
+export default englishLocalization;

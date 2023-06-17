@@ -1,5 +1,3 @@
-import { Factory } from 'react';
-
 import { Filter } from '@type/Filter';
 
 /**

@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import TextOverflow from 'react-text-overflow';
 
 import { changeCompletion, changeShown } from '@redux/reducers/marks.slice';
 
@@ -11,6 +12,8 @@ import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
 
 import useLocalization from '@hooks/useLocalization';
 import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
+
+import { PropsWith } from '@type/PropsWith';
 
 import styles from './AchievementCard.module.scss';
 import type { AchievementCardProps } from './AchievementCard.props';
@@ -40,6 +43,72 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 				name,
 				shown: false,
 			})
+		);
+	};
+
+	/** Link to the connected article. */
+	const articleLink = `/articles/${name}`;
+
+	/**
+	 * This component wraps card in Link.
+	 *
+	 * @param children
+	 * @constructor
+	 */
+	const WrapInLink: FC<PropsWith<'children', {}>> = ({ children }) => {
+		return <Link to={articleLink}>{children}</Link>;
+	};
+
+	/** Card`s body. */
+	const Body: FC<unknown> = () => {
+		return (
+			<div
+				className={cn(
+					styles.card,
+					gridView === 'row' && styles.rowView,
+					gridView === 'grid' && styles.gridView
+				)}
+			>
+				<div
+					className={cn(styles.avatarBox)}
+					onClick={() => {
+						dispatch(
+							changeCompletion({
+								name,
+								value: !completed,
+							})
+						);
+					}}
+				>
+					<ProgressiveImage
+						loaderColorScheme={{
+							backgroundColor: 'transparent',
+						}}
+						src={pictureUrl}
+						alt={name}
+					/>
+
+					<CompletionBadge completed={completed} />
+				</div>
+
+				<Link to={articleLink}>
+					<section>
+						<div className={cn(styles.title)}>
+							<h3>
+								<TextOverflow text={title} />
+							</h3>
+
+							<div className={cn(styles.filterGroup)}>
+								<FilterGroup filters={filters} />
+							</div>
+						</div>
+
+						<i className={cn(styles.desc)}>
+							<TextOverflow text={description} />
+						</i>
+					</section>
+				</Link>
+			</div>
 		);
 	};
 
@@ -83,51 +152,14 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 
 	return (
 		<>
-			{shown && (
-				<div
-					className={cn(
-						styles.card,
-						gridView === 'row' && styles.rowView,
-						gridView === 'grid' && styles.gridView
-					)}
-				>
-					<div
-						className={cn(styles.avatarBox)}
-						onClick={() => {
-							dispatch(
-								changeCompletion({
-									name,
-									value: !completed,
-								})
-							);
-						}}
-					>
-						<ProgressiveImage
-							loaderColorScheme={{
-								backgroundColor: 'transparent',
-							}}
-							src={pictureUrl}
-							alt={name}
-						/>
-
-						<CompletionBadge completed={completed} />
-					</div>
-
-					<Link to={`/articles/${name}`}>
-						<section>
-							<div className={cn(styles.title)}>
-								<h3>{title}</h3>
-
-								<div className={cn(styles.filterGroup)}>
-									<FilterGroup filters={filters} />
-								</div>
-							</div>
-
-							<i className={cn(styles.desc)}>{description}</i>
-						</section>
-					</Link>
-				</div>
-			)}
+			{shown &&
+				(gridView === 'grid' ? (
+					<WrapInLink>
+						<Body />
+					</WrapInLink>
+				) : (
+					<Body />
+				))}
 		</>
 	);
 };

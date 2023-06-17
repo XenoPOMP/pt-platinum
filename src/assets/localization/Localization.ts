@@ -2,6 +2,7 @@ import type { AchievementPageLocales } from '@localization/types/AchievementPage
 import type { HeaderLocales } from '@localization/types/HeaderLocales';
 import type { MainPageLocales } from '@localization/types/MainPageLocales';
 import type { MetaLocales } from '@localization/types/MetaLocales';
+import type { OptionsPageLocales } from '@localization/types/OptionsPageLocales';
 
 export interface Localization {
 	meta: MetaLocales;
@@ -9,5 +10,6 @@ export interface Localization {
 	pages: {
 		main: MainPageLocales;
 		achievement: AchievementPageLocales;
+		options: OptionsPageLocales;
 	};
 }

@@ -1,0 +1,32 @@
+@import "src/assets/styles/templates";
+
+.settingsPage {
+  @extend %uiContainer;
+  @extend %mainFont;
+
+  padding: globalPadding(.75) 0 globalPadding(1) 0;
+  font-size: 20px;
+
+  .item {
+    &:not(:last-of-type) {
+      margin-bottom: 2.5em;
+    }
+
+    .title {
+      margin-bottom: 1.55em;
+
+      h2 {
+        @extend %medium;
+
+        font-size: 1.6em;
+        margin-bottom: .406em;
+        color: var(--app-font-primary);
+      }
+
+      i {
+        font-size: 1em;
+        color: var(--app-font-secondary);
+      }
+    }
+  }
+}

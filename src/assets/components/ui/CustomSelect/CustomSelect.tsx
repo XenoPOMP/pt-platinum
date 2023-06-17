@@ -1,11 +1,9 @@
 import cn from 'classnames';
-import { CSSProperties, FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Select, { GroupBase, StylesConfig } from 'react-select';
-import AsyncSelect from 'react-select/async';
 
 import { PropsWith } from '@type/PropsWith';
 
-import styles from './CustomSelect.module.scss';
 import type { CustomSelectProps, SelectOption } from './CustomSelect.props';
 
 /**
@@ -56,6 +54,7 @@ const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 	placeholder,
 	isMulti,
 	className,
+	defaultValue,
 }) => {
 	const colorStyles: StylesConfig<
 		SelectOption,
@@ -148,6 +147,7 @@ const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 					onChange(option);
 				}
 			}}
+			defaultValue={defaultValue}
 			isMulti={isMulti}
 			placeholder={placeholder}
 			styles={colorStyles}

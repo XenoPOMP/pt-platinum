@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, PropsWithChildren, useRef } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 import styles from './CheckBox.module.scss';
 import type { CheckBoxProps } from './CheckBox.props';

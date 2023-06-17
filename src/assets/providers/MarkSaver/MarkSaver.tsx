@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import { FC, PropsWithChildren, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -9,10 +8,8 @@ import {
 } from '@redux/reducers/marks.slice';
 import IStore from '@redux/types/redux-types';
 
-import useAppSettings from '@hooks/useAppSettings';
 import { useLocalStorage } from '@hooks/useLocalStorage';
 
-import styles from './MarkSaver.module.scss';
 import type { MarkSaverProps } from './MarkSaver.props';
 
 const MarkSaver: FC<PropsWithChildren<MarkSaverProps>> = ({ children }) => {

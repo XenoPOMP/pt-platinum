@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 import { Achievements } from '@type/Achievements';
 import { Filter } from '@type/Filter';
 
@@ -25,14 +23,19 @@ export class InstructionImage {
 	}
 }
 
+/**
+ * Achievement locale`s type.
+ */
+export type AchievementLocale = {
+	title: string;
+	description: string;
+	filters?: Filter[];
+	instructions?: (string | InstructionImage)[];
+};
+
 export interface MainPageLocales {
 	achievements: {
-		[key in keyof Achievements]: {
-			title: string;
-			description: string;
-			filters?: Filter[];
-			instructions?: (string | InstructionImage)[];
-		};
+		[key in keyof Achievements]: AchievementLocale;
 	};
 
 	indexingFilters: Filter[];

@@ -1,7 +1,8 @@
 import { MetaInfo } from '@components/Page/Page.props';
 
-export type MetaLocales = {
+export interface MetaLocales extends Record<string, MetaInfo> {
 	main: MetaInfo;
+	options: MetaInfo;
 	achievement: MetaInfo;
 	notFound: MetaInfo;
-};
+}
