@@ -220,11 +220,11 @@ const englishLocalization: Localization = {
 
 				SPOONKNIGHT: {
 					title: 'Spoonknight',
-					description: 'Парируйте десять атак "Forknights" в "Pizzascape".',
+					description: 'Parry ten Forknights in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
 						new InstructionImage(preview_3, 'preview_3', 'transparent', 1),
-						'Очень просто, ничего особенного. Просто нажимаем "C" рядом с 10 "Forkknight" за один заход.',
+						'Very simple, nothing special. Just press Parry next to 10 "Forkknight" in one run.',
 					],
 				},
 
