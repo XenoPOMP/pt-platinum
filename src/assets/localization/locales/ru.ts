@@ -1177,6 +1177,11 @@ const russianLocalization: Localization = {
 				},
 			},
 		},
+
+		disabled: {
+			notWorking: 'Эта страница сейчас не работает',
+			goHome: 'Вернуться на главную',
+		},
 	},
 };
 

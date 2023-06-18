@@ -1165,6 +1165,11 @@ const englishLocalization: Localization = {
 				},
 			},
 		},
+
+		disabled: {
+			notWorking: 'This page is not working now',
+			goHome: 'Go home',
+		},
 	},
 };
 
