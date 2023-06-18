@@ -17,13 +17,13 @@ import { PageProps } from './Page.props';
  * @constructor
  */
 const Page: FC<PropsWithChildren<PageProps>> = ({ meta, children, header }) => {
-	const { appName } = useAppSettings();
+	const { appName, language } = useAppSettings();
 
 	return (
 		<Layout header={header}>
 			<Helmet
 				htmlAttributes={{
-					lang: 'en',
+					lang: language.get(),
 				}}
 			>
 				<title>{meta.pageTitle}</title>

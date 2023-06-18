@@ -62,7 +62,7 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	/** Card`s body. */
 	const Body: FC<unknown> = () => {
 		return (
-			<div
+			<article
 				className={cn(
 					styles.card,
 					gridView === 'row' && styles.rowView,
@@ -108,7 +108,7 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 						</i>
 					</section>
 				</Link>
-			</div>
+			</article>
 		);
 	};
 
