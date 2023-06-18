@@ -219,7 +219,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 
 			<div className={cn(styles.achievementPage)}>
 				{instructions && (
-					<>
+					<div className={cn(styles.instructionsPlaceholder)}>
 						<h3>{loc.pages.achievement.guideLabel}</h3>
 
 						<div className={cn(styles.instructions)}>
@@ -250,7 +250,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 								}
 							})}
 						</div>
-					</>
+					</div>
 				)}
 
 				<div className={cn(styles.nextUpLinks)}>
