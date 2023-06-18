@@ -16,9 +16,6 @@ const initialState: AppSettings = {
 	appVersion: '0.0.2',
 	appName: 'PT Platinum',
 	language: (() => {
-		// DEBUG
-		return 'en';
-
 		// Set default language in russian-speaking countries for
 		// Russian
 		if (navigator.language === 'ru-RU') {
@@ -35,6 +32,12 @@ const appSettingsSlice = createSlice({
 	name: 'appSettings',
 	initialState,
 	reducers: {
+		loadAppSettings(state, action: ReduxAction<AppSettings>) {
+			const { language } = action.payload;
+
+			state.language = language;
+		},
+
 		changeLang(state, action: ReduxAction<Language>) {
 			state.language = action.payload;
 		},
@@ -46,5 +49,6 @@ const appSettingsSlice = createSlice({
 });
 
 export default appSettingsSlice.reducer;
-export const { changeLang, changeTheme } = appSettingsSlice.actions;
+export const { changeLang, changeTheme, loadAppSettings } =
+	appSettingsSlice.actions;
 export const initialAppSettings = appSettingsSlice.getInitialState();
