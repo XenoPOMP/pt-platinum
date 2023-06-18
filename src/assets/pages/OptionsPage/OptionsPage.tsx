@@ -90,6 +90,7 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 			header={{
 				taskbar: false,
 			}}
+			noIndex
 		>
 			<div className={cn(styles.settingsPage)}>
 				<OptionItem locale={loc.pages.options.theme}>
