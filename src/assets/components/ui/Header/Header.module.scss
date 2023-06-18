@@ -1,7 +1,7 @@
 @import "src/assets/styles/templates";
 
 header.appHeader {
-  @extend %uiContainer;
+  // @extend %uiContainer;
   @extend %mainFont;
 
   height: var(--header-height);
@@ -78,6 +78,11 @@ header.appHeader {
     .settingsButton {
       @media (max-width: 534px) {
         height: globalPadding(1.6) !important;
+      }
+
+      &.disabled {
+        opacity: .5;
+        pointer-events: none;
       }
     }
   }

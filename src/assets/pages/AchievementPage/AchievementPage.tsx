@@ -16,6 +16,7 @@ import {
 import CheckBox from '@ui/CheckBox/CheckBox';
 import CompletionBadge from '@ui/CompletionBadge/CompletionBadge';
 import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
+import UiContainer from '@ui/UiContainer/UiContainer';
 
 import useLocalization from '@hooks/useLocalization';
 
@@ -153,7 +154,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 			}}
 		>
 			<div className={cn(styles.titleBlock)}>
-				<div className={cn(styles.container)}>
+				<UiContainer className={cn(styles.container)}>
 					<div className={cn(styles.block)}>
 						<div className={cn(styles.avatarPlaceholder)}>
 							<ProgressiveImage
@@ -214,16 +215,16 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 							}}
 						/>
 					</div>
-				</div>
+				</UiContainer>
 			</div>
 
-			<div className={cn(styles.achievementPage)}>
+			<UiContainer className={cn(styles.achievementPage)}>
 				{instructions && (
-					<>
+					<div className={cn(styles.instructionsPlaceholder)}>
 						<h3>{loc.pages.achievement.guideLabel}</h3>
 
 						<div className={cn(styles.instructions)}>
-							{instructions.map(instr => {
+							{instructions.map((instr, index) => {
 								if (instr instanceof InstructionImage) {
 									const { alt, background, url, rowSpan, colSpan } = instr;
 
@@ -234,6 +235,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 												gridRow: `span ${rowSpan}`,
 												gridColumn: colSpan ? `span ${colSpan}` : 1,
 											}}
+											key={`instruction-${index} (${defaultName})`}
 										>
 											<ProgressiveImage
 												loaderColorScheme={{
@@ -246,11 +248,13 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 									);
 								} else {
 									// Return paragraph by default
-									return <p key={instr}>{instr}</p>;
+									return (
+										<p key={`instruction-${index} (${defaultName})`}>{instr}</p>
+									);
 								}
 							})}
 						</div>
-					</>
+					</div>
 				)}
 
 				<div className={cn(styles.nextUpLinks)}>
@@ -260,7 +264,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 					/>
 					<NextUpLink achievementName={getNextUpLinks().next} type={'next'} />
 				</div>
-			</div>
+			</UiContainer>
 		</Page>
 	);
 };

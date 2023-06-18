@@ -7,6 +7,7 @@ import { AchievementMarks } from '@redux/reducers/marks.slice';
 import IStore from '@redux/types/redux-types';
 
 import AchievementCard from '@ui/AchievementCard/AchievementCard';
+import UiContainer from '@ui/UiContainer/UiContainer';
 
 import useLocalization from '@hooks/useLocalization';
 import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
@@ -22,7 +23,7 @@ const MainPage = () => {
 
 	return (
 		<Page meta={loc.meta.main}>
-			<div
+			<UiContainer
 				className={cn(
 					styles.mainPage,
 					gridView === 'row' && styles.rowView,
@@ -32,7 +33,7 @@ const MainPage = () => {
 				{achievements.map((ac, index) => (
 					<AchievementCard achievement={ac} key={`ac-card-${index}`} />
 				))}
-			</div>
+			</UiContainer>
 		</Page>
 	);
 };

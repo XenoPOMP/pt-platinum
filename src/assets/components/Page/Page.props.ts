@@ -9,4 +9,6 @@ export type MetaInfo = {
 export interface PageProps {
 	meta: MetaInfo;
 	header?: HeaderProps;
+	noIndex?: boolean;
+	disabled?: boolean;
 }

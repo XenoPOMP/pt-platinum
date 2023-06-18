@@ -37,7 +37,7 @@
   }
 
   .container {
-    @extend %uiContainer;
+    // @extend %uiContainer;
     @extend %flexCenter;
 
     justify-content: space-between;
@@ -95,7 +95,7 @@
 }
 
 .achievementPage {
-  @extend %uiContainer;
+  // @extend %uiContainer;
   @extend %mainFont;
 
   font-size: 20px; // 1em = 20px
@@ -126,6 +126,14 @@
   padding-top: .5em;
   // padding-bottom: globalPadding(2.5);
 
+  // Sticky
+  $headerHeight: globalPadding(2);
+  background-color: var(--app-back-primary);
+  min-height: calc(100vh - $headerHeight);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   h3 {
     @extend %mainFont;
     @extend %bold;
@@ -139,53 +147,55 @@
             0;
   }
 
-  .instructions {
-    // margin-top: calc(1.25em * 2);
-    font-size: 1em;
-    gap: 1.25em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    p {
-      width: 100%;
+  .instructionsPlaceholder {
+    .instructions {
+      // margin-top: calc(1.25em * 2);
       font-size: 1em;
-      color: var(--app-font-primary);
-    }
-
-    &:has(> .imagePlaceholder) {
-      // background: red;
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-
-      .imagePlaceholder {
-        // grid-column-start: 1;
-        // grid-column-end: 2;
-        grid-column: span 1;
-        align-items: start;
-      }
+      gap: 1.25em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       p {
-        // grid-column-start: 2;
-        // grid-column-end: 3;
-        grid-column: span 1;
-        // height: 100%;
+        width: 100%;
+        font-size: 1em;
+        color: var(--app-font-primary);
       }
-    }
 
-    .imagePlaceholder {
-      @extend %flexCenter;
+      &:has(> .imagePlaceholder) {
+        // background: red;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
 
-      width: 100%;
+        .imagePlaceholder {
+          // grid-column-start: 1;
+          // grid-column-end: 2;
+          grid-column: span 1;
+          align-items: start;
+        }
 
-      img {
-        max-width: min(calc((100vw - var(--global-padding) * 2 - 1.25em) / 2), 100%);
-        border-radius: .5em;
+        p {
+          // grid-column-start: 2;
+          // grid-column-end: 3;
+          grid-column: span 1;
+          // height: 100%;
+        }
+      }
+
+      .imagePlaceholder {
+        @extend %flexCenter;
+
+        width: 100%;
+
+        img {
+          max-width: min(calc((100vw - var(--global-padding) * 2 - 1.25em) / 2), 100%);
+          border-radius: .5em;
+        }
       }
     }
   }
 
-  &:not(:has(> .instructions)) {
+  &:not(:has(> .instructionsPlaceholder)) {
     // background: red;
 
     .nextUpLinks {
@@ -201,8 +211,16 @@
     justify-content: space-between;
     gap: 1em;
     font-size: 1em; // 1em = 20px
-    margin-top: 3em;
-    margin-bottom: 3em;
+    // margin-top: 3em;
+    // margin-bottom: 3em;
+
+    // Sticky
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    padding: 1.5em 0;
+    z-index: 9000;
+    background: inherit;
 
 
     .link {

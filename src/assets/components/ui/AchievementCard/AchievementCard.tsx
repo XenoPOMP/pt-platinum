@@ -1,10 +1,14 @@
 import cn from 'classnames';
-import { FC, useEffect } from 'react';
+import { FC, useCallback, useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import TextOverflow from 'react-text-overflow';
 
-import { changeCompletion, changeShown } from '@redux/reducers/marks.slice';
+import {
+	AchievementMark,
+	changeCompletion,
+	changeShown,
+} from '@redux/reducers/marks.slice';
 
 import CompletionBadge from '@ui/CompletionBadge/CompletionBadge';
 import FilterGroup from '@ui/FilterGroup/FilterGroup';
@@ -21,6 +25,18 @@ import type { AchievementCardProps } from './AchievementCard.props';
 const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	const { name, pictureUrl, shown, completed } = achievement;
 
+	// const { name, pictureUrl, shown, completed } = useMemo<
+	// 	Pick<AchievementMark, 'name' | 'pictureUrl' | 'shown' | 'completed'>
+	// >(
+	// 	() => ({
+	// 		name: achievement.name,
+	// 		pictureUrl: achievement.pictureUrl,
+	// 		shown: achievement.shown,
+	// 		completed: achievement.completed,
+	// 	}),
+	// 	[achievement]
+	// );
+
 	const loc = useLocalization();
 	const { title, description, filters } = loc.pages.main.achievements[name];
 
@@ -28,23 +44,23 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 		useTaskbarOptions();
 	const dispatch = useDispatch();
 
-	const showCard = (): void => {
+	const showCard = useCallback((): void => {
 		dispatch(
 			changeShown({
 				name,
 				shown: true,
 			})
 		);
-	};
+	}, []);
 
-	const hideCard = (): void => {
+	const hideCard = useCallback((): void => {
 		dispatch(
 			changeShown({
 				name,
 				shown: false,
 			})
 		);
-	};
+	}, []);
 
 	/** Link to the connected article. */
 	const articleLink = `/articles/${name}`;
@@ -62,7 +78,7 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 	/** Card`s body. */
 	const Body: FC<unknown> = () => {
 		return (
-			<div
+			<article
 				className={cn(
 					styles.card,
 					gridView === 'row' && styles.rowView,
@@ -108,7 +124,7 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 						</i>
 					</section>
 				</Link>
-			</div>
+			</article>
 		);
 	};
 

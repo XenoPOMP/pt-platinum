@@ -1,12 +1,16 @@
 import { FC } from 'react';
 
-import { ProviderProps } from '@providers/Provider.props';
+import { BaseProviderProps } from '@providers/BaseProvider.props';
 
 import useBodyClassnames from '@hooks/useBodyClassnames';
 
+import { PropsWith } from '@type/PropsWith';
+
 import styles from './ThemeProvider.module.scss';
 
-const ThemeProvider: FC<ProviderProps> = ({ children }) => {
+const ThemeProvider: FC<PropsWith<'children', BaseProviderProps>> = ({
+	children,
+}) => {
 	useBodyClassnames([styles.themes, styles.light]);
 
 	return <>{children}</>;

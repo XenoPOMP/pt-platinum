@@ -1,70 +1,11 @@
 import { Localization } from '@localization/Localization';
 import { InstructionImage } from '@localization/types/MainPageLocales';
+import * as previews from '@localization/utils/preview-images';
 
 import { Filter } from '@type/Filter';
 import { FilterNames, FilterTypes } from '@type/FilterTypes';
 
 import { FilterFactory } from '@utils/FilterFactory';
-
-import preview_0 from '@media/images/guides/2938238385_preview_Jonh Small.jpg';
-import preview_1 from '@media/images/guides/preview_1.jpg';
-import preview_2 from '@media/images/guides/preview_2.jpg';
-import preview_3 from '@media/images/guides/preview_3.jpg';
-import preview_4 from '@media/images/guides/preview_4.jpg';
-import preview_5 from '@media/images/guides/preview_5.jpg';
-import preview_6 from '@media/images/guides/preview_6.jpg';
-import preview_7 from '@media/images/guides/preview_7.jpg';
-import preview_8 from '@media/images/guides/preview_8.jpg';
-import preview_9 from '@media/images/guides/preview_9.jpg';
-import preview_10 from '@media/images/guides/preview_10.jpg';
-import preview_11 from '@media/images/guides/preview_11.jpg';
-import preview_12 from '@media/images/guides/preview_12.jpg';
-import preview_13 from '@media/images/guides/preview_13.jpg';
-import preview_14 from '@media/images/guides/preview_14.jpg';
-import preview_15 from '@media/images/guides/preview_15.jpg';
-import preview_16 from '@media/images/guides/preview_16.jpg';
-import preview_17 from '@media/images/guides/preview_17.jpg';
-import preview_18 from '@media/images/guides/preview_18.jpg';
-import preview_19 from '@media/images/guides/preview_19.jpg';
-import preview_20 from '@media/images/guides/preview_20.jpg';
-import preview_21 from '@media/images/guides/preview_21.jpg';
-import preview_22 from '@media/images/guides/preview_22.jpg';
-import preview_23 from '@media/images/guides/preview_23.jpg';
-import preview_24 from '@media/images/guides/preview_24.jpg';
-import preview_25 from '@media/images/guides/preview_25.jpg';
-import preview_26 from '@media/images/guides/preview_26.jpg';
-import preview_27 from '@media/images/guides/preview_27.jpg';
-import preview_28 from '@media/images/guides/preview_28.jpg';
-import preview_29 from '@media/images/guides/preview_29.jpg';
-import preview_30 from '@media/images/guides/preview_30.jpg';
-import preview_31 from '@media/images/guides/preview_31.jpg';
-import preview_32 from '@media/images/guides/preview_32.jpg';
-import preview_33 from '@media/images/guides/preview_33.png';
-import preview_34 from '@media/images/guides/preview_34.png';
-import preview_35 from '@media/images/guides/preview_35.jpg';
-import preview_36 from '@media/images/guides/preview_36.jpg';
-import preview_37 from '@media/images/guides/preview_37.jpg';
-import preview_38 from '@media/images/guides/preview_38.jpg';
-import preview_39 from '@media/images/guides/preview_39.jpg';
-import preview_41 from '@media/images/guides/preview_41.jpg';
-import preview_42 from '@media/images/guides/preview_42.jpg';
-import preview_43 from '@media/images/guides/preview_43.jpg';
-import preview_44 from '@media/images/guides/preview_44.jpg';
-import preview_45 from '@media/images/guides/preview_45.jpg';
-import preview_46 from '@media/images/guides/preview_46.jpg';
-import preview_47 from '@media/images/guides/preview_47.jpg';
-import preview_48 from '@media/images/guides/preview_48.jpg';
-import preview_49 from '@media/images/guides/preview_49.jpg';
-import preview_50 from '@media/images/guides/preview_50.jpg';
-import preview_51 from '@media/images/guides/preview_51.jpg';
-import preview_52 from '@media/images/guides/preview_52.webp';
-import preview_53 from '@media/images/guides/preview_53.jpg';
-import preview_54 from '@media/images/guides/preview_54.jpg';
-import preview_55 from '@media/images/guides/preview_55.jpg';
-import preview_56 from '@media/images/guides/preview_56.jpg';
-import preview_57 from '@media/images/guides/preview_57.jpg';
-import preview_58 from '@media/images/guides/preview_58.jpg';
-import preview_59 from '@media/images/guides/preview_59.jpg';
 
 /**
  * These filters are being indexed in filter select
@@ -183,7 +124,12 @@ const englishLocalization: Localization = {
 					description: 'Destroy all the dead john blocks in John Gutter.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
-						new InstructionImage(preview_0, 'preview_0', 'transparent', 1),
+						new InstructionImage(
+							previews.preview_0,
+							'preview_0',
+							'transparent',
+							1
+						),
 						'To complete this achievement, you need to destroy all the dead John blocks at the John Gutter level.',
 					],
 				},
@@ -202,7 +148,12 @@ const englishLocalization: Localization = {
 					description: 'Get a combo of 99 or more in John Gutter.',
 					filters: [indexingFilters.worldOne, indexingFilters.johnGutter],
 					instructions: [
-						new InstructionImage(preview_1, 'preview_1', 'transparent', 1),
+						new InstructionImage(
+							previews.preview_1,
+							'preview_1',
+							'transparent',
+							1
+						),
 						'Complete combo from start to finish, as well as the execution of the 2nd lap. Should be exactly enough to get a combo of 99 enemies.',
 					],
 				},
@@ -213,7 +164,12 @@ const englishLocalization: Localization = {
 						'Get to all the priests without bumping into a wall once in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
-						new InstructionImage(preview_2, 'preview_2', 'transparent', 1),
+						new InstructionImage(
+							previews.preview_2,
+							'preview_2',
+							'transparent',
+							1
+						),
 						'In total, you need to get to 5 priests. Constantly perform the technique of a sharp descent down, there will be a lot of moments when you need to beat against the wall and only this technique will save you from hitting the wall.',
 					],
 				},
@@ -223,7 +179,12 @@ const englishLocalization: Localization = {
 					description: 'Parry ten Forknights in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
-						new InstructionImage(preview_3, 'preview_3', 'transparent', 1),
+						new InstructionImage(
+							previews.preview_3,
+							'preview_3',
+							'transparent',
+							1
+						),
 						'Very simple, nothing special. Just press Parry next to 10 "Forkknight" in one run.',
 					],
 				},
@@ -231,672 +192,940 @@ const englishLocalization: Localization = {
 				SPHERICAL: {
 					title: 'Spherical',
 					description:
-						'Убейте другого врага когда вас пнет "Pepperoni Goblin" в "Pizzascape".',
+						'Kill another enemy while in the ball form in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
-						new InstructionImage(preview_4, 'preview_4', 'transparent', 1),
-						'Найдите область с "Pepperoni Goblin" и другим врагом достаточно близко друг к другу - (при необходимости вы можете переместить их, схватив их). И пусть вас пнут, и будучи круглым мячом убить другого врага.',
+						new InstructionImage(
+							previews.preview_4,
+							'preview_4',
+							'transparent',
+							1
+						),
+						'Find an area with a "Pepperoni Goblin" and another enemy close enough to each other - (if necessary, you can move them by grabbing them). And let them kick you, and being a round ball kill another enemy.',
 					],
 				},
 
 				THRILL_SEEKER: {
 					title: 'Thrill Seeker',
 					description:
-						'Закончите уровень "Ancient Cheese", не получив урона от взрывов.',
+						'Finish Ancient Cheese without getting hurt by an explosion.',
 					filters: [indexingFilters.worldOne, indexingFilters.ancientCheese],
 					instructions: [
-						new InstructionImage(preview_5, 'preview_5', 'transparent', 1),
-						'Все предельно просто. Просто постарайтесь не получить урона на этом уровне от бомб.',
+						new InstructionImage(
+							previews.preview_5,
+							'preview_5',
+							'transparent',
+							1
+						),
+						'Everything is extremely simple. Just try not to take damage at this level from bombs.',
 					],
 				},
 
 				VOLLEYBOMB: {
 					title: 'Volleybomb',
 					description:
-						'Убейте Крысу, используя бомбу, сброшенную врагом на уровне "Ancient Cheese".',
+						'Kill a rat using a bomb dropped by an enemy in Ancient Cheese.',
 					filters: [indexingFilters.worldOne, indexingFilters.ancientCheese],
 					instructions: [
-						new InstructionImage(preview_6, 'preview_6', 'transparent', 1),
-						'Убейте Крысу бомбой гоблина. Испытание может быть завершено в комнате, скрин ниже:',
+						new InstructionImage(
+							previews.preview_6,
+							'preview_6',
+							'transparent',
+							1
+						),
+						'Kill the Rat with a goblin bomb. The achievement can be completed in the room, screen:',
 					],
 				},
 
 				DELICACY: {
 					title: 'Delicacy',
 					description:
-						'Разрушить более сорока одной сырной платформы в "Ancient Cheese".',
+						'Make more than forty one sets of cheese platforms crumble in Ancient Cheese.',
 					filters: [indexingFilters.worldOne, indexingFilters.ancientCheese],
 					instructions: [
-						new InstructionImage(preview_7, 'preview_7', 'transparent', 1),
-						'Можете особо не напрягаться, получите без проблем.',
+						new InstructionImage(
+							previews.preview_7,
+							'preview_7',
+							'transparent',
+							1
+						),
+						'You can not strain yourself too much, you will get it without any problems.',
 					],
 				},
 
 				VERY_VERY_HOT_SAUCE: {
 					title: 'Very Very Hot Sauce',
-					description:
-						'Закончите уровень "Bloodsauce Dungeon" ни разу не дотронувшись до лавы.',
+					description: 'Finish Bloodsauce Dungeon without touching lava once.',
 					filters: [
 						indexingFilters.worldOne,
 						indexingFilters.bloodSauceDungeon,
 					],
 					instructions: [
-						new InstructionImage(preview_8, 'preview_8', 'transparent', 1),
-						'Ничего особенного, просто пройдите уровень, не попадая ни в какие ямы с лавой.',
+						new InstructionImage(
+							previews.preview_8,
+							'preview_8',
+							'transparent',
+							1
+						),
+						'Nothing special, just complete the level without getting into any lava pits.',
 					],
 				},
 
 				ERUPTION_MAN: {
 					title: 'Eruption Man',
 					description:
-						'Во время побега используйте супер-прыжок на протяжении более чем 2 секунд на уровне "Bloodsauce Dungeon".',
+						'During escape, go up with the superjump for more than two seconds in Bloodsauce Dungeon.',
 					filters: [
 						indexingFilters.worldOne,
 						indexingFilters.bloodSauceDungeon,
 					],
 					instructions: [
-						new InstructionImage(preview_9, 'preview_9', 'transparent', 1),
-						'Совершив суперпрыжок в этом месте во время "Pizza Time", и достижение ваше.',
+						new InstructionImage(
+							previews.preview_9,
+							'preview_9',
+							'transparent',
+							1
+						),
+						'By making a super jump in this place during "Pizza Time", and the achievement is yours.',
 					],
 				},
 
 				UNSLICED_PIZZAMAN: {
 					title: 'Unsliced Pizzaman',
 					description:
-						'Закончите уровень "Bloodsauce Dungeon", не получив урона от ножей для пиццы.',
+						'Finish Bloodsauce Dungeon without getting hurt by a pizza cutter.',
 					filters: [
 						indexingFilters.worldOne,
 						indexingFilters.bloodSauceDungeon,
 					],
 					instructions: [
-						new InstructionImage(preview_10, 'preview_10', 'transparent', 1, 2),
-						'Просто постарайтесь не получить урон от ножей для пиццы на этом уровне.',
+						new InstructionImage(
+							previews.preview_10,
+							'preview_10',
+							'transparent',
+							1,
+							1
+						),
+						'Just try not to take damage from pizza knives at this level.',
 					],
 				},
 
 				THE_CRITIC: {
 					title: 'The Critic',
-					description: 'Победите Пеппермена без урона.',
+					description: 'Defeat Pepperman without getting hurt.',
 					filters: [indexingFilters.worldOne, indexingFilters.boss],
 					instructions: [
-						new InstructionImage(preview_11, 'preview_11', 'transparent', 1),
-						'Один из самых простых боссов, по сравнению с другими боссами, проблем вызвать с его прохождением без урона не должно.',
+						new InstructionImage(
+							previews.preview_11,
+							'preview_11',
+							'transparent',
+							1
+						),
+						'One of the simplest bosses, compared to other bosses, there should be no problems with its passage without damage.',
 					],
 				},
 
 				S_RANK_1: {
 					title: 'S Ranked #1',
-					description: 'Пройдите все уровни из мира 1 на S-ранк.',
+					description: 'Get all S Ranks in World 1.',
 					filters: [indexingFilters.worldOne],
 				},
 
 				P_RANK_1: {
 					title: 'P Ranked #1',
-					description: 'Пройдите все уровни из мира 1 на P-ранк.',
+					description: 'Get all P Ranks in World 1.',
 					filters: [indexingFilters.worldOne],
 				},
 
 				PEPPINO_S_RAIN_DANCE: {
 					title: "Peppino's Rain Dance",
-					description: 'Повторно активируйте тотем, танцуя в "Oregano Desert".',
+					description:
+						'Reactivate a totem by dancing with the mach dash in Oregano Desert.',
 					filters: [indexingFilters.worldTwo, indexingFilters.oreganoDesert],
 					instructions: [
-						new InstructionImage(preview_12, 'preview_12', 'transparent', 1),
-						'Находясь рядом с тотемом, начните бегать и разгоняться туда-сюда, пока тотем снова не станет активным. Можно это сделать с любым тотемом.',
+						new InstructionImage(
+							previews.preview_12,
+							'preview_12',
+							'transparent',
+							1
+						),
+						'Being near the totem, start running and accelerating back and forth until the totem becomes active again. You can do this with any totem.',
 					],
 				},
 
 				UNNECESSARY_VIOLENCE: {
 					title: 'Unnecessary Violence',
-					description: 'Убейте всех клерков-сосисок в пиццериях.',
+					description: 'Kill all of the clerk sausages in the pizzamarts.',
 					filters: [indexingFilters.worldTwo, indexingFilters.oreganoDesert],
 					instructions: [
-						new InstructionImage(preview_13, 'preview_13', 'transparent', 1),
-						'На уровне расположено 5 пиццерий, в каждой из которых есть продавец сосисок.',
+						new InstructionImage(
+							previews.preview_13,
+							'preview_13',
+							'transparent',
+							1
+						),
+						'There are 5 pizzerias on the level, each of which has a sausage seller.',
 					],
 				},
 
 				ALIEN_COW: {
 					title: 'Alien Cow',
-					description:
-						'Не дайте ни одной корове ударить себя на уровне "Oregano Desert".',
+					description: 'Dont get hit by a single cow in Oregano Desert.',
 					filters: [indexingFilters.worldTwo, indexingFilters.oreganoDesert],
 					instructions: [
-						new InstructionImage(preview_14, 'preview_14', 'transparent', 1),
-						'Избегайте спешки и не торопитесь. Старайтесь перепрыгнуть всех коров и все получится.',
+						new InstructionImage(
+							previews.preview_14,
+							'preview_14',
+							'transparent',
+							1
+						),
+						'Avoid haste and take your time. Try to jump over all the cows and everything will work out.',
 					],
 				},
 
 				GHOSTED: {
 					title: 'Ghosted',
-					description:
-						'Избегайте прикосновения призрака Джона на уровне "Wasteyard".',
+					description: 'Avoid getting touched by the John Ghost in Wasteyard.',
 					filters: [indexingFilters.worldTwo, indexingFilters.wasteyard],
 					instructions: [
-						new InstructionImage(preview_15, 'preview_15', 'transparent', 1),
-						'Не прикасайтесь к Джону-Призраку во время "Pizza Time".',
+						new InstructionImage(
+							previews.preview_15,
+							'preview_15',
+							'transparent',
+							1
+						),
+						'Don\'t touch John Ghost during "Pizza Time".',
 					],
 				},
 
 				PRETEND_GHOST: {
 					title: 'Pretend Ghost',
-					description:
-						'Убейте 20 или более врагов, играя за призрака, в "Wasteyard".',
+					description: 'Kill 20 or more enemies as a ghost in Wasteyard.',
 					filters: [indexingFilters.worldTwo, indexingFilters.wasteyard],
 					instructions: [
-						new InstructionImage(preview_16, 'preview_16', 'transparent', 1),
-						'Убедитесь, что появились эти два мини-Джонов - (Нужно убить их будучи призраком)',
-						new InstructionImage(preview_17, 'preview_17', 'transparent', 1),
-						'и залетите в этот секрет, чтобы выполнить квест.',
+						new InstructionImage(
+							previews.preview_16,
+							'preview_16',
+							'transparent',
+							1
+						),
+						'Make sure that these two mini-Johns have appeared - (You need to kill them being a ghost)',
+						new InstructionImage(
+							previews.preview_17,
+							'preview_17',
+							'transparent',
+							1
+						),
+						'and fly into this secret to complete the quest.',
 					],
 				},
 
 				ALIVE_AND_WELL: {
 					title: 'Alive and Well',
-					description: 'Прокатитесь на каждом трупе в "Wasteyard".',
+					description: 'Surf every corpse in Wasteyard.',
 					filters: [indexingFilters.worldTwo, indexingFilters.wasteyard],
 					instructions: [
-						new InstructionImage(preview_18, 'preview_18', 'transparent', 1),
-						'Все трупы находятся на главном пути.',
+						new InstructionImage(
+							previews.preview_18,
+							'preview_18',
+							'transparent',
+							1
+						),
+						'All the corpses are on the main path.',
 					],
 				},
 
 				NO_ONE_IS_SAFE: {
 					title: 'No One Is Safe',
 					description:
-						'Убейте сразу трех недоступных врагов с помощью супер-насмешки в "Fun Farm".',
+						'Kill three unreachable enemies at once with the supertaunt in Fun Farm.',
 					filters: [indexingFilters.worldTwo, indexingFilters.farm],
 					instructions: [
-						new InstructionImage(preview_19, 'preview_19', 'transparent', 1),
-						'Супер-насмешка в этом месте убьет 4 "Peasanto\'s":',
+						new InstructionImage(
+							previews.preview_19,
+							'preview_19',
+							'transparent',
+							1
+						),
+						'Super-mockery in this place will kill 4 "Peasanto\'s":',
 					],
 				},
 
 				CUBE_MENACE: {
 					title: 'Cube Menace',
-					description: 'Найдите и уничтожьте куб Морта.',
+					description: 'Find and destroy the Mort Cube.',
 					filters: [indexingFilters.worldTwo, indexingFilters.farm],
 					instructions: [
-						new InstructionImage(preview_20, 'preview_20', 'transparent', 1),
-						'Куб можно найти в первой локации, через которую вам нужно будет перепрыгнуть с "Мортом". Секция будет закрыта, и вам нужно будет сломать блок "Мортом", чтобы туда попасть.',
+						new InstructionImage(
+							previews.preview_20,
+							'preview_20',
+							'transparent',
+							1
+						),
+						'The cube can be found in the first location, through which you will need to jump with the "Mort". The section will be closed, and you will need to break the block with a "Mort" to get there.',
 					],
 				},
 
 				GOOD_EGG: {
 					title: 'Good Egg',
-					description: 'Завершите "Fun Farm", избегая урона с "Мортом" на вас.',
+					description:
+						'Complete Fun Farm while avoiding getting hurt with Mort on you.',
 					filters: [indexingFilters.worldTwo, indexingFilters.farm],
 					instructions: [
-						new InstructionImage(preview_21, 'preview_21', 'transparent', 1),
-						'Просто постарайтесь избегать повреждений с "Мортом" на вас. Попадания факела который кидает "Peasanto" не считается уроном.',
+						new InstructionImage(
+							previews.preview_21,
+							'preview_21',
+							'transparent',
+							1
+						),
+						'Just try to avoid damage with the "Mort" on you. Hitting a torch that throws a "Peasanto" is not considered damage.',
 					],
 				},
 
 				NON_ALCOHOLIC: {
 					title: 'Non-Alcoholic',
-					description:
-						'Уничтожьте все пивные бутылки на уровне "Fastfood Saloon".',
+					description: 'Destroy nearly every beer bottle in Fastfood Saloon.',
 					filters: [indexingFilters.worldTwo, indexingFilters.saloon],
 					instructions: [
-						new InstructionImage(preview_22, 'preview_22', 'transparent', 1),
-						'В салуне повсюду разбросано куча пивных бутылок, и большую часть нужно их разбить.',
+						new InstructionImage(
+							previews.preview_22,
+							'preview_22',
+							'transparent',
+							1
+						),
+						'There are a lot of beer bottles scattered everywhere in the saloon, and most of them need to be broken.',
 					],
 				},
 
 				ALREADY_PRESSED: {
 					title: 'Already Pressed',
-					description:
-						'Активируйте каждую кнопку только один раз в "Fastfood Saloon".',
+					description: 'Activate each button only once in Fastfood Saloon.',
 					filters: [indexingFilters.worldTwo, indexingFilters.saloon],
 					instructions: [
-						new InstructionImage(preview_23, 'preview_23', 'transparent', 1),
-						'Не очень простое достижение. Нужно не плохо запомнить маршрут и точно знать, что делать. Также есть вероятность двойного активирования кнопки так что нужно быть немного осторожным с этим.',
+						new InstructionImage(
+							previews.preview_23,
+							'preview_23',
+							'transparent',
+							1
+						),
+						'Not a very simple achievement. You need to remember the route well and know exactly what to do. There is also a possibility of double activation of the button, so you need to be a little careful with this.',
 					],
 				},
 
 				ROYAL_FLUSH: {
 					title: 'Royal Flush',
-					description:
-						'Прикоснитесь к каждой карте на уровне "Fastfood Saloon".',
+					description: 'Touch every single card in Fastfood Saloon.',
 					filters: [indexingFilters.worldTwo, indexingFilters.saloon],
 					instructions: [
-						new InstructionImage(preview_24, 'preview_24', 'transparent', 1),
-						'Карты разбросаны по всей карте и вам нужно собрать их всех. Карты в секретах не учитываются.',
+						new InstructionImage(
+							previews.preview_24,
+							'preview_24',
+							'transparent',
+							1
+						),
+						'The cards are scattered all over the map and you need to collect them all. Cards are not counted in secrets.',
 					],
 				},
 
 				THE_UGLY: {
 					title: 'The Ugly',
-					description: 'Победите Виджиланта без урона.',
+					description: 'Defeat Vigilante without getting hurt.',
 					filters: [indexingFilters.worldTwo, indexingFilters.boss],
 					instructions: [
-						new InstructionImage(preview_25, 'preview_25', 'transparent', 1),
-						'Из 5-ти боссов я считаю ,что это самый сложный босс после "PizzaFace". В общей сложности 18 HP и не простые атаки, даст вам фору.',
+						new InstructionImage(
+							previews.preview_25,
+							'preview_25',
+							'transparent',
+							1
+						),
+						'Of the 5 bosses, I think this is the most difficult boss after PizzaFace. A total of 18 HP and not simple attacks will give you a head start.',
 					],
 				},
 
 				S_RANK_2: {
 					title: 'S Ranked #2',
-					description: 'Пройдите все уровни из мира 2 на S-ранк.',
+					description: 'Get all S Ranks in World 2.',
 					filters: [indexingFilters.worldTwo],
 				},
 
 				P_RANK_2: {
 					title: 'P Ranked #2',
-					description: 'Пройдите все уровни из мира 2 на P-ранк.',
+					description: 'Get all P Ranks in World 2.',
 					filters: [indexingFilters.worldTwo],
 				},
 
 				BLOWBACK: {
 					title: 'Blowback',
-					description:
-						'Убейте гоблина-пушечника его собственной бомбой на уровне Crust Cove',
+					description: 'Kill a cannon goblin with his own bomb in Crust Cove.',
 					filters: [indexingFilters.worldThree, indexingFilters.crust],
 					instructions: [
-						new InstructionImage(preview_26, 'preview_26', 'transparent', 1),
-						'Отразите атаку пушечного выстрела гоблина, и все должно получиться.',
+						new InstructionImage(
+							previews.preview_26,
+							'preview_26',
+							'transparent',
+							1
+						),
+						"Parry the attack of the goblin's cannon shot, and everything should work out.",
 					],
 				},
 
 				X: {
 					title: 'X',
-					description: 'Найдите всех "Treasure Chest Guy" в "Crust Cove".',
+					description: 'Uncover all the treasure guys in Crust Cove.',
 					filters: [indexingFilters.worldThree, indexingFilters.crust],
 					instructions: [
-						new InstructionImage(preview_27, 'preview_27', 'transparent', 2),
-						'На протяжении всего забега в земле прячутся 7 спрятанных "Treasure Chest Guy", все они отмечены красным крестиком на земле.',
-						'В игре засчитывается "Treasure Chest Guy", выкопав его, а не убив. Это означает, что вы можете постоянно выкапывать первого "Treasure Chest Guy" в начале уровня, и не убивать его. Идем на другую под-локацию, возвращаемся обратно в комнату и снова выкапываем того же "Treasure Chest Guy", делаем так 7 раз и получаем достижение.',
+						new InstructionImage(
+							previews.preview_27,
+							'preview_27',
+							'transparent',
+							2
+						),
+						'Throughout the run, there are 7 hidden "Treasure Chest Guy" hiding in the ground, all of them marked with a red cross on the ground.',
+						'The game counts "Treasure Chest Guy" by digging him out, not killing him. This means that you can constantly dig up the first "Treasure Chest Guy" at the beginning of the level, and not kill him. Then you go to another sub-location, go back to the room and dig out the same "Treasure Chest Guy" again, do this 7 times and get an achievement.',
 					],
 				},
 
 				DEMOLITION_EXPERT: {
 					title: 'Demolition Expert',
-					description: 'Завершите "Crust Cove", не получив урона от взрыва.',
+					description:
+						'Complete Crust Cove without getting hit by an explosion.',
 					filters: [indexingFilters.worldThree, indexingFilters.crust],
 					instructions: [
-						new InstructionImage(preview_28, 'preview_28', 'transparent', 1),
-						'Просто избегайте повреждений гоблинов с пушкой и капитанских пушек на протяжении всего забега.',
+						new InstructionImage(
+							previews.preview_28,
+							'preview_28',
+							'transparent',
+							1
+						),
+						"Just avoid damage to the goblins with the cannon and the captain's guns throughout the race.",
 					],
 				},
 
 				BEE_NICE: {
 					title: 'Bee Nice',
-					description:
-						'Встань перед пчелой и используй насмешку на уровне "Gnome Forest".',
+					description: 'Stand next to a bee and taunt in Gnome Forest.',
 					filters: [indexingFilters.worldThree, indexingFilters.lario],
 					instructions: [
-						new InstructionImage(preview_29, 'preview_29', 'transparent', 1),
-						'Пчелы повсюду на карте, просто найдите одну, а затем позируйте рядом с ней на "C".',
+						new InstructionImage(
+							previews.preview_29,
+							'preview_29',
+							'transparent',
+							1
+						),
+						'Bees are everywhere on the map, just find one and then stand in front of one of them and hit Parry.',
 					],
 				},
 
 				LUMBERJACK: {
 					title: 'Lumberjack',
-					description: 'Уничтожьте все деревянный блоки в "Gnome Forest".',
+					description: 'Destroy every wood block in Gnome Forest.',
 					filters: [indexingFilters.worldThree, indexingFilters.lario],
 					instructions: [
-						new InstructionImage(preview_30, 'preview_30', 'transparent', 1),
-						'Их слишком много, чтобы их сосчитать, но они расположены только на этом уровне.',
+						new InstructionImage(
+							previews.preview_30,
+							'preview_30',
+							'transparent',
+							1
+						),
+						'There are too many of them to count, but they are located only on this level.',
 					],
 				},
 
 				BULLSEYE: {
 					title: 'Bullseye',
 					description:
-						'Убейте "Noise Goblin" его собственной стрелой в "Gnome Forest".',
+						'Kill a noise goblin with his own arrow in Gnome Forest.',
 					filters: [indexingFilters.worldThree, indexingFilters.lario],
 					instructions: [
-						new InstructionImage(preview_31, 'preview_31', 'transparent', 1),
-						'Отразите стрелу "Noise Goblin", которую он выпускает. Она должна попасть в гоблина, если он не находится слишком далеко.',
+						new InstructionImage(
+							previews.preview_31,
+							'preview_31',
+							'transparent',
+							1
+						),
+						'Parry the "Noise Goblin" arrow that he releases. It should hit the goblin if it is not too far away.',
 					],
 				},
 
 				TURBO_TUNNEL: {
 					title: 'Turbo Tunnel',
 					description:
-						'Избегайте ударов о потолок в комнате сразу после начала "Pizza Time" в "Deep Dish Nine".',
+						'Avoid hitting the ceiling during the room right after the John Pillar in Deep Dish Nine.',
 					filters: [indexingFilters.worldThree, indexingFilters.deepDishNine],
 					instructions: [
-						new InstructionImage(preview_32, 'preview_32', 'transparent', 1),
-						'Как только вы начнете "Pizza Time", вы не должны стучаться головой об потолок. Метод проб и ошибок и все получится.',
+						new InstructionImage(
+							previews.preview_32,
+							'preview_32',
+							'transparent',
+							1
+						),
+						'Once you start "Pizza Time", you should not knock your head on the ceiling. Trial and error and everything will work out.',
 					],
 				},
 
 				BLAST_EM_ASTEROIDS: {
 					title: "Blast'Em Asteroids",
-					description: 'Уничтожьте все астероиды на уровне "Deep Dish Nine".',
+					description: 'Destroy all asteroids in Deep Dish Nine.',
 					filters: [indexingFilters.worldThree, indexingFilters.deepDishNine],
 					instructions: [
-						new InstructionImage(preview_33, 'preview_33', 'transparent', 1),
-						'Нужно уничтожить все астероиды с трубками во рту. Астероиды хорошо видны, и проблем это достижение вызвать не должно.',
+						new InstructionImage(
+							previews.preview_33,
+							'preview_33',
+							'transparent',
+							1
+						),
+						'We need to destroy all the asteroids with tubes in their mouths. Asteroids are clearly visible, and this achievement should not cause problems.',
 					],
 				},
 
 				MAN_METEOR: {
 					title: 'Man Meteor',
-					description:
-						'Уничтожьте 5 НЛО за один боди-слам на уровне "Deep Dish Nine".',
+					description: 'Kill 5 UFOlives in a single bodyslam in Deep Dish Nine',
 					filters: [indexingFilters.worldThree, indexingFilters.deepDishNine],
 					instructions: [
-						new InstructionImage(preview_34, 'preview_34', 'transparent', 1),
-						'Есть несколько мест, где можно выполнить это достижение, но самый легкий это убить 5 парящих НЛО в этой яме.',
+						new InstructionImage(
+							previews.preview_34,
+							'preview_34',
+							'transparent',
+							1
+						),
+						'There are several places where you can accomplish this achievement, but the easiest is to kill 5 floating UFOs in this pit.',
 					],
 				},
 
 				PRIMO_GOLFER: {
 					title: 'Primo Golfer',
-					description:
-						'Получите ранг "Primo Burg`" во всех курсах на уровне Golf.',
+					description: 'Get the highest rank in the courses of Golf.',
 					filters: [indexingFilters.worldThree, indexingFilters.golf],
 					instructions: [
-						new InstructionImage(preview_35, 'preview_35', 'transparent', 1),
-						'Получите ранг «Primo Burg`» на каждом поле для гольфа за один проход. Столкновение с разбега в "Greaseball", (он же «мяч для гольфа») преодолевает гораздо большее расстояние, чем обычный удар клюшкой, поэтому постарайтесь набрать скорость и столкнуться с ним, а не просто играть в гольф.',
+						new InstructionImage(
+							previews.preview_35,
+							'preview_35',
+							'transparent',
+							1
+						),
+						'Get the rank of "Primo Burg`" on each golf course in one pass. A run-up collision in a "Greaseball" (aka "golf ball") covers a much longer distance than a normal putter, so try to pick up speed and collide with it, and not just play golf.',
 					],
 				},
 
 				NICE_SHOT: {
 					title: 'Nice Shot',
-					description: 'Убейте трех или более врагов одним ударом в "Golf".',
+					description: 'Kill three or more enemies in a single stroke in Golf.',
 					filters: [indexingFilters.worldThree, indexingFilters.golf],
 					instructions: [
-						new InstructionImage(preview_36, 'preview_36', 'transparent', 1),
-						'Это должно произойти само по себе, но если вы не можете этого сделать, просто поставьте 3 врага рядом друг с другом - (вы же можете их перетаскивать, только аккуратно...) и ударьте "Greaseball", чтобы убить их всех одним ударом.',
+						new InstructionImage(
+							previews.preview_36,
+							'preview_36',
+							'transparent',
+							1
+						),
+						'This should happen by itself, but if you can\'t do it, just put 3 enemies next to each other - (you can drag them, just carefully...) and hit the "Greaseball" to kill them all with one blow.',
 					],
 				},
 
 				HELPFUL_BURGER: {
 					title: 'Helpful Burger',
 					description:
-						'Заставьте противника-бургера забить мяч внутрь цели на уровне "Golf".',
+						'Get a burger enemy to hit the ball inside the goal in Golf.',
 					filters: [indexingFilters.worldThree, indexingFilters.golf],
 					instructions: [
-						new InstructionImage(preview_37, 'preview_37', 'transparent', 1),
-						'У "Burger Golfer" должен быть последний штрих, чтобы забить шар в корзину. Пусть "Greaseball" застрянет в носе, и пусть "Burger Golfer" подойдет, и ударить его.',
+						new InstructionImage(
+							previews.preview_37,
+							'preview_37',
+							'transparent',
+							1
+						),
+						'The "Burger Golfer" must have the finishing touch to score the ball into the basket. Let the "Greaseball" get stuck in the nose, and let the "Burger Golfer" come up and hit it.',
 					],
 				},
 
 				DENOISE: {
 					title: 'Denoise',
-					description: 'Победите Нойза без урона.',
+					description: 'Defeat Noise without getting hurt.',
 					filters: [indexingFilters.worldThree, indexingFilters.boss],
 					instructions: [
-						new InstructionImage(preview_38, 'preview_38', 'transparent', 1, 2),
-						'Первый раз при прохождении может показаться сложным, но мне кажется по сложности он идет вторым после "Pepperman". Вся фишка "Noise" в том, что, несмотря на то, что у него есть определенное количество атак, все они будут выполняться в случайном порядке и могут быть выполнены всего 2 раза',
+						new InstructionImage(
+							previews.preview_38,
+							'preview_38',
+							'transparent',
+							1,
+							1
+						),
+						'The first time during the passage may seem difficult, but it seems to me that it is second in complexity after "Pepperman". The whole trick of "Noise" is that, despite the fact that it has a certain number of attacks, they will all be executed in random order and can be executed only 2 times.',
 					],
 				},
 
 				S_RANK_3: {
 					title: 'S Ranked #3',
-					description: 'Пройдите все уровни из мира 3 на S-ранк.',
+					description: 'Get all S Ranks in World 3.',
 					filters: [indexingFilters.worldThree],
 				},
 
 				P_RANK_3: {
 					title: 'P Ranked #3',
-					description: 'Пройдите все уровни из мира 3 на P-ранк.',
+					description: 'Get all P Ranks in World 3.',
 					filters: [indexingFilters.worldThree],
 				},
 
 				PAN_FRIED: {
 					title: 'Pan Fried',
-					description: 'Найдите комнату с беконом.',
+					description: 'Find the bacon room.',
 					filters: [indexingFilters.worldFour, indexingFilters.pigCity],
 					instructions: [
-						new InstructionImage(preview_39, 'preview_39', 'transparent', 1),
-						'Комната с беконом находится в подзоне 3-го такси. Перед тем, как вы войдете в полицейскую машину, с потолка наверху будут свисать 2 полоски бекона. Супер-прыжок между беконом открывает вход, ведущую в комнату с беконом.',
+						new InstructionImage(
+							previews.preview_39,
+							'preview_39',
+							'transparent',
+							1
+						),
+						'The bacon room is located in the subzone of the 3rd taxi. Before you enter the police car, 2 strips of bacon will hang from the ceiling above. The super-jump between the bacon opens the entrance leading to the bacon room.',
 					],
 				},
 
 				STRIKE: {
 					title: 'Strike!',
 					description:
-						'Убейте трех или более врагов одним шаровым ударом в "The Pig City".',
+						'Kill three or more enemies with a single Brick ball in Pig City.',
 					filters: [indexingFilters.worldFour, indexingFilters.pigCity],
 					instructions: [
-						new InstructionImage(preview_41, 'preview_41', 'transparent', 1),
-						'Как только вы переключитесь на Густаво и Брика, рядом с вами будет 3 креветки. Атакуйте их, когда они окажутся на одном уровне.',
+						new InstructionImage(
+							previews.preview_41,
+							'preview_41',
+							'transparent',
+							1
+						),
+						'Once you switch to Gustavo and Brick, there will be 3 shrimp next to you. Attack them when they are on the same level.',
 					],
 				},
 
 				SAY_OINK: {
 					title: 'Say Oink!',
-					description: 'Сфотографируйтесь с каждым жителем в "The Pig City".',
+					description: 'Take a photo with every Pig City citizen.',
 					filters: [indexingFilters.worldFour, indexingFilters.pigCity],
 					instructions: [
-						new InstructionImage(preview_42, 'preview_42', 'transparent', 1),
-						'На локации есть 13 свиней, рядом с ними нужно позировать на "C". Все они находятся на главном пути, поэтому их не может быть в подзонах такси или секретах, их нетрудно найти. Танцующие свиньи и свиньи-полицейские не засчитываются.',
+						new InstructionImage(
+							previews.preview_42,
+							'preview_42',
+							'transparent',
+							1
+						),
+						'There are 13 pigs on the location, next to them you need to pose for "C". All of them are on the main road, so they cannot be in taxi subzones or secrets, they are not difficult to find. Dancing pigs and police pigs don\'t count.',
 					],
 				},
 
 				CANT_FOOL_ME: {
 					title: "Can't Fool Me",
-					description: 'Не убивать картонных пицца-boy в "Oh Sh!t!".',
+					description: 'Avoid killing any pizzaboy cardboard in Oh Shit!',
 					filters: [indexingFilters.worldFour, indexingFilters.thatLevel],
 					instructions: [
-						new InstructionImage(preview_43, 'preview_43', 'transparent', 1),
-						'Нужно избегать уничтожения картонных пицца-boy. Лучшая тактика действий — определить картонного от врага, их нетрудно обнаружить, и с ними нетрудно справиться. Имейте в виду, что красные ниндзя совершенно неотличимы от картонных. В конце дадут достижение.',
+						new InstructionImage(
+							previews.preview_43,
+							'preview_43',
+							'transparent',
+							1
+						),
+						'It is necessary to avoid destroying cardboard pizza-boy. The best tactic of action is to identify the cardboard from the enemy, they are not difficult to detect, and they are not difficult to cope with. Keep in mind that red ninjas are completely indistinguishable from cardboard ones. In the end, they will give an achievement.',
 					],
 				},
 
 				FOOD_CLAN: {
 					title: 'Food Clan',
-					description: 'Убейте 10 ниндзя парированием на уровне "Oh Shit!".',
+					description: 'Kill ten ninjas by parrying them in Oh Shit!',
 					filters: [indexingFilters.worldFour, indexingFilters.thatLevel],
 					instructions: [
-						new InstructionImage(preview_44, 'preview_44', 'transparent', 1),
-						'Тот же метод как с "Forknight" только сложнее , когда "Ninja Slice" попытается атаковать отражаем атаку с помощью "C", все должно получиться.',
+						new InstructionImage(
+							previews.preview_44,
+							'preview_44',
+							'transparent',
+							1
+						),
+						'The same method as with "Forknight" is only more difficult, when "Ninja Slice" tries to attack, we repel the attack with "C", everything should work out.',
 					],
 				},
 
 				PENNY_PINCHER: {
 					title: 'Penny Pincher',
 					description:
-						'Избегайте того, чтобы "Mr. Pinch" схватил вас во время "Pizza Time" в "Oh Sh!t!".',
+						'Avoid getting grabbed by Mr Pinch during the escape sequence of Oh Shit!',
 					filters: [indexingFilters.worldFour, indexingFilters.thatLevel],
 					instructions: [
-						new InstructionImage(preview_45, 'preview_45', 'transparent', 1),
-						'Не особо сложное достижение. Как только вы пройдете комнату с несколькими "Mr. Pinch", вы практически получили это достижение.',
+						new InstructionImage(
+							previews.preview_45,
+							'preview_45',
+							'transparent',
+							1
+						),
+						'Not a particularly difficult achievement. As soon as you pass the room with a few "Mr. Pinch", you\'ve practically got this achievement.',
 					],
 				},
 
 				UNFLATTENING: {
 					title: 'Unflattening',
 					description:
-						'Уберите форму коробки при помощи жрецов (хотя бы раз на каждого) на уровне "Peppibot Factory".',
+						'Remove the boxxed form from each priest at least once in Peppibot Factory.',
 					filters: [indexingFilters.worldFour, indexingFilters.factory],
 					instructions: [
-						new InstructionImage(preview_46, 'preview_46', 'transparent', 1),
-						'Есть 4 священника, с которыми вам нужно взаимодействовать, священник 3-й находится сразу после священника 2-го, между ними нет преобразования в коробку. Вы можете либо открыть секрет рядом со 2-м священником, чтобы взаимодействовать с 3-им священником, а затем вернуться наверх, чтобы снова получить трансформацию и на этот раз взаимодействовать со 2-м священником, или сделать второй круг и выбрать несекретный маршрут и секретный маршрут, на разных забегах.',
+						new InstructionImage(
+							previews.preview_46,
+							'preview_46',
+							'transparent',
+							1
+						),
+						'There are 4 priests you need to interact with, the 3rd priest is right after the 2nd priest, there is no box conversion between them. You can either open the secret next to the 2nd priest to interact with the 3rd priest, and then go back upstairs to get the transformation again and this time interact with the 2nd priest, or make a Lap 2 and choose an unclassified route and a secret route, on different races.',
 					],
 				},
 
 				WHOOP_THIS: {
 					title: 'Whoop This!',
 					description:
-						'Пройдите первый секрет на уровне "Peppibot Factory" без урона.',
+						'Survive the first secret of Peppibot Factory without getting hurt.',
 					filters: [indexingFilters.worldFour, indexingFilters.factory],
 					instructions: [
-						new InstructionImage(preview_47, 'preview_47', 'transparent', 1),
-						'Когда вы найдете секрет, вам нужно как можно скорее использовать супер-насмешку и начать бежать к стене слева от вас, чтобы избежать всех атак сразу.',
+						new InstructionImage(
+							previews.preview_47,
+							'preview_47',
+							'transparent',
+							1
+						),
+						'When you find the secret, you need to use the super taunt as soon as possible and start running towards the wall to your left to avoid all the attacks at once.',
 					],
 				},
 
 				THERE_CAN_BE_ONLY_ONE: {
 					title: 'There Can Be Only One',
-					description: 'Уничтожьте всех "Peppibot" на "Peppibot Factory".',
+					description: 'Destroy every Peppino robot in Peppibot Factory.',
 					filters: [indexingFilters.worldFour, indexingFilters.factory],
 					instructions: [
-						new InstructionImage(preview_48, 'preview_48', 'transparent', 1),
-						'Все роботы находятся на основном пути (нет секретов или скрытых комнат), но вы должны пройти второй круг, так как вам нужно дважды убить каждого робота, которые появляется во время "Pizza Time", чтобы они все зачлись.',
+						new InstructionImage(
+							previews.preview_48,
+							'preview_48',
+							'transparent',
+							1
+						),
+						'All robots are on the main path (there are no secrets or hidden rooms), but you have to go through the second round, as you need to kill each robot twice that appears during "Pizza Time" so that they all count.',
 					],
 				},
 
 				FROZEN_NUGGETS: {
 					title: 'Frozen Nuggets',
 					description:
-						'Освободите всех замороженных птиц в "Refrigerator-Refrigerador-Freezerator".',
+						'Free all the frozen birds in Refrigerator-Refrigerador-Freezerator.',
 					filters: [indexingFilters.worldFour, indexingFilters.freezerator],
 					instructions: [
-						new InstructionImage(preview_49, 'preview_49', 'transparent', 1),
-						'Вам нужен будет огненное дыхание, чтобы освободить большинство птиц, (также вы можете использовать реактивные ранцы). Блоки с замороженными птицами очень отличаются от обычных замороженных блоков.',
+						new InstructionImage(
+							previews.preview_49,
+							'preview_49',
+							'transparent',
+							1
+						),
+						'You will need fire breath to free most of the birds, (you can also use jetpacks). Frozen bird blocks are very different from regular frozen blocks.',
 					],
 				},
 
 				SEASON_S_GREETINGS: {
 					title: "Season's Greetings",
 					description:
-						'Убейте 5 фейковых Санта-Клаусов на уровне "Refrigerator-Refrigerador-Freezerator".',
+						'Kill 5 fake santas in Refrigerator-Refrigerador-Freezerator.',
 					filters: [indexingFilters.worldFour, indexingFilters.freezerator],
 					instructions: [
-						new InstructionImage(preview_50, 'preview_50', 'transparent', 1),
-						'Чтобы получить это достижение, вам нужно провести приличную комбинацию, как только вы получите огненное дыхание. Первые 2 "Fake Santa\'s" могут быть убиты, запустив/апперкотируя врага в санту, но оставшиеся 3 могут умереть только с помощью супер-насмешки. Если к моменту, когда вы доберетесь до выхода, у вас не будет всех 5 убийств, вы можете пройти второй забег и попробовать еще раз.',
+						new InstructionImage(
+							previews.preview_50,
+							'preview_50',
+							'transparent',
+							1
+						),
+						'To get this achievement, you need to make a decent combination once you get the fire breath. The first 2 "Fake Santa\'s" can be killed by launching/uppercutting an enemy at Santa, but the remaining 3 can only die with a super taunt. If you don\'t have all 5 kills by the time you get to the exit, you can take the second run and try again.',
 					],
 				},
 
 				ICE_CLIMBER: {
 					title: 'Ice Climber',
 					description:
-						'Закончите уровень "Refrigerator-Refrigerador-Freezerator", ни разу не упав в пропасть.',
+						'Complete Refrigerator-Refrigerador-Freezerator without falling in a pit.',
 					filters: [indexingFilters.worldFour, indexingFilters.freezerator],
 					instructions: [
-						new InstructionImage(preview_51, 'preview_51', 'transparent', 1),
-						'Легче сказать, чем сделать, избегайте быстрого движения, так как есть много внезапных падений, но как только вы получите огненное дыхание, вы можете просто удерживать кнопку прыжка.',
+						new InstructionImage(
+							previews.preview_51,
+							'preview_51',
+							'transparent',
+							1
+						),
+						'Easier said than done, avoid moving fast as there are a lot of sudden falls, but once you get a fiery breath, you can just hold the jump button.',
 					],
 				},
 
 				FAKER: {
 					title: 'Faker',
-					description: 'Победите босса фейк-Пеппино без урона.',
+					description: 'Defeat Fake Peppino without getting hurt.',
 					filters: [indexingFilters.worldFour, indexingFilters.boss],
 					instructions: [
-						new InstructionImage(preview_52, 'preview_52', 'transparent', 1, 1),
-						'Достаточно не простой босс. Всего у него две стадии атак, сначала он сам лично атакует, а потом уже посылает своих двойников атаковать вас. Наберитесь терпения, достаточно продолжительный босс который требуют много времени и попыток. Было не плохо бы запомнить расположение туннеля когда будете убегать от него, а то будет очень обидно упереться в тупик когда вы почти прошли это испытание.',
+						new InstructionImage(
+							previews.preview_52,
+							'preview_52',
+							'transparent',
+							1,
+							1
+						),
+						'Quite a difficult boss. In total, he has two stages of attacks, first he personally attacks, and then he sends his doppelgangers to attack you. Be patient, a fairly long boss that requires a lot of time and attempts. It would not be bad to remember the location of the tunnel when you run away from it, otherwise it will be very insulting to run into a dead end when you have almost passed this test.',
 					],
 				},
 
 				S_RANK_4: {
 					title: 'S Ranked #4',
-					description: 'Пройдите все уровни из мира 4 на S-ранк.',
+					description: 'Get all S Ranks in World 4.',
 					filters: [indexingFilters.worldFour],
 				},
 
 				P_RANK_4: {
 					title: 'P Ranked #4',
-					description: 'Пройдите все уровни из мира 4 на P-ранк.',
+					description: 'Get all P Ranks in World 4.',
 					filters: [indexingFilters.worldFour],
 				},
 
 				CROSS_TO_BARE: {
 					title: 'Cross To Bare',
-					description: 'Убейте тридцать призраков в "Pizzascare".',
+					description: 'Kill thirty ghosts in Pizzascare.',
 					filters: [indexingFilters.worldFive, indexingFilters.pizzaScare],
 					instructions: [
-						new InstructionImage(preview_53, 'preview_53', 'transparent', 1),
-						'Призраки разбросаны по всей карте, и вы много раз получите крест для изгнания призраков на протяжении всего этого уровня.',
+						new InstructionImage(
+							previews.preview_53,
+							'preview_53',
+							'transparent',
+							1
+						),
+						'The ghosts are scattered all over the map, and you will get a cross for exorcising the ghosts many times throughout this level.',
 					],
 				},
 
 				HAUNTED_PLAYGROUND: {
 					title: 'Haunted Playground',
 					description:
-						'Избегайте урона от ловушек Короля-призрака в "Pizzascare".',
+						"Avoid getting hurt by the King Ghost's traps in Pizzascare.",
 					filters: [indexingFilters.worldFive, indexingFilters.pizzaScare],
 					instructions: [
-						new InstructionImage(preview_54, 'preview_54', 'transparent', 1),
-						'Вам нужно неплохо знать расположение карты, чтобы получить это достижение. Старайтесь не торопиться, хотя будут участки где нужно будет пройти на скорости. Имейте в виду, что крест делает вас полностью неуязвимым для "Ghost King", поэтому обязательно воспользуйтесь им.',
+						new InstructionImage(
+							previews.preview_54,
+							'preview_54',
+							'transparent',
+							1
+						),
+						'You need to know the location of the map pretty well to get this achievement. Try not to rush, although there will be areas where you will need to pass at speed. Keep in mind that the cross makes you completely invulnerable to the "Ghost King", so be sure to use it.',
 					],
 				},
 
 				SKULLSPLITTER: {
 					title: 'Skullsplitter',
-					description: 'Уничтожьте все блоки черепа в "Pizzascare".',
+					description: 'Destroy every single skull block in Pizzascare.',
 					filters: [indexingFilters.worldFive, indexingFilters.pizzaScare],
 					instructions: [
-						new InstructionImage(preview_55, 'preview_55', 'transparent', 1),
-						'Все тоже самое как и в "Gnome Forest", только вместо дерева, черепа. Все блоки черепа находятся на главном пути, поэтому нет необходимости проверять секреты.',
+						new InstructionImage(
+							previews.preview_55,
+							'preview_55',
+							'transparent',
+							1
+						),
+						'Everything is the same as in "Gnome Forest", only instead of a tree, a skull. All the skull blocks are on the main path, so there is no need to check the secrets.',
 					],
 				},
 
 				AND_THIS_IS_MY_GUN_ON_A_STICK: {
 					title: 'And This... Is My Gun On A Stick!',
 					description:
-						'Убейте всех преследующих вас монстров во время побега на уровне "Don`t Make A Sound".',
+						"Kill every chasing monster in the escape section of Don't Make A Sound.",
 					filters: [indexingFilters.worldFive, indexingFilters.fnaf],
 					instructions: [
-						new InstructionImage(preview_56, 'preview_56', 'transparent', 1),
-						'При побеге вам нужно убить всех монстров из дробовика. Вы будете стрелять в них всех в одной комнате, а уже после вы будете стрелять в них по одному в каждой комнате. Стреляйте в монстра независимо от того, активны ли они или нет, и позвольте ананасу разбудить их. Если достижение не срабатывает после убийства Гриба который стоит около выхода, сделайте второй забег, чтобы убить всех монстров, которых вы пропустили.',
+						new InstructionImage(
+							previews.preview_56,
+							'preview_56',
+							'transparent',
+							1
+						),
+						'When escaping, you need to kill all the monsters with a shotgun. You will shoot them all in one room, and after that you will shoot them one at a time in each room. Shoot the monster regardless of whether they are active or not and let the pineapple wake them up. If the achievement does not work after killing the Mushroom that stands near the exit, make a second run to kill all the monsters that you missed.',
 					],
 				},
 
 				LET_THEM_SLEEP: {
 					title: 'Let Them Sleep',
 					description:
-						'Активируйте тревогу меньше чем 6 раз до побега на уровне "Don`t Make A Sound".',
+						"Activate the alarms in Don't Make A Sound less than six times before the escape sequence.",
 					filters: [indexingFilters.worldFive, indexingFilters.fnaf],
 					instructions: [
-						new InstructionImage(preview_57, 'preview_57', 'transparent', 1),
-						'Всего на уровне около 5 обязательных будильников. Один с Грибом, один с Сыром, дважды с Мясником и финальная в конце, это означает, что у вас в запасе остается только одна тревога. Достижение получить сразу после наступления "Pizza Time". Советую запомнить маршрут, сделайте все возможное, чтобы избежать срабатывания сигнализации, и, надеюсь, у вас все получится.',
+						new InstructionImage(
+							previews.preview_57,
+							'preview_57',
+							'transparent',
+							1
+						),
+						'In total, there are about 5 mandatory alarm clocks at the level. One with Mushrooms, one with Cheese, twice with a Butcher and the final one at the end, this means that you have only one alarm left. The achievement is obtained immediately after the onset of "Pizza Time". I advise you to remember the route, do everything possible to avoid triggering the alarm, and I hope you will succeed.',
 					],
 				},
 
 				JUMPSPARED: {
 					title: 'Jumpspared',
-					description: 'Избегайте скримеров на уровне "Don`t Make A Sound".',
+					description: "Avoid getting jumpscared in Don't Make A Sound.",
 					filters: [indexingFilters.worldFive, indexingFilters.fnaf],
 					instructions: [
-						new InstructionImage(preview_58, 'preview_58', 'transparent', 1),
-						'Начинайте этот забег, как будто вы собираетесь получить ранг S/P, так как вам всегда будет нужна супер-насмешка, и избегайте всех секретов, так как комбо мгновенно пропадет. Будьте осторожны с комбо, так как все может очень быстро пойти наперекосяк. Во время "Pizza Time" убейте ананас как можно скорее, так как он мгновенно разбудит монстра в комнате.',
+						new InstructionImage(
+							previews.preview_58,
+							'preview_58',
+							'transparent',
+							1
+						),
+						'Start this run as if you are going to get the S/P rank, as you will always need a super mockery, and avoid all secrets, as the combo will instantly disappear. Be careful with combos, as things can go awry very quickly. During Pizza Time, kill the pineapple as soon as possible, as it will instantly wake up the monster in the room.',
 					],
 				},
 
 				DECORATED_VETERAN: {
 					title: 'Decorated Veteran',
-					description: 'Не получите урон более трех раз на уровне "WAR".',
+					description: "Don't get hurt more than three times in WAR.",
 					filters: [indexingFilters.worldFive, indexingFilters.war],
 					instructions: [
-						'Серьезную проблему для прохождения создают тут только танки, избавьтесь от них как можно скорее, если танк стреляет, вы можете взорвать снаряд из своего дробовика. Рекомендую пройти уровень несколько раз, чтобы не плохо запомнить все. Используйте свой дробовик всякий раз, когда вы чувствуете, что он вам нужен, и избегайте все секреты, поскольку вы ничего не получите от них.',
+						"Only tanks create a serious problem for passing here, get rid of them as soon as possible, if the tank shoots, you can detonate a projectile from your shotgun. I recommend going through the level several times to remember everything well. Use your shotgun whenever you feel you need it and avoid all the secrets as you won't get anything from them.",
 					],
 				},
 
 				SHARPSHOOTER: {
 					title: 'Sharpshooter',
-					description:
-						'Не промазывайте выстрелами более трех раз на уровне "WAR".',
+					description: "Don't miss more than three shots in WAR",
 					filters: [indexingFilters.worldFive, indexingFilters.war],
 					instructions: [
-						'Тут нужно свисти к минимум использование дробовика. Попадание во врага, разрушаемые блоки, блоки-мишени или компьютеры — все это считается попаданиями, поэтому постарайтесь во все это попасть и реже промахиваться.',
+						'Here you need to minimize the use of a shotgun. Hitting the enemy, destructible blocks, target blocks or computers - all these are considered hits, so try to get into all this and miss less often.',
 					],
 				},
 
 				TRIP_TO_THE_WARZONE: {
 					title: 'Trip to the Warzone',
-					description:
-						'Закончите уровень "WAR" так, чтобы у вас осталось времени больше минуты.',
+					description: 'Finish WAR with more than a minute left.',
 					filters: [indexingFilters.worldFive, indexingFilters.war],
 					instructions: [
-						'Это достижение не такое уж и сложное, как кажется. Все, что требуется, — это приличная память об уровне. Само собой, что в секреты идти не надо. Старайтесь таранить всех врагов, так как стрельба из дробовика убивает большую часть вашей скорости, но не забываем про танки.',
+						'This achievement is not as difficult as it seems. All that is required is a decent level memory. It goes without saying that there is no need to go into secrets. Try to ram all the enemies, as shooting with a shotgun kills most of your speed, but do not forget about tanks.',
 					],
 				},
 
 				FACE_OFF: {
 					title: 'Face Off',
-					description: 'Пройдите Пицца-фейса без урона.',
+					description: 'Defeat Pizza Face without damage.',
 					filters: [indexingFilters.worldFive, indexingFilters.boss],
 					instructions: [
-						new InstructionImage(preview_59, 'preview_59', 'transparent', 1),
-						'Лично я считаю, что это самый сложный босс, ну оно и понятно почему. Этот босс самый настоящий тест на выносливость и стойкость. Единственным положительным моментом этого босса является то, что большинство его этапов, достаточно легкие.',
+						new InstructionImage(
+							previews.preview_59,
+							'preview_59',
+							'transparent',
+							1
+						),
+						"Personally, I think this is the most difficult boss, well, it's understandable why. This boss is a real test of endurance and fortitude. The only positive thing about this boss is that most of his stages are quite easy.",
 					],
 				},
 
 				S_RANK_5: {
 					title: 'S Ranked #5',
-					description: 'Пройдите все уровни из мира 5 на S-ранк.',
+					description: 'Get all S Ranks in World 5.',
 					filters: [indexingFilters.worldFive],
 				},
 
 				P_RANK_5: {
 					title: 'P Ranked #5',
-					description: 'Пройдите все уровни из мира 5 на P-ранк.',
+					description: 'Get all P Ranks in World 5.',
 					filters: [indexingFilters.worldFive],
 				},
 			},
@@ -935,6 +1164,11 @@ const englishLocalization: Localization = {
 					en: 'English',
 				},
 			},
+		},
+
+		disabled: {
+			notWorking: 'This page is not working now',
+			goHome: 'Go home',
 		},
 	},
 };

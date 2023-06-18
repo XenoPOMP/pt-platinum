@@ -21,6 +21,7 @@ import {
 	SelectOption,
 	TypedSelectOption,
 } from '@ui/CustomSelect/CustomSelect.props';
+import UiContainer from '@ui/UiContainer/UiContainer';
 
 import useAppSettings from '@hooks/useAppSettings';
 import useLocalization from '@hooks/useLocalization';
@@ -34,7 +35,7 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 	const loc = useLocalization();
 	const dispatch = useDispatch();
 
-	const { theme, language } = useAppSettings();
+	const { theme, language, appVersion } = useAppSettings();
 
 	const themeVariants: TypedSelectOption<Theme>[] = [
 		{
@@ -90,8 +91,10 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 			header={{
 				taskbar: false,
 			}}
+			noIndex
+			disabled
 		>
-			<div className={cn(styles.settingsPage)}>
+			<UiContainer className={cn(styles.settingsPage)}>
 				<OptionItem locale={loc.pages.options.theme}>
 					<CustomSelect
 						options={themeVariants}
@@ -143,7 +146,11 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 						}}
 					/>
 				</OptionItem>
-			</div>
+
+				<div className={cn(styles.item)}>
+					<i>v{appVersion.get()}</i>
+				</div>
+			</UiContainer>
 		</Page>
 	);
 };
