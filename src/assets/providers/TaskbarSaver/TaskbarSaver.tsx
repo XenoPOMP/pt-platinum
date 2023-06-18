@@ -15,6 +15,7 @@ import type { TaskbarSaverProps } from './TaskbarSaver.props';
 
 const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 	children,
+	disabled,
 }) => {
 	const selector: TaskbarOptions = useSelector(
 		(state: IStore) => state.taskbar
@@ -27,22 +28,24 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 		initialTaskbarOptions
 	);
 
-	// Load data from cookie
-	useEffect(() => {
-		dispatch(
-			loadTaskbarOptions({
-				showCompleted: getCookie.showCompleted,
-				gridView: getCookie.gridView
-					? getCookie.gridView
-					: initialTaskbarOptions.gridView,
-			})
-		);
-	}, []);
+	if (!disabled) {
+		// Load data from cookie
+		useEffect(() => {
+			dispatch(
+				loadTaskbarOptions({
+					showCompleted: getCookie.showCompleted,
+					gridView: getCookie.gridView
+						? getCookie.gridView
+						: initialTaskbarOptions.gridView,
+				})
+			);
+		}, []);
 
-	// Save data to cookie
-	useEffect(() => {
-		setCookie(selector);
-	}, [selector.showCompleted, selector.gridView]);
+		// Save data to cookie
+		useEffect(() => {
+			setCookie(selector);
+		}, [selector.showCompleted, selector.gridView]);
+	}
 
 	return <>{children}</>;
 };
