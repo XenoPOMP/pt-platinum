@@ -231,33 +231,33 @@ const englishLocalization: Localization = {
 				SPHERICAL: {
 					title: 'Spherical',
 					description:
-						'Убейте другого врага когда вас пнет "Pepperoni Goblin" в "Pizzascape".',
+						'Kill another enemy while in the ball form in Pizzascape.',
 					filters: [indexingFilters.worldOne, indexingFilters.pizzaScape],
 					instructions: [
 						new InstructionImage(preview_4, 'preview_4', 'transparent', 1),
-						'Найдите область с "Pepperoni Goblin" и другим врагом достаточно близко друг к другу - (при необходимости вы можете переместить их, схватив их). И пусть вас пнут, и будучи круглым мячом убить другого врага.',
+						'Find an area with a "Pepperoni Goblin" and another enemy close enough to each other - (if necessary, you can move them by grabbing them). And let them kick you, and being a round ball kill another enemy.',
 					],
 				},
 
 				THRILL_SEEKER: {
 					title: 'Thrill Seeker',
 					description:
-						'Закончите уровень "Ancient Cheese", не получив урона от взрывов.',
+						'Finish Ancient Cheese without getting hurt by an explosion.',
 					filters: [indexingFilters.worldOne, indexingFilters.ancientCheese],
 					instructions: [
 						new InstructionImage(preview_5, 'preview_5', 'transparent', 1),
-						'Все предельно просто. Просто постарайтесь не получить урона на этом уровне от бомб.',
+						'Everything is extremely simple. Just try not to take damage at this level from bombs.',
 					],
 				},
 
 				VOLLEYBOMB: {
 					title: 'Volleybomb',
 					description:
-						'Убейте Крысу, используя бомбу, сброшенную врагом на уровне "Ancient Cheese".',
+						'Kill a rat using a bomb dropped by an enemy in Ancient Cheese.',
 					filters: [indexingFilters.worldOne, indexingFilters.ancientCheese],
 					instructions: [
 						new InstructionImage(preview_6, 'preview_6', 'transparent', 1),
-						'Убейте Крысу бомбой гоблина. Испытание может быть завершено в комнате, скрин ниже:',
+						'Kill the Rat with a goblin bomb. The achievement can be completed in the room, screen:',
 					],
 				},
 

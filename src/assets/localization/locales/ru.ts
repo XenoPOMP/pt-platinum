@@ -622,7 +622,7 @@ const russianLocalization: Localization = {
 					description: 'Победите Нойза без урона.',
 					filters: [indexingFilters.worldThree, indexingFilters.boss],
 					instructions: [
-						new InstructionImage(preview_38, 'preview_38', 'transparent', 1, 2),
+						new InstructionImage(preview_38, 'preview_38', 'transparent', 1, 1),
 						'Первый раз при прохождении может показаться сложным, но мне кажется по сложности он идет вторым после "Pepperman". Вся фишка "Noise" в том, что, несмотря на то, что у него есть определенное количество атак, все они будут выполняться в случайном порядке и могут быть выполнены всего 2 раза',
 					],
 				},

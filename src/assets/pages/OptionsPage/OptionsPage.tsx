@@ -34,7 +34,7 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 	const loc = useLocalization();
 	const dispatch = useDispatch();
 
-	const { theme, language } = useAppSettings();
+	const { theme, language, appVersion } = useAppSettings();
 
 	const themeVariants: TypedSelectOption<Theme>[] = [
 		{
@@ -143,6 +143,10 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 						}}
 					/>
 				</OptionItem>
+
+				<div className={cn(styles.item)}>
+					<i>v{appVersion.get()}</i>
+				</div>
 			</div>
 		</Page>
 	);
