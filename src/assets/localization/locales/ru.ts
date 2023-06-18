@@ -311,7 +311,7 @@ const russianLocalization: Localization = {
 						indexingFilters.bloodSauceDungeon,
 					],
 					instructions: [
-						new InstructionImage(preview_10, 'preview_10', 'transparent', 1, 2),
+						new InstructionImage(preview_10, 'preview_10', 'transparent', 1, 1),
 						'Просто постарайтесь не получить урон от ножей для пиццы на этом уровне.',
 					],
 				},

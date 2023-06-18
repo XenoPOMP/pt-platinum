@@ -264,193 +264,189 @@ const englishLocalization: Localization = {
 				DELICACY: {
 					title: 'Delicacy',
 					description:
-						'Разрушить более сорока одной сырной платформы в "Ancient Cheese".',
+						'Make more than forty one sets of cheese platforms crumble in Ancient Cheese.',
 					filters: [indexingFilters.worldOne, indexingFilters.ancientCheese],
 					instructions: [
 						new InstructionImage(preview_7, 'preview_7', 'transparent', 1),
-						'Можете особо не напрягаться, получите без проблем.',
+						'You can not strain yourself too much, you will get it without any problems.',
 					],
 				},
 
 				VERY_VERY_HOT_SAUCE: {
 					title: 'Very Very Hot Sauce',
-					description:
-						'Закончите уровень "Bloodsauce Dungeon" ни разу не дотронувшись до лавы.',
+					description: 'Finish Bloodsauce Dungeon without touching lava once.',
 					filters: [
 						indexingFilters.worldOne,
 						indexingFilters.bloodSauceDungeon,
 					],
 					instructions: [
 						new InstructionImage(preview_8, 'preview_8', 'transparent', 1),
-						'Ничего особенного, просто пройдите уровень, не попадая ни в какие ямы с лавой.',
+						'Nothing special, just complete the level without getting into any lava pits.',
 					],
 				},
 
 				ERUPTION_MAN: {
 					title: 'Eruption Man',
 					description:
-						'Во время побега используйте супер-прыжок на протяжении более чем 2 секунд на уровне "Bloodsauce Dungeon".',
+						'During escape, go up with the superjump for more than two seconds in Bloodsauce Dungeon.',
 					filters: [
 						indexingFilters.worldOne,
 						indexingFilters.bloodSauceDungeon,
 					],
 					instructions: [
 						new InstructionImage(preview_9, 'preview_9', 'transparent', 1),
-						'Совершив суперпрыжок в этом месте во время "Pizza Time", и достижение ваше.',
+						'By making a super jump in this place during "Pizza Time", and the achievement is yours.',
 					],
 				},
 
 				UNSLICED_PIZZAMAN: {
 					title: 'Unsliced Pizzaman',
 					description:
-						'Закончите уровень "Bloodsauce Dungeon", не получив урона от ножей для пиццы.',
+						'Finish Bloodsauce Dungeon without getting hurt by a pizza cutter.',
 					filters: [
 						indexingFilters.worldOne,
 						indexingFilters.bloodSauceDungeon,
 					],
 					instructions: [
-						new InstructionImage(preview_10, 'preview_10', 'transparent', 1, 2),
-						'Просто постарайтесь не получить урон от ножей для пиццы на этом уровне.',
+						new InstructionImage(preview_10, 'preview_10', 'transparent', 1, 1),
+						'Just try not to take damage from pizza knives at this level.',
 					],
 				},
 
 				THE_CRITIC: {
 					title: 'The Critic',
-					description: 'Победите Пеппермена без урона.',
+					description: 'Defeat Pepperman without getting hurt.',
 					filters: [indexingFilters.worldOne, indexingFilters.boss],
 					instructions: [
 						new InstructionImage(preview_11, 'preview_11', 'transparent', 1),
-						'Один из самых простых боссов, по сравнению с другими боссами, проблем вызвать с его прохождением без урона не должно.',
+						'One of the simplest bosses, compared to other bosses, there should be no problems with its passage without damage.',
 					],
 				},
 
 				S_RANK_1: {
 					title: 'S Ranked #1',
-					description: 'Пройдите все уровни из мира 1 на S-ранк.',
+					description: 'Get all S Ranks in World 1.',
 					filters: [indexingFilters.worldOne],
 				},
 
 				P_RANK_1: {
 					title: 'P Ranked #1',
-					description: 'Пройдите все уровни из мира 1 на P-ранк.',
+					description: 'Get all P Ranks in World 1.',
 					filters: [indexingFilters.worldOne],
 				},
 
 				PEPPINO_S_RAIN_DANCE: {
 					title: "Peppino's Rain Dance",
-					description: 'Повторно активируйте тотем, танцуя в "Oregano Desert".',
+					description:
+						'Reactivate a totem by dancing with the mach dash in Oregano Desert.',
 					filters: [indexingFilters.worldTwo, indexingFilters.oreganoDesert],
 					instructions: [
 						new InstructionImage(preview_12, 'preview_12', 'transparent', 1),
-						'Находясь рядом с тотемом, начните бегать и разгоняться туда-сюда, пока тотем снова не станет активным. Можно это сделать с любым тотемом.',
+						'Being near the totem, start running and accelerating back and forth until the totem becomes active again. You can do this with any totem.',
 					],
 				},
 
 				UNNECESSARY_VIOLENCE: {
 					title: 'Unnecessary Violence',
-					description: 'Убейте всех клерков-сосисок в пиццериях.',
+					description: 'Kill all of the clerk sausages in the pizzamarts.',
 					filters: [indexingFilters.worldTwo, indexingFilters.oreganoDesert],
 					instructions: [
 						new InstructionImage(preview_13, 'preview_13', 'transparent', 1),
-						'На уровне расположено 5 пиццерий, в каждой из которых есть продавец сосисок.',
+						'There are 5 pizzerias on the level, each of which has a sausage seller.',
 					],
 				},
 
 				ALIEN_COW: {
 					title: 'Alien Cow',
-					description:
-						'Не дайте ни одной корове ударить себя на уровне "Oregano Desert".',
+					description: 'Dont get hit by a single cow in Oregano Desert.',
 					filters: [indexingFilters.worldTwo, indexingFilters.oreganoDesert],
 					instructions: [
 						new InstructionImage(preview_14, 'preview_14', 'transparent', 1),
-						'Избегайте спешки и не торопитесь. Старайтесь перепрыгнуть всех коров и все получится.',
+						'Avoid haste and take your time. Try to jump over all the cows and everything will work out.',
 					],
 				},
 
 				GHOSTED: {
 					title: 'Ghosted',
-					description:
-						'Избегайте прикосновения призрака Джона на уровне "Wasteyard".',
+					description: 'Avoid getting touched by the John Ghost in Wasteyard.',
 					filters: [indexingFilters.worldTwo, indexingFilters.wasteyard],
 					instructions: [
 						new InstructionImage(preview_15, 'preview_15', 'transparent', 1),
-						'Не прикасайтесь к Джону-Призраку во время "Pizza Time".',
+						'Don\'t touch John Ghost during "Pizza Time".',
 					],
 				},
 
 				PRETEND_GHOST: {
 					title: 'Pretend Ghost',
-					description:
-						'Убейте 20 или более врагов, играя за призрака, в "Wasteyard".',
+					description: 'Kill 20 or more enemies as a ghost in Wasteyard.',
 					filters: [indexingFilters.worldTwo, indexingFilters.wasteyard],
 					instructions: [
 						new InstructionImage(preview_16, 'preview_16', 'transparent', 1),
-						'Убедитесь, что появились эти два мини-Джонов - (Нужно убить их будучи призраком)',
+						'Make sure that these two mini-Johns have appeared - (You need to kill them being a ghost)',
 						new InstructionImage(preview_17, 'preview_17', 'transparent', 1),
-						'и залетите в этот секрет, чтобы выполнить квест.',
+						'and fly into this secret to complete the quest.',
 					],
 				},
 
 				ALIVE_AND_WELL: {
 					title: 'Alive and Well',
-					description: 'Прокатитесь на каждом трупе в "Wasteyard".',
+					description: 'Surf every corpse in Wasteyard.',
 					filters: [indexingFilters.worldTwo, indexingFilters.wasteyard],
 					instructions: [
 						new InstructionImage(preview_18, 'preview_18', 'transparent', 1),
-						'Все трупы находятся на главном пути.',
+						'All the corpses are on the main path.',
 					],
 				},
 
 				NO_ONE_IS_SAFE: {
 					title: 'No One Is Safe',
 					description:
-						'Убейте сразу трех недоступных врагов с помощью супер-насмешки в "Fun Farm".',
+						'Kill three unreachable enemies at once with the supertaunt in Fun Farm.',
 					filters: [indexingFilters.worldTwo, indexingFilters.farm],
 					instructions: [
 						new InstructionImage(preview_19, 'preview_19', 'transparent', 1),
-						'Супер-насмешка в этом месте убьет 4 "Peasanto\'s":',
+						'Super-mockery in this place will kill 4 "Peasanto\'s":',
 					],
 				},
 
 				CUBE_MENACE: {
 					title: 'Cube Menace',
-					description: 'Найдите и уничтожьте куб Морта.',
+					description: 'Find and destroy the Mort Cube.',
 					filters: [indexingFilters.worldTwo, indexingFilters.farm],
 					instructions: [
 						new InstructionImage(preview_20, 'preview_20', 'transparent', 1),
-						'Куб можно найти в первой локации, через которую вам нужно будет перепрыгнуть с "Мортом". Секция будет закрыта, и вам нужно будет сломать блок "Мортом", чтобы туда попасть.',
+						'The cube can be found in the first location, through which you will need to jump with the "Mort". The section will be closed, and you will need to break the block with a "Mort" to get there.',
 					],
 				},
 
 				GOOD_EGG: {
 					title: 'Good Egg',
-					description: 'Завершите "Fun Farm", избегая урона с "Мортом" на вас.',
+					description:
+						'Complete Fun Farm while avoiding getting hurt with Mort on you.',
 					filters: [indexingFilters.worldTwo, indexingFilters.farm],
 					instructions: [
 						new InstructionImage(preview_21, 'preview_21', 'transparent', 1),
-						'Просто постарайтесь избегать повреждений с "Мортом" на вас. Попадания факела который кидает "Peasanto" не считается уроном.',
+						'Just try to avoid damage with the "Mort" on you. Hitting a torch that throws a "Peasanto" is not considered damage.',
 					],
 				},
 
 				NON_ALCOHOLIC: {
 					title: 'Non-Alcoholic',
-					description:
-						'Уничтожьте все пивные бутылки на уровне "Fastfood Saloon".',
+					description: 'Destroy nearly every beer bottle in Fastfood Saloon.',
 					filters: [indexingFilters.worldTwo, indexingFilters.saloon],
 					instructions: [
 						new InstructionImage(preview_22, 'preview_22', 'transparent', 1),
-						'В салуне повсюду разбросано куча пивных бутылок, и большую часть нужно их разбить.',
+						'There are a lot of beer bottles scattered everywhere in the saloon, and most of them need to be broken.',
 					],
 				},
 
 				ALREADY_PRESSED: {
 					title: 'Already Pressed',
-					description:
-						'Активируйте каждую кнопку только один раз в "Fastfood Saloon".',
+					description: 'Activate each button only once in Fastfood Saloon.',
 					filters: [indexingFilters.worldTwo, indexingFilters.saloon],
 					instructions: [
 						new InstructionImage(preview_23, 'preview_23', 'transparent', 1),
-						'Не очень простое достижение. Нужно не плохо запомнить маршрут и точно знать, что делать. Также есть вероятность двойного активирования кнопки так что нужно быть немного осторожным с этим.',
+						'Not a very simple achievement. You need to remember the route well and know exactly what to do. There is also a possibility of double activation of the button, so you need to be a little careful with this.',
 					],
 				},
 
