@@ -12,11 +12,13 @@ import type { SaversProps } from './Savers.props';
 
 const Savers: FC<PropsWith<'children', SaversProps>> = ({ children }) => {
 	return (
-		<AppSettingsSaver disabled>
-			<TaskbarSaver>
-				<MarkSaver>{children}</MarkSaver>
-			</TaskbarSaver>
-		</AppSettingsSaver>
+		<>
+			<AppSettingsSaver disabled />
+			<TaskbarSaver />
+			<MarkSaver />
+
+			{children}
+		</>
 	);
 };
 

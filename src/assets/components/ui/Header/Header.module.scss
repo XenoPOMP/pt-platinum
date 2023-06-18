@@ -79,6 +79,11 @@ header.appHeader {
       @media (max-width: 534px) {
         height: globalPadding(1.6) !important;
       }
+
+      &.disabled {
+        opacity: .5;
+        pointer-events: none;
+      }
     }
   }
 

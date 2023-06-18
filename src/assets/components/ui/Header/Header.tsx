@@ -44,7 +44,7 @@ const Header: FC<HeaderProps> = ({ taskbar }) => {
 					fullHeight
 					square
 					routerLink={'/settings'}
-					className={cn(styles.settingsButton)}
+					className={cn(styles.settingsButton, styles.disabled)}
 				>
 					<svg
 						width='33'
