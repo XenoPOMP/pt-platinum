@@ -11,8 +11,6 @@ import styles from './Savers.module.scss';
 import type { SaversProps } from './Savers.props';
 
 const Savers: FC<PropsWith<'children', SaversProps>> = ({ children }) => {
-	// const nestedChild = useMemo(() => children, [children]);
-
 	return (
 		<AppSettingsSaver disabled>
 			<TaskbarSaver>
