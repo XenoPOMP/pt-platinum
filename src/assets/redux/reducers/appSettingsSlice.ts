@@ -13,7 +13,7 @@ export type AppSettings = {
 };
 
 const initialState: AppSettings = {
-	appVersion: '0.0.1',
+	appVersion: '0.0.2',
 	appName: 'PT Platinum',
 	language: (() => {
 		// DEBUG
