@@ -147,6 +147,7 @@ const englishLocalization: Localization = {
 			pageTitle: `Options`,
 			pageDescription: '',
 			keywords: '',
+			noIndex: true,
 		},
 
 		achievement: {
@@ -159,6 +160,7 @@ const englishLocalization: Localization = {
 			pageTitle: 'PT Platinum | 404',
 			pageDescription: '',
 			keywords: '',
+			noIndex: true,
 		},
 	},
 

@@ -147,6 +147,7 @@ const russianLocalization: Localization = {
 			pageTitle: `Настройки`,
 			pageDescription: '',
 			keywords: '',
+			noIndex: true,
 		},
 
 		achievement: {
@@ -159,6 +160,7 @@ const russianLocalization: Localization = {
 			pageTitle: 'PT Platinum | 404',
 			pageDescription: '',
 			keywords: '',
+			noIndex: true,
 		},
 	},
 

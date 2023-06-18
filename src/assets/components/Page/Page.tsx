@@ -30,6 +30,8 @@ const Page: FC<PropsWithChildren<PageProps>> = ({ meta, children, header }) => {
 				<meta name={'description'} content={meta.pageDescription} />
 				<meta name={'keywords'} content={meta.keywords} />
 				<meta name={'apple-mobile-web-app-title'} content={appName.get()} />
+
+				{meta.noIndex && <meta name={'robots'} content={'noindex'} />}
 			</Helmet>
 
 			{children}
