@@ -8,7 +8,11 @@ import SizesProvider from '@providers/SizesProvider/SizesProvider';
 import TaskbarSaver from '@providers/TaskbarSaver/TaskbarSaver';
 import ThemeProvider from '@providers/ThemeProvider/ThemeProvider';
 
-const GlobalProvider: FC<BaseProviderProps> = ({ children }) => {
+import { PropsWith } from '@type/PropsWith';
+
+const GlobalProvider: FC<PropsWith<'children', BaseProviderProps>> = ({
+	children,
+}) => {
 	return (
 		<>
 			<BodyClassnameProvider>

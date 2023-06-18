@@ -4,6 +4,8 @@ import GlobalProvider from '@providers/GlobalProvider/GlobalProvider';
 
 import Header from '@ui/Header/Header';
 
+import { PropsWith } from '@type/PropsWith';
+
 import { LayoutProps } from './Layout.props';
 
 /**
@@ -12,7 +14,10 @@ import { LayoutProps } from './Layout.props';
  * @param children
  * @constructor
  */
-const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, header }) => {
+const Layout: FC<PropsWith<'children', LayoutProps>> = ({
+	children,
+	header,
+}) => {
 	return (
 		<GlobalProvider>
 			<Header {...header} />

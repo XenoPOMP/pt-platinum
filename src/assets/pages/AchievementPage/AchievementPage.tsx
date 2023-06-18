@@ -224,7 +224,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 						<h3>{loc.pages.achievement.guideLabel}</h3>
 
 						<div className={cn(styles.instructions)}>
-							{instructions.map(instr => {
+							{instructions.map((instr, index) => {
 								if (instr instanceof InstructionImage) {
 									const { alt, background, url, rowSpan, colSpan } = instr;
 
@@ -235,6 +235,7 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 												gridRow: `span ${rowSpan}`,
 												gridColumn: colSpan ? `span ${colSpan}` : 1,
 											}}
+											key={`instruction-${index} (${defaultName})`}
 										>
 											<ProgressiveImage
 												loaderColorScheme={{
@@ -247,7 +248,9 @@ const AchievementPage: FC<AchievementPageProps> = ({}) => {
 									);
 								} else {
 									// Return paragraph by default
-									return <p key={instr}>{instr}</p>;
+									return (
+										<p key={`instruction-${index} (${defaultName})`}>{instr}</p>
+									);
 								}
 							})}
 						</div>
