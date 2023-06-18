@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useEffect, useMemo } from 'react';
+import { FC, useCallback, useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import TextOverflow from 'react-text-overflow';
@@ -44,23 +44,23 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 		useTaskbarOptions();
 	const dispatch = useDispatch();
 
-	const showCard = (): void => {
+	const showCard = useCallback((): void => {
 		dispatch(
 			changeShown({
 				name,
 				shown: true,
 			})
 		);
-	};
+	}, []);
 
-	const hideCard = (): void => {
+	const hideCard = useCallback((): void => {
 		dispatch(
 			changeShown({
 				name,
 				shown: false,
 			})
 		);
-	};
+	}, []);
 
 	/** Link to the connected article. */
 	const articleLink = `/articles/${name}`;
