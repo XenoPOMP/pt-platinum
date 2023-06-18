@@ -21,6 +21,7 @@ import {
 	SelectOption,
 	TypedSelectOption,
 } from '@ui/CustomSelect/CustomSelect.props';
+import UiContainer from '@ui/UiContainer/UiContainer';
 
 import useAppSettings from '@hooks/useAppSettings';
 import useLocalization from '@hooks/useLocalization';
@@ -92,7 +93,7 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 			}}
 			noIndex
 		>
-			<div className={cn(styles.settingsPage)}>
+			<UiContainer className={cn(styles.settingsPage)}>
 				<OptionItem locale={loc.pages.options.theme}>
 					<CustomSelect
 						options={themeVariants}
@@ -148,7 +149,7 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 				<div className={cn(styles.item)}>
 					<i>v{appVersion.get()}</i>
 				</div>
-			</div>
+			</UiContainer>
 		</Page>
 	);
 };

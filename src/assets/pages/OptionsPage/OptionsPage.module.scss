@@ -1,7 +1,7 @@
 @import "src/assets/styles/templates";
 
 .settingsPage {
-  @extend %uiContainer;
+  // @extend %uiContainer;
   @extend %mainFont;
 
   padding: globalPadding(.75) 0 globalPadding(1) 0;

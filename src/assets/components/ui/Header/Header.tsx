@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '@ui/Button/Button';
 import TaskBar from '@ui/TaskBar/TaskBar';
 import type { TaskBarProps } from '@ui/TaskBar/TaskBar.props';
+import UiContainer from '@ui/UiContainer/UiContainer';
 
 import ptLogo from '@media/images/logo/short logo 1.png';
 
@@ -21,7 +22,7 @@ const Header: FC<HeaderProps> = ({ taskbar }) => {
 			: false;
 
 	return (
-		<header className={cn(styles.appHeader)}>
+		<UiContainer.Header className={cn(styles.appHeader)}>
 			<section className={cn(styles.main)}>
 				<Link to={'/'} className={cn(styles.logotype)}>
 					<img src={ptLogo} alt={'app-logo'} className={cn(styles.logo)} />
@@ -69,7 +70,7 @@ const Header: FC<HeaderProps> = ({ taskbar }) => {
 					rightControl={(defaultTaskbarOptions as TaskBarProps).rightControl}
 				/>
 			)}
-		</header>
+		</UiContainer.Header>
 	);
 };
 

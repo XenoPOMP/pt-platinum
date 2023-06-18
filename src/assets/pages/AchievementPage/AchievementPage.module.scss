@@ -37,7 +37,7 @@
   }
 
   .container {
-    @extend %uiContainer;
+    // @extend %uiContainer;
     @extend %flexCenter;
 
     justify-content: space-between;
@@ -95,7 +95,7 @@
 }
 
 .achievementPage {
-  @extend %uiContainer;
+  // @extend %uiContainer;
   @extend %mainFont;
 
   font-size: 20px; // 1em = 20px
