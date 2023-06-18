@@ -4,10 +4,10 @@ export type MetaInfo = {
 	pageTitle: string;
 	pageDescription?: string;
 	keywords?: string;
-	noIndex?: boolean;
 };
 
 export interface PageProps {
 	meta: MetaInfo;
 	header?: HeaderProps;
+	noIndex?: boolean;
 }
