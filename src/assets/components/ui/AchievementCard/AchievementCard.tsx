@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 import { FC, useCallback, useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -22,20 +23,8 @@ import { PropsWith } from '@type/PropsWith';
 import styles from './AchievementCard.module.scss';
 import type { AchievementCardProps } from './AchievementCard.props';
 
-const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
+const AchievementCard: FC<AchievementCardProps> = ({ achievement, index }) => {
 	const { name, pictureUrl, shown, completed } = achievement;
-
-	// const { name, pictureUrl, shown, completed } = useMemo<
-	// 	Pick<AchievementMark, 'name' | 'pictureUrl' | 'shown' | 'completed'>
-	// >(
-	// 	() => ({
-	// 		name: achievement.name,
-	// 		pictureUrl: achievement.pictureUrl,
-	// 		shown: achievement.shown,
-	// 		completed: achievement.completed,
-	// 	}),
-	// 	[achievement]
-	// );
 
 	const loc = useLocalization();
 	const { title, description, filters } = loc.pages.main.achievements[name];
@@ -77,8 +66,20 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 
 	/** Card`s body. */
 	const Body: FC<unknown> = () => {
+		const ANIMATION_DURATION = 0.08;
+
 		return (
-			<article
+			<motion.article
+				initial={{
+					opacity: 0,
+				}}
+				animate={{
+					opacity: 1,
+				}}
+				transition={{
+					duration: ANIMATION_DURATION,
+					delay: index * ANIMATION_DURATION,
+				}}
 				className={cn(
 					styles.card,
 					gridView === 'row' && styles.rowView,
@@ -124,7 +125,7 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement }) => {
 						</i>
 					</section>
 				</Link>
-			</article>
+			</motion.article>
 		);
 	};
 

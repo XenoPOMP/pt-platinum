@@ -37,6 +37,8 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 					gridView: getCookie.gridView
 						? getCookie.gridView
 						: initialTaskbarOptions.gridView,
+					paginationSize: getCookie.paginationSize,
+					paginationPage: getCookie.paginationPage,
 				})
 			);
 		}, []);
@@ -44,7 +46,12 @@ const TaskbarSaver: FC<PropsWithChildren<TaskbarSaverProps>> = ({
 		// Save data to cookie
 		useEffect(() => {
 			setCookie(selector);
-		}, [selector.showCompleted, selector.gridView]);
+		}, [
+			selector.showCompleted,
+			selector.gridView,
+			selector.paginationSize,
+			selector.paginationPage,
+		]);
 	}
 
 	return <>{children}</>;

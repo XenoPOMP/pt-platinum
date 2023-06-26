@@ -109,6 +109,7 @@ const englishLocalization: Localization = {
 			options: {
 				showCompleted: 'Show completed achievements',
 				filters: 'Filters',
+				paginationSize: 'Result quantity at one page',
 				filtersPlaceholder: 'Choose from list...',
 				gridView: 'Grid view',
 			},

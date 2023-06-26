@@ -4,7 +4,7 @@
   // @extend %uiContainer;
   @extend %mainFont;
 
-  padding: globalPadding(.75) 0 globalPadding(1) 0;
+  padding: globalPadding(.75) 0 0 0;
   font-size: 20px; // 1em = 20px
 
   &.rowView {
@@ -50,6 +50,84 @@
 
     @media (max-width: 316px) {
       --column-count: 1;
+    }
+  }
+
+  nav.pagination {
+    @extend %flexCenter;
+    @extend %notSelectable;
+
+    margin-top: globalPadding(1);
+    width: 100%;
+    height: 3.45em;
+    font-size: 1em;
+    background: var(--app-back-primary);
+    color: var(--pagination-font-secondary);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    gap: 1em;
+    align-items: center;
+
+    .controlGroup {
+      @extend %flexCenter;
+
+      gap: .6em;
+
+      svg.control {
+        height: .8em;
+        cursor: pointer;
+        // rotate: -.5turn;
+
+        path {
+          fill: var(--pagination-font-secondary);
+        }
+
+        &.disabled {
+          opacity: 0;
+          pointer-events: none;
+          transition: .15s ease;
+
+          path {
+            // fill: var(--ui-border-disabled);
+          }
+        }
+
+        &.reverse {
+          rotate: -.5turn !important;
+        }
+      }
+    }
+
+    .numericLinks {
+      @extend %flexCenter;
+
+      border-radius: var(--ui-border-radius);
+
+      .link {
+        @extend %flexCenter;
+
+        color: inherit;
+        cursor: pointer;
+        aspect-ratio: 1;
+        line-height: 1em;
+        height: 1.5em;
+
+        $duration: .15s ease;
+        transition: color $duration,
+                    background-color $duration;
+
+        &:hover {
+          color: var(--pagination-font);
+        }
+
+        &.active {
+          background: var(--ui-border);
+          color: var(--ui-icon);
+          border: none;
+          border-radius: var(--ui-border-radius);
+        }
+      }
     }
   }
 }

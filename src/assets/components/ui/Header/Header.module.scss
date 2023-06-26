@@ -210,6 +210,51 @@ header.appHeader {
         .item {
           @extend %flexCenter;
 
+          &.noFlex {
+            display: block !important;
+          }
+
+          .buttonGrid {
+            display: grid;
+            width: 100%;
+            gap: .5em;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: .25em;
+
+            @media (max-width: 700px) {
+              grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media (max-width: 418px) {
+              grid-template-columns: repeat(2, 1fr);
+            }
+
+            button {
+              width: 100%;
+              aspect-ratio: 2.25 / 1;
+              background: var(--button-back);
+              cursor: pointer;
+              border-radius: var(--ui-border-radius);
+              border: 2px solid var(--ui-border-disabled);
+              color: var(--button-font);
+
+              $duration: .08s ease;
+
+              transition: filter $duration,
+                          border-color $duration,
+                          color $duration;
+
+              &:active {
+                filter: brightness(.9);
+              }
+
+              &.selected {
+                border-color: var(--ui-border);
+                color: var(--ui-border);
+              }
+            }
+          }
+
           min-height: 3em;
           gap: 1em;
           align-items: center;

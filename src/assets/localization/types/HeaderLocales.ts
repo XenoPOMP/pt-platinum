@@ -4,6 +4,7 @@ export type HeaderLocales = {
 		options: {
 			showCompleted: string;
 			filters: string;
+			paginationSize: string;
 			filtersPlaceholder: string;
 			gridView: string;
 		};
