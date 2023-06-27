@@ -20,6 +20,7 @@ import UiContainer from '@ui/UiContainer/UiContainer';
 import useLocalization from '@hooks/useLocalization';
 import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
 
+import numericGenerator from '@utils/numericGenerator';
 import { smoothScroll } from '@utils/smooth-scroll';
 
 import styles from './MainPage.module.scss';
@@ -41,6 +42,11 @@ const MainPage = () => {
 	const chunkKeys: number[] = Object.keys(achievementChunks)
 		.map(strKey => parseInt(strKey))
 		.map(key => key + 1);
+
+	/** The size of pagination link splice. */
+	const PAGINATION_SLICE_SIZE = 3;
+	/** If true pagination will not show all links at the time. */
+	const USE_LINK_SLICES = true;
 
 	useEffect(() => {
 		/** Initial page from params. */
@@ -142,12 +148,22 @@ const MainPage = () => {
 						</div>
 
 						<div className={cn(styles.numericLinks)}>
+							{chunkKeys.length > PAGINATION_SLICE_SIZE &&
+								!numericGenerator(PAGINATION_SLICE_SIZE - 1)
+									.map(item => item + 1)
+									.includes(paginationPage) &&
+								USE_LINK_SLICES && <div>...</div>}
+
 							{chunkKeys.map((key, index) => (
 								<div
 									key={`${index}-pagination-link`}
 									className={cn(
 										styles.link,
-										paginationPage === key && styles.active
+										paginationPage === key && styles.active,
+										(key - paginationPage >= PAGINATION_SLICE_SIZE - 1 ||
+											paginationPage - key >= PAGINATION_SLICE_SIZE - 1) &&
+											USE_LINK_SLICES &&
+											styles.hidden
 									)}
 									onClick={() => {
 										setParams(
@@ -162,6 +178,16 @@ const MainPage = () => {
 									{key}
 								</div>
 							))}
+
+							{chunkKeys.length > PAGINATION_SLICE_SIZE &&
+								!numericGenerator(PAGINATION_SLICE_SIZE - 1)
+									.map((item, index) => {
+										const reverseIndex = -(index + 1);
+
+										return chunkKeys.at(reverseIndex);
+									})
+									.includes(paginationPage) &&
+								USE_LINK_SLICES && <div>...</div>}
 						</div>
 
 						<div className={cn(styles.controlGroup)}>

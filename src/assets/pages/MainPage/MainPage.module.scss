@@ -127,6 +127,10 @@
           border: none;
           border-radius: var(--ui-border-radius);
         }
+
+        &.hidden {
+          display: none;
+        }
       }
     }
   }
