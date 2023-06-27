@@ -92,7 +92,7 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 				taskbar: false,
 			}}
 			noIndex
-			disabled
+			// disabled
 		>
 			<UiContainer className={cn(styles.settingsPage)}>
 				<OptionItem locale={loc.pages.options.theme}>
