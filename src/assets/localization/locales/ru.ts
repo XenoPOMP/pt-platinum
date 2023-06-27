@@ -109,6 +109,7 @@ const russianLocalization: Localization = {
 			options: {
 				showCompleted: 'Показывать выполненные достижения',
 				filters: 'Фильтры',
+				paginationSize: 'Показывать результатов за раз',
 				filtersPlaceholder: 'Выберете из списка...',
 				gridView: 'Вид сетки',
 			},

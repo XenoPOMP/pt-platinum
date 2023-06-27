@@ -7,6 +7,8 @@ export type TaskbarOptions = {
 	showCompleted: boolean;
 	taskbarFilters: (string | undefined)[];
 	gridView: 'row' | 'grid';
+	paginationSize: number;
+	paginationPage: number;
 };
 
 const initialState: TaskbarOptions = {
@@ -14,6 +16,8 @@ const initialState: TaskbarOptions = {
 	showCompleted: true,
 	taskbarFilters: [],
 	gridView: 'row',
+	paginationSize: -1,
+	paginationPage: 1,
 };
 
 const taskbarSlice = createSlice({
@@ -25,10 +29,21 @@ const taskbarSlice = createSlice({
 		 */
 		loadTaskbarOptions(
 			state,
-			action: ReduxAction<Pick<TaskbarOptions, 'showCompleted' | 'gridView'>>
+			action: ReduxAction<
+				Pick<
+					TaskbarOptions,
+					'showCompleted' | 'gridView' | 'paginationSize' | 'paginationPage'
+				>
+			>
 		) {
 			state.showCompleted = action.payload.showCompleted;
 			state.gridView = action.payload.gridView;
+			state.paginationSize = action.payload.paginationSize
+				? action.payload.paginationSize
+				: -1;
+			state.paginationPage = action.payload.paginationPage
+				? action.payload.paginationPage
+				: 0;
 		},
 
 		/** Allows to change search string. */
@@ -56,6 +71,22 @@ const taskbarSlice = createSlice({
 		changeGridView(state, action: ReduxAction<TaskbarOptions['gridView']>) {
 			state.gridView = action.payload;
 		},
+
+		/** Change pagination size. */
+		changePaginationSize(
+			state,
+			action: ReduxAction<TaskbarOptions['paginationSize']>
+		) {
+			state.paginationSize = action.payload;
+		},
+
+		/** Switch pagination page to another one. */
+		switchPaginationPage(
+			state,
+			action: ReduxAction<TaskbarOptions['paginationPage']>
+		) {
+			state.paginationPage = action.payload;
+		},
 	},
 });
 
@@ -66,5 +97,7 @@ export const {
 	loadTaskbarOptions,
 	changeAppFilters,
 	changeGridView,
+	changePaginationSize,
+	switchPaginationPage,
 } = taskbarSlice.actions;
 export const initialTaskbarOptions = taskbarSlice.getInitialState();

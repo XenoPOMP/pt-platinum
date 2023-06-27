@@ -7,6 +7,8 @@ import TaskBar from '@ui/TaskBar/TaskBar';
 import type { TaskBarProps } from '@ui/TaskBar/TaskBar.props';
 import UiContainer from '@ui/UiContainer/UiContainer';
 
+import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
+
 import ptLogo from '@media/images/logo/short logo 1.png';
 
 import styles from './Header.module.scss';
@@ -21,10 +23,12 @@ const Header: FC<HeaderProps> = ({ taskbar }) => {
 			  } as TaskBarProps)
 			: false;
 
+	const { paginationPage } = useTaskbarOptions();
+
 	return (
 		<UiContainer.Header className={cn(styles.appHeader)}>
 			<section className={cn(styles.main)}>
-				<Link to={'/'} className={cn(styles.logotype)}>
+				<Link to={`/?page=${paginationPage}`} className={cn(styles.logotype)}>
 					<img src={ptLogo} alt={'app-logo'} className={cn(styles.logo)} />
 
 					<svg

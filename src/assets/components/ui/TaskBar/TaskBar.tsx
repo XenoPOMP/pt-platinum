@@ -1,13 +1,14 @@
 import { useOutside } from '@pacote/react-use-outside';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
-import { CSSProperties, FC, useState } from 'react';
+import { CSSProperties, FC, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { MultiValue } from 'react-select';
 
 import {
 	changeAppFilters,
 	changeGridView,
+	changePaginationSize,
 	changeSearchString,
 	changeShowCompletedRule,
 } from '@redux/reducers/taskbar.slice';
@@ -27,7 +28,8 @@ import type { TaskBarProps } from './TaskBar.props';
 
 const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 	const { progress } = useProgress();
-	const { search, showCompleted, gridView } = useTaskbarOptions();
+	const { search, showCompleted, gridView, paginationSize } =
+		useTaskbarOptions();
 	const dispatch = useDispatch();
 	const loc = useLocalization();
 
@@ -219,6 +221,51 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 							>
 								{loc.header.taskbar.options.showCompleted}
 							</CheckBox>
+						</div>
+
+						<div className={cn(styles.item, styles.noFlex)}>
+							<label className={cn(styles.itemLabel)}>
+								{loc.header.taskbar.options.paginationSize}
+							</label>
+
+							<div className={cn(styles.buttonGrid)}>
+								<button
+									className={cn(paginationSize === 10 && styles.selected)}
+									onClick={() => {
+										dispatch(changePaginationSize(10));
+										window.scrollTo(0, 0);
+									}}
+								>
+									10
+								</button>
+								<button
+									className={cn(paginationSize === 20 && styles.selected)}
+									onClick={() => {
+										dispatch(changePaginationSize(20));
+										window.scrollTo(0, 0);
+									}}
+								>
+									20
+								</button>
+								<button
+									className={cn(paginationSize === 30 && styles.selected)}
+									onClick={() => {
+										dispatch(changePaginationSize(30));
+										window.scrollTo(0, 0);
+									}}
+								>
+									30
+								</button>
+								<button
+									className={cn(paginationSize === -1 && styles.selected)}
+									onClick={() => {
+										dispatch(changePaginationSize(-1));
+										window.scrollTo(0, 0);
+									}}
+								>
+									Все
+								</button>
+							</div>
 						</div>
 					</motion.div>
 				</div>
