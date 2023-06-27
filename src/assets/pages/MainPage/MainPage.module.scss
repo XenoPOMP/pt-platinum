@@ -51,6 +51,10 @@
     @media (max-width: 316px) {
       --column-count: 1;
     }
+
+    nav.pagination {
+      grid-column: span var(--column-count);
+    }
   }
 
   nav.pagination {

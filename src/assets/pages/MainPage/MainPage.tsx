@@ -46,7 +46,7 @@ const MainPage = () => {
 	/** The size of pagination link splice. */
 	const PAGINATION_SLICE_SIZE = 3;
 	/** If true pagination will not show all links at the time. */
-	const USE_LINK_SLICES = true;
+	const USE_LINK_SLICES = false;
 
 	useEffect(() => {
 		/** Initial page from params. */
