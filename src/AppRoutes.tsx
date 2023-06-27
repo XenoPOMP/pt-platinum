@@ -31,7 +31,7 @@ const AppRoutes: FC<{
 			<Routes location={location} key={location.pathname}>
 				<Route path={'*'} element={<NotFound />} />
 
-				<Route path={'/'} element={<MainPage />} />
+				<Route path={'/'} element={<MainPage />} index />
 
 				<Route path={'/settings'} element={<OptionsPage />} />
 
