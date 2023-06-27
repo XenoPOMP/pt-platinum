@@ -92,7 +92,7 @@ const MainPage = () => {
 								className={cn(
 									styles.control,
 									styles.reverse,
-									paginationPage === 1 && styles.disabled
+									[1, 2].includes(paginationPage) && styles.disabled
 								)}
 								viewBox='0 0 13 11'
 								fill='none'
@@ -192,7 +192,9 @@ const MainPage = () => {
 							<svg
 								className={cn(
 									styles.control,
-									paginationPage === chunkKeys.at(-1) && styles.disabled
+									[chunkKeys.at(-1), chunkKeys.at(-2)].includes(
+										paginationPage
+									) && styles.disabled
 								)}
 								viewBox='0 0 13 11'
 								fill='none'
