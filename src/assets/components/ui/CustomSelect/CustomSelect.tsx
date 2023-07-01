@@ -83,6 +83,10 @@ const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 			};
 		},
 
+		input: styles => {
+			return { ...styles, color: 'var(--ui-select-font-base)' };
+		},
+
 		placeholder: (styles, props) => {
 			return { ...styles, color: 'var(--ui-select-font-base)' };
 		},
@@ -93,8 +97,14 @@ const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 				...styles,
 				color: 'var(--ui-select-font-base)',
 				backgroundColor:
-					isSelected || isFocused ? 'var(--ui-select-selection)' : '',
+					isSelected || isFocused
+						? 'var(--ui-select-selection)'
+						: 'var(--ui-select-background)',
 			};
+		},
+
+		group: styles => {
+			return { ...styles, background: 'red' };
 		},
 
 		// Styling multi-value
@@ -152,6 +162,14 @@ const CustomSelect: FC<PropsWith<'className', CustomSelectProps>> = ({
 			placeholder={placeholder}
 			styles={colorStyles}
 			className={cn(className)}
+			theme={theme => ({
+				...theme,
+				colors: {
+					...theme.colors,
+					neutral80: 'var(--ui-select-font-base)',
+					neutral0: 'var(--ui-select-background)',
+				},
+			})}
 		></Select>
 	);
 };
