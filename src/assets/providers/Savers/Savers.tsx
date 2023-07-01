@@ -10,12 +10,18 @@ import { PropsWith } from '@type/PropsWith';
 import styles from './Savers.module.scss';
 import type { SaversProps } from './Savers.props';
 
+/**
+ * @deprecated new save algorithm is being used now.
+ *
+ * @param children
+ * @constructor
+ */
 const Savers: FC<PropsWith<'children', SaversProps>> = ({ children }) => {
 	return (
 		<>
-			<AppSettingsSaver disabled />
-			<TaskbarSaver />
-			<MarkSaver />
+			{/*<AppSettingsSaver disabled />*/}
+			{/*<TaskbarSaver disabled />*/}
+			{/*<MarkSaver disabled />*/}
 
 			{children}
 		</>

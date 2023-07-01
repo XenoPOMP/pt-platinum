@@ -10,6 +10,23 @@ const rootReducer = combineReducers({
 	taskbar: taskbarSlice,
 });
 
-export const store = configureStore({
+/** Cookie name. */
+const cookieName = 'pt-platinum-store';
+
+const store = configureStore({
 	reducer: rootReducer,
+	preloadedState: localStorage.getItem(cookieName)
+		? JSON.parse(localStorage.getItem(cookieName) as string)
+		: {},
 });
+
+/**
+ * Subscribe to update event.
+ *
+ * Save data to local storage.
+ */
+store.subscribe(() => {
+	localStorage.setItem(cookieName, JSON.stringify(store.getState()));
+});
+
+export { store };
