@@ -19,25 +19,24 @@ const ThemeProvider: FC<PropsWith<'children', BaseProviderProps>> = ({
 	const [registerClasses, deleteClasses] = useBodyClassnames();
 	const classGroupName = 'themeClasses';
 
-	useEffect(() => {
-		// Clear classnames
-		deleteClasses(classGroupName);
-
-		registerClasses(classGroupName, [
-			styles.themes,
-			currentTheme === 'light' ? styles.light : '',
-			currentTheme === 'dark' ? styles.dark : '',
-		]);
-	}, [currentTheme]);
+	// useEffect(() => {
+	// 	// Clear classnames
+	// 	// deleteClasses(classGroupName);
+	//
+	// 	registerClasses(classGroupName, [
+	// 		styles.themes,
+	// 		currentTheme === 'light' ? styles.light : '',
+	// 		currentTheme === 'dark' ? styles.dark : '',
+	// 	]);
+	// }, [currentTheme]);
 
 	return (
 		<div
-			className={
-				cn()
-				// styles.themes,
-				// theme.get() === 'light' && styles.light,
-				// theme.get() === 'dark' && styles.dark
-			}
+			className={cn(
+				styles.themes,
+				currentTheme === 'light' ? styles.light : '',
+				currentTheme === 'dark' ? styles.dark : ''
+			)}
 		>
 			{children}
 		</div>

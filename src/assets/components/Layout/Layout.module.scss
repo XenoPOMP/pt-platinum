@@ -1,4 +1,10 @@
 @import "src/assets/styles/templates";
 
 main.layout {
+  &:before {
+    @apply fixed top-0 left-0 w-screen h-screen -z-[50000];
+
+    content: "";
+    background: var(--app-back-primary);
+  }
 }
