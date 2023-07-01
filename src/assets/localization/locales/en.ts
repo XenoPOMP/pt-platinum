@@ -124,7 +124,6 @@ const englishLocalization: Localization = {
 	},
 
 	pages: {
-		// TODO Translate all locales
 		main: {
 			achievements: {
 				JOHN_GUTTED: {
@@ -1139,6 +1138,10 @@ const englishLocalization: Localization = {
 			},
 
 			indexingFilters: getIndexingFilters(),
+
+			allDoneLabels: {
+				header: 'Congratulations! You got 100% of achievements.',
+			},
 		},
 
 		achievement: {

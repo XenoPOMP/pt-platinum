@@ -39,4 +39,8 @@ export interface MainPageLocales {
 	};
 
 	indexingFilters: Filter[];
+
+	allDoneLabels: {
+		header: string;
+	};
 }

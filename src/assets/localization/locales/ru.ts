@@ -1151,6 +1151,10 @@ const russianLocalization: Localization = {
 			},
 
 			indexingFilters: getIndexingFilters(),
+
+			allDoneLabels: {
+				header: 'Поздравляем! Вы прошли игру на 100%',
+			},
 		},
 
 		achievement: {

@@ -36,6 +36,7 @@
     display: grid;
     grid-template-columns: repeat(var(--column-count), 1fr);
     gap: globalPadding(.5);
+    color: var(--app-font-primary);
 
     @media (max-width: 1000px) {
       --column-count: 4;
@@ -60,6 +61,16 @@
     nav.pagination {
       grid-column: span var(--column-count);
     }
+  }
+
+  h3.allCompleted {
+    @extend %semiBold;
+    @extend %notSelectable;
+
+    @apply text-center;
+
+    color: var(--app-font-primary);
+    font-size: 1.5em;
   }
 
   nav.pagination {
