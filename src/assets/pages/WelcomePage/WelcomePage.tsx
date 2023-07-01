@@ -17,6 +17,7 @@ const WelcomePage: FC<WelcomePageProps> = ({}) => {
 		<Page
 			meta={loc.meta.welcomePage}
 			noIndex
+			disabled
 			header={{
 				renderHeader: false,
 			}}
