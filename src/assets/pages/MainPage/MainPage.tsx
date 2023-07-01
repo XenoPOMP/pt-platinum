@@ -14,6 +14,7 @@ import AchievementCard from '@ui/AchievementCard/AchievementCard';
 import UiContainer from '@ui/UiContainer/UiContainer';
 
 import useLocalization from '@hooks/useLocalization';
+import { useProgress } from '@hooks/useProgress';
 import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
 
 import numericGenerator from '@utils/numericGenerator';
@@ -31,6 +32,8 @@ const MainPage = () => {
 	const { gridView, paginationSize, paginationPage } = useTaskbarOptions();
 	const [params, setParams] = useSearchParams();
 	const dispatch = useDispatch();
+
+	const { progress } = useProgress();
 
 	const { search } = useTaskbarOptions();
 
@@ -75,6 +78,12 @@ const MainPage = () => {
 					gridView === 'grid' && styles.gridView
 				)}
 			>
+				{progress === 100 && (
+					<h3 className={cn(styles.allCompleted)}>
+						{loc.pages.main.allDoneLabels.header}
+					</h3>
+				)}
+
 				{paginationSize !== -1
 					? Array.isArray(paginationResults)
 						? paginationResults.map((ac, index) => (

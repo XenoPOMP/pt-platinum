@@ -63,6 +63,16 @@
     }
   }
 
+  h3.allCompleted {
+    @extend %semiBold;
+    @extend %notSelectable;
+
+    @apply text-center;
+
+    color: var(--app-font-primary);
+    font-size: 1.5em;
+  }
+
   nav.pagination {
     @extend %flexCenter;
     @extend %notSelectable;
