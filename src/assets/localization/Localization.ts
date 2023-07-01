@@ -4,6 +4,7 @@ import type { HeaderLocales } from '@localization/types/HeaderLocales';
 import type { MainPageLocales } from '@localization/types/MainPageLocales';
 import type { MetaLocales } from '@localization/types/MetaLocales';
 import type { OptionsPageLocales } from '@localization/types/OptionsPageLocales';
+import { WelcomePageLocales } from '@localization/types/WelcomePageLocales';
 
 export interface Localization {
 	meta: MetaLocales;
@@ -13,5 +14,6 @@ export interface Localization {
 		achievement: AchievementPageLocales;
 		options: OptionsPageLocales;
 		disabled: DisabledPageLocales;
+		welcomePage: WelcomePageLocales;
 	};
 }

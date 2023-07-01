@@ -1182,6 +1182,31 @@ const englishLocalization: Localization = {
 			notWorking: 'This page is not working now',
 			goHome: 'Go home',
 		},
+
+		welcomePage: {
+			steps: {
+				welcome: {
+					header: 'Welcome to Pizza Tower Platinum!',
+					descText:
+						'Our app will help you keep track of all the achievements you can get in this amazing game. You will always know how much progress you have made and what achievements you still need to get. We hope that our app will help you enjoy the game even more and achieve all the desired results. Have a good game!',
+				},
+
+				languageSetup: {
+					header: 'Language setup',
+				},
+
+				themeSetup: {
+					header: 'Theme setup',
+				},
+			},
+
+			controls: {
+				skip: 'Skip',
+				back: 'Back',
+				forward: 'Forward',
+				readyToComplete: 'Ready',
+			},
+		},
 	},
 };
 

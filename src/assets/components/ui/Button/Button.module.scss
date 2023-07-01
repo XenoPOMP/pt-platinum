@@ -18,6 +18,13 @@
     color: var(--ui-icon);
   }
 
+  &.transparent {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: transparent !important;
+    color: var(--button-font-inactive);
+  }
+
   &:hover {
     svg {
       path {

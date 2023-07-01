@@ -2,7 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { ReduxAction } from '@redux/types/redux-types';
 
-export interface TutorialStepNames {}
+export interface TutorialStepNames {
+	welcome: string;
+	languageSetup: string;
+	themeSetup: string;
+}
 
 type TutorialStep = {
 	name: keyof TutorialStepNames;
@@ -12,11 +16,28 @@ type TutorialStep = {
 export type WelcomeTutorialState = {
 	steps: TutorialStep[];
 	completed: boolean;
+	currentStepIndex: number;
 };
 
 const initialState: WelcomeTutorialState = {
-	steps: [],
+	steps: [
+		{
+			name: 'welcome',
+			completed: false,
+		},
+		{
+			name: 'languageSetup',
+			completed: false,
+		},
+		{
+			name: 'themeSetup',
+			completed: false,
+		},
+	],
+
 	completed: false,
+
+	currentStepIndex: 0,
 };
 
 const welcomeTutorialSlice = createSlice({
@@ -32,9 +53,14 @@ const welcomeTutorialSlice = createSlice({
 		completeStep(state, action: ReduxAction<TutorialStep>) {
 			const { name, completed } = action.payload;
 
-			state.steps.map(step => {
+			state.steps.map((step, index) => {
 				if (name === step.name) {
-					return action.payload;
+					state.currentStepIndex = index;
+
+					return {
+						...step,
+						completed,
+					};
 				}
 
 				return step;

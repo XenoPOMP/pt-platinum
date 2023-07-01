@@ -11,7 +11,7 @@ export interface ButtonProps {
 	fullWidth?: boolean;
 
 	/** Button`s style variant. */
-	variant?: 'normal' | 'active';
+	variant?: 'normal' | 'active' | 'transparent';
 
 	/** Callback. */
 	onClick?: (event?: MouseEvent<HTMLDivElement | HTMLAnchorElement>) => void;

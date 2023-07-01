@@ -1,9 +1,14 @@
 import cn from 'classnames';
-import { FC, PropsWithChildren, ReactNode } from 'react';
+import { FC, PropsWithChildren, ReactNode, useEffect } from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link, useLocation } from 'react-router-dom';
 
 import Layout from '@components/Layout/Layout';
+import Redirect from '@components/Redirect/Redirect';
+
+import { WelcomeTutorialState } from '@redux/reducers/welcomeTutorial.slice';
+import IStore from '@redux/types/redux-types';
 
 import UiContainer from '@ui/UiContainer/UiContainer';
 
@@ -32,6 +37,12 @@ const Page: FC<PropsWithChildren<PageProps>> = ({
 	const { appName, language } = useAppSettings();
 	const loc = useLocalization();
 
+	const location = useLocation();
+
+	const { completed, currentStepIndex }: WelcomeTutorialState = useSelector(
+		(state: IStore) => state.welcome
+	);
+
 	return (
 		<Layout header={header}>
 			<Helmet
@@ -46,6 +57,11 @@ const Page: FC<PropsWithChildren<PageProps>> = ({
 
 				{(noIndex || disabled) && <meta name={'robots'} content={'noindex'} />}
 			</Helmet>
+
+			<Redirect
+				to={`/welcome/${currentStepIndex}`}
+				triggered={!/^\/welcome\/\d+$/gi.test(location.pathname) && !completed}
+			/>
 
 			{!disabled ? (
 				children

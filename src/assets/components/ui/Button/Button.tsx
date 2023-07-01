@@ -55,6 +55,10 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 			classes.push(styles.active);
 		}
 
+		if (defaultVariant === 'transparent') {
+			classes.push(styles.transparent);
+		}
+
 		return cn(...classes);
 	};
 

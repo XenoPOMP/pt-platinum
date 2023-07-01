@@ -1,10 +1,94 @@
 @import "src/assets/styles/templates";
 
 .welcomePage {
+  @extend %mainFont;
+
   @apply fixed top-0 left-0 w-screen h-screen;
 
   display: grid;
-  grid-template-columns: 1fr 780px;
+  grid-template-columns: .6fr .4fr;
+  font-size: 20px; // 1em = 20px
+
+  section.settings {
+    width: 100%;
+    height: 100%;
+    padding:
+            globalPadding(1)
+            globalPadding(1)
+            calc(var(--global-padding) + .4em)
+            globalPadding(1);
+    display: grid;
+    grid-template-rows: 1fr 3.4em;
+    position: relative;
+
+    .step {
+      @extend %scrollable;
+
+      @apply w-full h-full;
+
+      padding-bottom: globalPadding(1);
+
+      h2 {
+        @extend %semiBold;
+
+        font-size: 2.8em;
+        color: var(--app-font-primary);
+        text-align: center;
+        line-height: normal;
+      }
+
+      &.welcome {
+        @extend %flexCenter;
+        @extend %mainFont;
+
+        flex-direction: column;
+        justify-content: space-between;
+
+        .desc {
+          font-size: 1.75em;
+          color: var(--app-font-primary);
+          text-align: center;
+          margin: auto 0;
+        }
+      }
+    }
+
+    .controls {
+      @extend %flexCenter;
+
+      @apply w-full h-full;
+
+      font-size: 1.5em;
+      justify-content: space-between;
+      gap: globalPadding(.5);
+
+      .group {
+        @apply h-full;
+
+        display: inherit;
+        justify-content: inherit;
+        gap: inherit;
+      }
+    }
+
+    progress.progressBar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: .4em;
+      content: "";
+      z-index: 5000;
+
+      &::-webkit-progress-bar {
+        background: transparent;
+      }
+
+      &::-webkit-progress-value {
+        background: var(--app-progress-bar);
+      }
+    }
+  }
 
   section.peppinoPoster {
     @extend %flexCenter;
@@ -12,13 +96,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-
-    img {
-      // min-width: 100%;
-      // min-height: 100%;
-      width: auto;
-      height: auto;
-      position: absolute;
-    }
+    background: url("../../../media/images/Art Section.png") center;
+    background-size: cover;
   }
 }
