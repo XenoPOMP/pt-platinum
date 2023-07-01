@@ -6,6 +6,7 @@ import AchievementPage from '@pages/AchievementPage/AchievementPage';
 import MainPage from '@pages/MainPage/MainPage';
 import NotFound from '@pages/NotFound/NotFound';
 import OptionsPage from '@pages/OptionsPage/OptionsPage';
+import WelcomePage from '@pages/WelcomePage/WelcomePage';
 
 /**
  * Root component of application routes.
@@ -31,11 +32,13 @@ const AppRoutes: FC<{
 			<Routes location={location} key={location.pathname}>
 				<Route path={'*'} element={<NotFound />} />
 
-				<Route path={'/'} element={<MainPage />} />
+				<Route path={'/'} element={<MainPage />} index />
 
 				<Route path={'/settings'} element={<OptionsPage />} />
 
 				<Route path={'/articles/:name'} element={<AchievementPage />} />
+
+				<Route path={'/welcome/:step'} element={<WelcomePage />} />
 			</Routes>
 		);
 	};

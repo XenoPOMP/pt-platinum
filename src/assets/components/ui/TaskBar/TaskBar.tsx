@@ -41,7 +41,11 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 
 	return (
 		<section className={cn(styles.taskBar)}>
-			<div className={'flex items-center gap-[.95em]'}>
+			<div
+				className={
+					'flex items-center gap-[.95em] text-[var(--app-font-primary)]'
+				}
+			>
 				<div
 					className={cn(styles.progressBar)}
 					style={
@@ -263,7 +267,7 @@ const TaskBar: FC<TaskBarProps> = ({ rightControl }) => {
 										window.scrollTo(0, 0);
 									}}
 								>
-									Все
+									{loc.header.taskbar.options.disablePagination}
 								</button>
 							</div>
 						</div>

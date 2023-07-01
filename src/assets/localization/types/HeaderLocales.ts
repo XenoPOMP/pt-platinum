@@ -7,6 +7,7 @@ export type HeaderLocales = {
 			paginationSize: string;
 			filtersPlaceholder: string;
 			gridView: string;
+			disablePagination: string;
 		};
 	};
 };

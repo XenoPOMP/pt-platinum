@@ -70,16 +70,6 @@ const AchievementCard: FC<AchievementCardProps> = ({ achievement, index }) => {
 
 		return (
 			<motion.article
-				initial={{
-					opacity: 0,
-				}}
-				animate={{
-					opacity: 1,
-				}}
-				transition={{
-					duration: ANIMATION_DURATION,
-					delay: index * ANIMATION_DURATION,
-				}}
 				className={cn(
 					styles.card,
 					gridView === 'row' && styles.rowView,

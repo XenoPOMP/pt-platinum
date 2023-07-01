@@ -2,16 +2,12 @@ import { chunk } from 'chunk-arr';
 import cn from 'classnames';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 import Page from '@components/Page/Page';
-import page from '@components/Page/Page';
 
-import { AchievementMark, AchievementMarks } from '@redux/reducers/marks.slice';
-import {
-	initialTaskbarOptions,
-	switchPaginationPage,
-} from '@redux/reducers/taskbar.slice';
+import { AchievementMarks } from '@redux/reducers/marks.slice';
+import { switchPaginationPage } from '@redux/reducers/taskbar.slice';
 import IStore from '@redux/types/redux-types';
 
 import AchievementCard from '@ui/AchievementCard/AchievementCard';
@@ -20,7 +16,7 @@ import UiContainer from '@ui/UiContainer/UiContainer';
 import useLocalization from '@hooks/useLocalization';
 import { useTaskbarOptions } from '@hooks/useTaskbarOptions';
 
-import { smoothScroll } from '@utils/smooth-scroll';
+import numericGenerator from '@utils/numericGenerator';
 
 import styles from './MainPage.module.scss';
 
@@ -29,18 +25,30 @@ const MainPage = () => {
 	const achievements: AchievementMarks['achievements'] = useSelector(
 		(state: IStore) => state.marks.achievements
 	);
+	const shownAchievements: AchievementMarks['achievements'] =
+		achievements.filter(ac => ac.shown);
+
 	const { gridView, paginationSize, paginationPage } = useTaskbarOptions();
 	const [params, setParams] = useSearchParams();
 	const dispatch = useDispatch();
 
+	const { search } = useTaskbarOptions();
+
 	/** Pagination chunks. */
 	const achievementChunks =
-		paginationSize === -1 ? achievements : chunk(achievements, paginationSize);
+		paginationSize === -1
+			? achievements
+			: chunk(search === '' ? achievements : shownAchievements, paginationSize);
 
 	/** Pagination keys. */
 	const chunkKeys: number[] = Object.keys(achievementChunks)
 		.map(strKey => parseInt(strKey))
 		.map(key => key + 1);
+
+	/** The size of pagination link splice. */
+	const PAGINATION_SLICE_SIZE = 3;
+	/** If true pagination will not show all links at the time. */
+	const USE_LINK_SLICES = false;
 
 	useEffect(() => {
 		/** Initial page from params. */
@@ -92,7 +100,7 @@ const MainPage = () => {
 								className={cn(
 									styles.control,
 									styles.reverse,
-									paginationPage === 1 && styles.disabled
+									[1, 2].includes(paginationPage) && styles.disabled
 								)}
 								viewBox='0 0 13 11'
 								fill='none'
@@ -142,12 +150,22 @@ const MainPage = () => {
 						</div>
 
 						<div className={cn(styles.numericLinks)}>
+							{chunkKeys.length > PAGINATION_SLICE_SIZE &&
+								!numericGenerator(PAGINATION_SLICE_SIZE - 1)
+									.map(item => item + 1)
+									.includes(paginationPage) &&
+								USE_LINK_SLICES && <div>...</div>}
+
 							{chunkKeys.map((key, index) => (
 								<div
 									key={`${index}-pagination-link`}
 									className={cn(
 										styles.link,
-										paginationPage === key && styles.active
+										paginationPage === key && styles.active,
+										(key - paginationPage >= PAGINATION_SLICE_SIZE - 1 ||
+											paginationPage - key >= PAGINATION_SLICE_SIZE - 1) &&
+											USE_LINK_SLICES &&
+											styles.hidden
 									)}
 									onClick={() => {
 										setParams(
@@ -162,6 +180,16 @@ const MainPage = () => {
 									{key}
 								</div>
 							))}
+
+							{chunkKeys.length > PAGINATION_SLICE_SIZE &&
+								!numericGenerator(PAGINATION_SLICE_SIZE - 1)
+									.map((item, index) => {
+										const reverseIndex = -(index + 1);
+
+										return chunkKeys.at(reverseIndex);
+									})
+									.includes(paginationPage) &&
+								USE_LINK_SLICES && <div>...</div>}
 						</div>
 
 						<div className={cn(styles.controlGroup)}>
@@ -192,7 +220,9 @@ const MainPage = () => {
 							<svg
 								className={cn(
 									styles.control,
-									paginationPage === chunkKeys.at(-1) && styles.disabled
+									[chunkKeys.at(-1), chunkKeys.at(-2)].includes(
+										paginationPage
+									) && styles.disabled
 								)}
 								viewBox='0 0 13 11'
 								fill='none'

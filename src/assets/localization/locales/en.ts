@@ -101,6 +101,12 @@ const englishLocalization: Localization = {
 			pageDescription: '',
 			keywords: '',
 		},
+
+		welcomePage: {
+			pageTitle: 'You`re welcome at PT Platinum!',
+			pageDescription: '',
+			keywords: '',
+		},
 	},
 
 	header: {
@@ -112,6 +118,7 @@ const englishLocalization: Localization = {
 				paginationSize: 'Result quantity at one page',
 				filtersPlaceholder: 'Choose from list...',
 				gridView: 'Grid view',
+				disablePagination: 'All',
 			},
 		},
 	},
@@ -1154,6 +1161,7 @@ const englishLocalization: Localization = {
 				description: 'Choose appearance for application.',
 				variants: {
 					light: 'Light',
+					dark: 'Dark',
 				},
 			},
 

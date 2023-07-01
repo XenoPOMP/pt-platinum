@@ -6,6 +6,7 @@
 
   padding: globalPadding(.75) 0 globalPadding(1) 0;
   font-size: 20px;
+  color: var(--app-font-primary);
 
   .item {
     &:not(:last-of-type) {

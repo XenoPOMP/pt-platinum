@@ -12,7 +12,10 @@ import { useLocalStorage } from '@hooks/useLocalStorage';
 
 import type { MarkSaverProps } from './MarkSaver.props';
 
-const MarkSaver: FC<PropsWithChildren<MarkSaverProps>> = ({ children }) => {
+const MarkSaver: FC<PropsWithChildren<MarkSaverProps>> = ({
+	children,
+	disabled,
+}) => {
 	const selector: AchievementMarks = useSelector(
 		(state: IStore) => state.marks
 	);
@@ -23,20 +26,22 @@ const MarkSaver: FC<PropsWithChildren<MarkSaverProps>> = ({ children }) => {
 		initialAchievementMarks
 	);
 
-	// Load cookie data
-	useEffect(() => {
-		if (getCookieItem.achievements.length !== selector.achievements.length) {
+	if (!disabled) {
+		// Load cookie data
+		useEffect(() => {
+			if (getCookieItem.achievements.length !== selector.achievements.length) {
+				setCookieItem(selector);
+				return;
+			}
+
+			dispatch(loadMarks(getCookieItem));
+		}, []);
+
+		// Save data to cookie
+		useEffect(() => {
 			setCookieItem(selector);
-			return;
-		}
-
-		dispatch(loadMarks(getCookieItem));
-	}, []);
-
-	// Save data to cookie
-	useEffect(() => {
-		setCookieItem(selector);
-	}, [selector.achievements]);
+		}, [selector.achievements]);
+	}
 
 	return <>{children}</>;
 };

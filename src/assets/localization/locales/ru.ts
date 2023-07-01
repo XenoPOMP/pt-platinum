@@ -101,6 +101,12 @@ const russianLocalization: Localization = {
 			pageDescription: '',
 			keywords: '',
 		},
+
+		welcomePage: {
+			pageTitle: 'Добро пожаловать в PT Platinum!',
+			pageDescription: '',
+			keywords: '',
+		},
 	},
 
 	header: {
@@ -112,6 +118,7 @@ const russianLocalization: Localization = {
 				paginationSize: 'Показывать результатов за раз',
 				filtersPlaceholder: 'Выберете из списка...',
 				gridView: 'Вид сетки',
+				disablePagination: 'Все',
 			},
 		},
 	},
@@ -1166,6 +1173,7 @@ const russianLocalization: Localization = {
 				description: 'Выберите, как будет выглядеть приложение.',
 				variants: {
 					light: 'Светлая',
+					dark: 'Темная',
 				},
 			},
 
