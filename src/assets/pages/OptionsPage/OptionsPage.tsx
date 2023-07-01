@@ -42,6 +42,11 @@ const OptionsPage: FC<OptionsPageProps> = ({}) => {
 			value: 'light',
 			label: loc.pages.options.theme.variants.light,
 		},
+
+		{
+			value: 'dark',
+			label: loc.pages.options.theme.variants.dark,
+		},
 	];
 
 	const languageVariants: TypedSelectOption<Language>[] = [

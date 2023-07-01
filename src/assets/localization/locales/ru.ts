@@ -112,6 +112,7 @@ const russianLocalization: Localization = {
 				paginationSize: 'Показывать результатов за раз',
 				filtersPlaceholder: 'Выберете из списка...',
 				gridView: 'Вид сетки',
+				disablePagination: 'Все',
 			},
 		},
 	},
@@ -1166,6 +1167,7 @@ const russianLocalization: Localization = {
 				description: 'Выберите, как будет выглядеть приложение.',
 				variants: {
 					light: 'Светлая',
+					dark: 'Темная',
 				},
 			},
 

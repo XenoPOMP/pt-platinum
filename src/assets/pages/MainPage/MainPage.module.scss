@@ -6,6 +6,11 @@
 
   padding: globalPadding(.75) 0 0 0;
   font-size: 20px; // 1em = 20px
+  background: var(--app-back-primary);
+
+  &:not(:has(> nav.pagination)) {
+    padding-bottom: globalPadding(1);
+  }
 
   &.rowView {
     display: flex;

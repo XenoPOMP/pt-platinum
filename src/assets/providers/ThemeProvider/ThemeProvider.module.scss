@@ -1,19 +1,105 @@
 .themes {
   &.dark {
-    --ui-border: #0066FF;
-    --ui-border-disabled: #737674;
-    --ui-icon: white;
-    // Select colors
-    --ui-select-background: white;
-    --ui-select-border: rgb(229, 231, 235);
-    --ui-multi-select-def: #E6E6E6FF;
-    --ui-multi-select-font-def: black;
-    --ui-select-selection: #5086D8;
-    // Select remove button
-    --ui-select-remove-back: red;
-    --ui-select-remove-icon: white;
-    // Select font colors
-    --ui-select-font-base: black;
+
+    // App
+    --app-back-primary: rgba(28, 23, 23, 1);
+    --app-font-primary: rgba(255, 255, 255, 1);
+    --app-font-secondary: rgba(178, 172, 172, 1);
+    --app-progress-bar: rgba(41, 209, 97, 1);
+    --app-link: rgba(108, 125, 216, 1);
+
+    // Button
+    --button-back: rgba(53, 53, 54, 1);
+    --button-font: rgba(255, 255, 255, 1);
+    --button-font-inactive: rgba(99, 99, 99, 1);
+
+    // UI
+    --ui-select-background: rgba(53, 53, 54, 1);
+    --ui-select-border: rgba(87, 87, 89, 1);
+    --ui-multi-select-def: rgba(37, 37, 38, 1);
+    --ui-multi-select-font-def: rgba(255, 255, 255, 1);
+    --ui-select-remove-back: rgba(255, 0, 0, 1);
+    --ui-select-remove-icon: rgba(255, 255, 255, 1);
+    --ui-select-font-base: rgba(255, 255, 255, 1);
+    --ui-select-selection: rgba(41, 209, 97, 1);
+    --ui-border: rgba(41, 209, 97, 1);
+    --ui-border-disabled: rgba(115, 118, 116, 1);
+    --ui-icon: rgba(53, 53, 54, 1);
+
+    // Theme  previews
+    --pre: rgba(250, 250, 250, 1);
+    --light-theme-font: rgba(217, 217, 217, 1);
+
+    // Achievement
+    --ach-icon-success: rgba(81, 255, 0, 1);
+
+    // Badges
+    --bad-world-one-back: rgba(71, 26, 73, 1);
+    --bad-world-one-font: rgba(168, 154, 194, 1);
+    --bad-world-two-back: rgba(211, 119, 5, 1);
+    --bad-world-two-font: rgba(248, 224, 128, 1);
+    --bad-world-three-back: rgba(13, 92, 21, 1);
+    --bad-world-three-font: rgba(0, 255, 25, 1);
+    --bad-world-four-back: rgba(176, 120, 120, 1);
+    --bad-world-four-font: rgba(248, 232, 208, 1);
+    --bad-world-five-back: rgba(33, 28, 41, 1);
+    --bad-world-five-font: rgba(171, 103, 12, 1);
+    --bad-required-back: rgba(193, 192, 192, 1);
+    --bad-required-font: rgba(98, 97, 97, 1);
+    --bad-pizzascape-back: rgba(0, 0, 0, 1);
+    --bad-pizzascape-font: rgba(228, 49, 0, 1);
+    --bad-anc-cheese-back: rgba(136, 40, 88, 1);
+    --bad-anc-cheese-font: rgba(224, 144, 0, 1);
+    --bad-bloodsauce-dungeon-back: rgba(105, 36, 10, 1);
+    --bad-bloodsauce-dungeon-font: rgba(224, 48, 0, 1);
+    --bad-oregano-back: rgba(88, 0, 184, 1);
+    --bad-oregano-font: rgba(216, 184, 248, 1);
+    --bad-wasteyard-back: rgba(48, 80, 120, 1);
+    --bad-wasteyard-font: rgba(136, 168, 200, 1);
+    --bad-farm-back: rgba(48, 168, 248, 1);
+    --bad-farm-font: rgba(248, 0, 0, 1);
+    --bad-saloon-back: rgba(64, 17, 0, 1);
+    --bad-saloon-font: rgba(224, 136, 88, 1);
+    --bad-crust-back: rgba(156, 58, 107, 1);
+    --bad-crust-font: rgba(252, 119, 185, 1);
+    --bad-lario-back: rgba(88, 192, 0, 1);
+    --bad-lario-font: rgba(200, 248, 168, 1);
+    --bad-boss-back: rgba(98, 97, 97, 1);
+    --bad-boss-font: rgba(193, 192, 192, 1);
+    --bad-golf-back: rgba(96, 208, 72, 1);
+    --bad-golf-font: rgba(255, 255, 255, 1);
+    --bad-pigcity-back: rgba(216, 104, 160, 1);
+    --bad-pigcity-font: rgba(78, 9, 43, 1);
+    --bad-that-level-back: rgba(248, 224, 128, 1);
+    --bad-that-level-font: rgba(60, 122, 7, 1);
+    --bad-factory-back: rgba(136, 168, 200, 1);
+    --bad-factory-font: rgba(48, 80, 120, 1);
+    --bad-freezerator-back: rgba(248, 248, 248, 1);
+    --bad-freezerator-font: rgba(80, 168, 248, 1);
+    --bad-pizzascare-back: rgba(225, 48, 1, 1);
+    --bad-pizzascare-font: rgba(240, 225, 125, 1);
+    --bad-fnaf-back: rgba(0, 0, 0, 1);
+    --bad-fnaf-font: rgba(233, 30, 19, 1);
+    --bad-war-back: rgba(240, 59, 10, 1);
+    --bad-war-font: rgba(65, 6, 5, 1);
+
+    // Pagination
+    --pagination-font: rgba(255, 255, 255, 1);
+    --pagination-font-secondary: rgba(174, 169, 169, 1);
+
+    // Gallery
+    --gallery-placeholder: rgba(0, 0, 0, 0.49);
+
+    // Disabled Page
+    --disabled-page-art-back: rgba(0, 18, 32, 1);
+    --disabled-page-art-primary: rgba(250, 114, 104, 1);
+    --disabled-page-art-secondary: rgba(241, 99, 103, 1);
+    --disabled-page-art-third: rgba(232, 84, 103, 1);
+    --disabled-page-art-fourth: rgba(222, 68, 103, 1);
+    --disabled-page-art-fifth: rgba(210, 52, 103, 1);
+    --disabled-page-art-sixth: rgba(198, 35, 104, 1);
+    --disabled-page-art-font: rgba(255, 255, 255, 1);
+    --disabled-page-art-font-link: rgba(104, 201, 44, 1);
   }
 
   &.light {

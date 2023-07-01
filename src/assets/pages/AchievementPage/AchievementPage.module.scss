@@ -82,6 +82,7 @@
           @extend %bold;
 
           font-size: 1em;
+          color: var(--app-font-primary);
         }
 
         i {
@@ -148,6 +149,10 @@
   }
 
   .instructionsPlaceholder {
+    h3 {
+      color: var(--app-font-primary);
+    }
+
     .instructions {
       // margin-top: calc(1.25em * 2);
       font-size: 1em;
@@ -225,6 +230,7 @@
 
     .link {
       @extend %notSelectable;
+
       color: var(--app-link);
 
       $toMediumBreakpoint: 775px;
@@ -250,6 +256,10 @@
 
       svg {
         width: .5em;
+
+        path {
+          fill: var(--app-link);
+        }
       }
 
       &:last-of-type {
