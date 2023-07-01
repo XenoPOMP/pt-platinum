@@ -58,7 +58,7 @@
       --column-count: 1;
     }
 
-    nav.pagination {
+    nav.pagination, h3.allCompleted {
       grid-column: span var(--column-count);
     }
   }
