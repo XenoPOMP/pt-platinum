@@ -23,11 +23,14 @@ const Header: FC<HeaderProps> = ({ renderHeader, taskbar }) => {
 			  } as TaskBarProps)
 			: false;
 
+	const defaultRenderRule: boolean =
+		renderHeader !== undefined ? renderHeader : true;
+
 	const { paginationPage } = useTaskbarOptions();
 
 	return (
 		<>
-			{renderHeader && (
+			{defaultRenderRule && (
 				<UiContainer.Header className={cn(styles.appHeader)}>
 					<section className={cn(styles.main)}>
 						<Link
