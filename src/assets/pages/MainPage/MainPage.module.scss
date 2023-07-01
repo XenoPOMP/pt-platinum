@@ -36,6 +36,7 @@
     display: grid;
     grid-template-columns: repeat(var(--column-count), 1fr);
     gap: globalPadding(.5);
+    color: var(--app-font-primary);
 
     @media (max-width: 1000px) {
       --column-count: 4;
