@@ -101,6 +101,12 @@ const englishLocalization: Localization = {
 			pageDescription: '',
 			keywords: '',
 		},
+
+		welcomePage: {
+			pageTitle: 'You`re welcome at PT Platinum!',
+			pageDescription: '',
+			keywords: '',
+		},
 	},
 
 	header: {

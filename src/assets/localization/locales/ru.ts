@@ -101,6 +101,12 @@ const russianLocalization: Localization = {
 			pageDescription: '',
 			keywords: '',
 		},
+
+		welcomePage: {
+			pageTitle: 'Добро пожаловать в PT Platinum!',
+			pageDescription: '',
+			keywords: '',
+		},
 	},
 
 	header: {

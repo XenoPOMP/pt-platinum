@@ -5,4 +5,5 @@ export interface MetaLocales extends Record<string, MetaInfo> {
 	options: MetaInfo;
 	achievement: MetaInfo;
 	notFound: MetaInfo;
+	welcomePage: MetaInfo;
 }
