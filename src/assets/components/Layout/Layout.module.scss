@@ -1,11 +1,4 @@
 @import "src/assets/styles/templates";
 
 main.layout {
-  &:before {
-    @apply fixed top-0 left-0 w-screen h-screen;
-
-    background: var(--app-back-primary);
-    content: "";
-    z-index: -10000;
-  }
 }

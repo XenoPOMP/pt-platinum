@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useContext } from 'react';
+import { FC, useContext, useEffect } from 'react';
 
 import { BaseProviderProps } from '@providers/BaseProvider.props';
 import { BodyClassnameContext } from '@providers/BodyClassnameProvider/BodyClassnameProvider';
@@ -15,14 +15,29 @@ const ThemeProvider: FC<PropsWith<'children', BaseProviderProps>> = ({
 	children,
 }) => {
 	const { theme } = useAppSettings();
+	const currentTheme = theme.get();
+	const [registerClasses, deleteClasses] = useBodyClassnames();
+	const classGroupName = 'themeClasses';
+
+	useEffect(() => {
+		// Clear classnames
+		deleteClasses(classGroupName);
+
+		registerClasses(classGroupName, [
+			styles.themes,
+			currentTheme === 'light' ? styles.light : '',
+			currentTheme === 'dark' ? styles.dark : '',
+		]);
+	}, [currentTheme]);
 
 	return (
 		<div
-			className={cn(
-				styles.themes,
-				theme.get() === 'light' && styles.light,
-				theme.get() === 'dark' && styles.dark
-			)}
+			className={
+				cn()
+				// styles.themes,
+				// theme.get() === 'light' && styles.light,
+				// theme.get() === 'dark' && styles.dark
+			}
 		>
 			{children}
 		</div>
