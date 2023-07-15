@@ -37,8 +37,6 @@ const AppRoutes: FC<{
 				<Route path={'/settings'} element={<OptionsPage />} />
 
 				<Route path={'/articles/:name'} element={<AchievementPage />} />
-
-				<Route path={'/welcome/:step'} element={<WelcomePage />} />
 			</Routes>
 		);
 	};

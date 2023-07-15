@@ -58,11 +58,6 @@ const Page: FC<PropsWithChildren<PageProps>> = ({
 				{(noIndex || disabled) && <meta name={'robots'} content={'noindex'} />}
 			</Helmet>
 
-			<Redirect
-				to={`/welcome/${currentStepIndex}`}
-				triggered={!/^\/welcome\/\d+$/gi.test(location.pathname) && !completed}
-			/>
-
 			{!disabled ? (
 				children
 			) : (
